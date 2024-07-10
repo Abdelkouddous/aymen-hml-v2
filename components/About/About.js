@@ -4,7 +4,7 @@ import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
+import laptopImg from "../../Assets/about2.png";
 import Toolstack from "./Toolstack";
 
 function About() {
@@ -13,7 +13,13 @@ function About() {
       <Container fluid className="about-section">
         <Particle />
         <Container>
-          <Row style={{ justifyContent: "center", padding: "10px" }}>
+          <Row
+            style={{
+              justifyContent: "center",
+              padding: "10px",
+              verticalAlign: "center",
+            }}
+          >
             <Col
               md={7}
               style={{
