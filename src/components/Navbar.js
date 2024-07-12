@@ -11,10 +11,13 @@ import {
   AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
+  AiTwotoneContacts,
+  AiFillMessage,
   AiOutlineUser,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import Particle from "./Particle";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -38,6 +41,7 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
+        <Particle></Particle>
         <Navbar.Brand href="/" className="d-flex">
           <img src={logo} className="img-fluid logo" alt="brand" />
         </Navbar.Brand>
@@ -56,41 +60,51 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 href="#home"
-                // as={Link} to="/" onClick={() => updateExpanded(false)}
+                onClick={() => updateExpanded(false)}
+                // as={Link} to="/"
               >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link href="#about">
+              <Nav.Link href="#about" onClick={() => updateExpanded(false)}>
                 {/* as={Link}
                 to=".about"
-                onClick={() => updateExpanded(false)} */}
+                 */}
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="#project"
+                // as={Link}
+                // to=""
+                href="#project-heading"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
+                <AiTwotoneContacts style={{ marginBottom: "2px" }} /> Skills
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                href="#avatar"
+                // as={Link}
+                // to="#contact"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiFillMessage style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="#resume"
+                // as={Link}
+                // to="#resumeCV"
+                href="#CV"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument style={{ marginBottom: "2px" }} /> MyCV
               </Nav.Link>
             </Nav.Item>
 

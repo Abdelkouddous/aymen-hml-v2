@@ -29,7 +29,7 @@ function About() {
                   paddingBottom: "20px",
                 }}
               >
-                About <strong className="purple">ME</strong>
+                About <strong className="orange">ME</strong>
               </h1>
               <Aboutcard />
             </Col>
@@ -41,14 +41,15 @@ function About() {
               <img src={laptopImg} alt="about" className="img-fluid" />
             </Col>
           </Row>
+          <h1 id="project-heading" style={{ padding: "40px" }}></h1>
           <h1 className="project-heading">
-            Professional <strong className="purple">Skillset </strong>
+            Professional <strong className="orange">Skillset </strong>
           </h1>
 
           <Techstack />
 
           <h1 className="project-heading">
-            <strong className="purple">Tools</strong> I use
+            <strong className="orange">Tools</strong> I use
           </h1>
           <Toolstack />
 

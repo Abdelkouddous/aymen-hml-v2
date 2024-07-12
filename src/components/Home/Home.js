@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import About from "../About/About";
 import TypeName from "./Type-name";
+import Resume from "../Resume/ResumeNew";
 
 function Home() {
   return (
@@ -44,6 +45,9 @@ function Home() {
           </Row>
           <Row>
             <About />
+          </Row>
+          <Row>
+            <Resume></Resume>
           </Row>
         </Container>
       </Container>

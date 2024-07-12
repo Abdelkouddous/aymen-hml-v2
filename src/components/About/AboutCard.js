@@ -9,8 +9,8 @@ function AboutCard() {
         <blockquote className="blockquote mb-0">
           <span className="home-about-body-me">
             Hi Everyone, I'am{" "}
-            <span className="purple">HAMEL Aymen Abdelkouddous </span>
-            from <span className="purple"> Algeria.</span>
+            <span className="orange">HAMEL Aymen Abdelkouddous </span>
+            from <span className="orange"> Algeria.</span>
             <br></br>
             I'am currently a junior software developper. I have completed
             Master's Degree in Computer Systems and Multimedia at the University
