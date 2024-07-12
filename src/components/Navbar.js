@@ -95,23 +95,22 @@ function NavBar() {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link
-                href="#avatar"
-                // as={Link}
-                // to="#contact"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiFillMessage style={{ marginBottom: "2px" }} /> Contact
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
                 // as={Link}
                 // to="#resumeCV"
                 href="#CV"
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> MyCV
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                href="#avatar"
+                // as={Link}
+                // to="#contact"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiFillMessage style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
 

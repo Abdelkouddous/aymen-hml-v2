@@ -11,7 +11,7 @@ function Home() {
   return (
     <div>
       <section id="home"></section>
-      <Container fluid className="home-section" id="home">
+      <Container fluid className="home-section">
         <Particle />
         <Container className="home-content">
           <Row>
@@ -50,8 +50,8 @@ function Home() {
             <Resume></Resume>
           </Row>
         </Container>
+        <Home2 />
       </Container>
-      <Home2 />
     </div>
   );
 }

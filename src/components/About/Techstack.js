@@ -12,7 +12,7 @@ import {
   DiPhp,
 } from "react-icons/di";
 import {
-  SiRedis,
+  SiFlutter,
   SiCss3,
   SiHtml5,
   SiFirebase,
@@ -57,16 +57,19 @@ function Techstack() {
         <DiReact />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiNextdotjs />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <DiPhp />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <FaLaravel />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
+        <DiGit />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <SiFlutter />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiFirebase />
