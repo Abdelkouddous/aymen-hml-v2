@@ -22,7 +22,7 @@ import {
   SiBootstrap,
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
-
+import { FaLaravel } from "react-icons/fa6";
 function Techstack() {
   // my skills : HTML CSS JS PHP Python C++ C# JAVA
   // React Next Firebase Git & Github Node Bootstrap
@@ -59,7 +59,9 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <DiPhp />
       </Col>
-
+      <Col xs={4} md={2} className="tech-icons">
+        <FaLaravel />
+      </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiNextdotjs />
       </Col>

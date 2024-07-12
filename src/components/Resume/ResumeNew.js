@@ -26,7 +26,7 @@ function ResumeNew() {
             My <span className="orange">CV</span>
           </h1>
           <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1 : 0.6} />
+            <Page pageNumber={1} scale={width > 786 ? 1.2 : 0.65} />
           </Document>
         </Row>
 
