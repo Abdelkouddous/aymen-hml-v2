@@ -9,15 +9,15 @@ import Resume from "../Resume/ResumeNew";
 
 function Home() {
   return (
-    <div>
-      <section id="home"></section>
+    <div id="home">
+      <section></section>
       <Container fluid className="home-section">
         <Particle />
         <Container className="home-content">
           <Row>
             <Col md={20} className="home-header">
               <h1 style={{ paddingBottom: 10 }} className="heading">
-                Hello There!{" "}
+                Hello There!
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
