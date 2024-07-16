@@ -12,6 +12,7 @@ import { GiSkills } from "react-icons/gi";
 import {
   AiFillStar,
   AiOutlineHome,
+  AiFillProject,
   // AiOutlineFundProjectionScreen,
   AiTwotoneContacts,
   AiFillMessage,
@@ -81,6 +82,14 @@ function NavBar() {
                 to=".about"
                  */}
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#projects" onClick={() => updateExpanded(false)}>
+                {/* as={Link}
+                to=".about"
+                 */}
+                <AiFillProject style={{ marginBottom: "2px" }} /> Projects
               </Nav.Link>
             </Nav.Item>
 
