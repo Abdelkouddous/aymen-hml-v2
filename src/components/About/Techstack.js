@@ -21,6 +21,7 @@ import {
   SiPostgresql,
   SiBootstrap,
 } from "react-icons/si";
+import { GiJasmine } from "react-icons/gi";
 import { TbBrandGolang } from "react-icons/tb";
 import { FaLaravel } from "react-icons/fa6";
 function Techstack() {
@@ -79,6 +80,9 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiPostgresql />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <GiJasmine />
       </Col>
     </Row>
   );
