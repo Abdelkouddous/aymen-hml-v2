@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import { RxCaretDown } from "react-icons/rx";
 // import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
+import { GiSkills } from "react-icons/gi";
 // import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
@@ -90,7 +91,7 @@ function NavBar() {
                 href="#project-heading"
                 onClick={() => updateExpanded(false)}
               >
-                <AiTwotoneContacts style={{ marginBottom: "2px" }} /> Skills
+                <GiSkills style={{ marginBottom: "2px" }} /> Skills
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
