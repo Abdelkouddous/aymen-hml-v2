@@ -5,7 +5,11 @@ function TypeName() {
   return (
     <Typewriter
       options={{
-        strings: ["Hamel Aymen Abdelkouddous", "A Full Stack developper "],
+        strings: [
+          "Hamel Aymen Abdelkouddous",
+          "a Software Engineer ",
+          "a Graphics Desginer",
+        ],
         autoStart: true,
         loop: true,
         deleteSpeed: 60,
