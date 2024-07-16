@@ -75,7 +75,6 @@ function NavBar() {
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item>
               <Nav.Link href="#about" onClick={() => updateExpanded(false)}>
                 {/* as={Link}
@@ -84,15 +83,6 @@ function NavBar() {
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="#projects" onClick={() => updateExpanded(false)}>
-                {/* as={Link}
-                to=".about"
-                 */}
-                <AiFillProject style={{ marginBottom: "2px" }} /> Projects
-              </Nav.Link>
-            </Nav.Item>
-
             <Nav.Item>
               <Nav.Link
                 // as={Link}
@@ -114,6 +104,14 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
+              <Nav.Link href="#projects" onClick={() => updateExpanded(false)}>
+                {/* as={Link}
+                to=".about"
+                 */}
+                <AiFillProject style={{ marginBottom: "2px" }} /> Projects
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
               <Nav.Link
                 href="#avatar"
                 // as={Link}
@@ -123,9 +121,7 @@ function NavBar() {
                 <AiFillMessage style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
-
-            {}
-
+            {}{" "}
             <Nav.Item className="fork-btn">
               <Button
                 href="https://github.com/Abdelkouddous"
