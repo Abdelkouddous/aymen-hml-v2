@@ -8,14 +8,14 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <span className="home-about-body-me">
-            Hi Everyone, I'am{" "}
+            Hello visitor, I'am{" "}
             <span className="orange">HAMEL Aymen Abdelkouddous </span>
             from <span className="orange"> Algeria.</span>
             <br></br>
-            I'am currently a junior software developper. I have completed
-            Master's Degree in Computer Systems and Multimedia at the University
-            of Tebessa, where I studied various fields such as : Programming,
-            Data Engineering, Data Science, Artificial Intelligence and System
+            I'am currently a junior software engineer. I have completed Master's
+            Degree in Computer Systems and Multimedia at the University of
+            Tebessa, where I studied various fields such as : Programming, Data
+            Engineering, Data Science, Artificial Intelligence and System
             Security...
             <br />
             <br />

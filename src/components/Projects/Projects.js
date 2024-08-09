@@ -11,7 +11,7 @@ import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
   return (
-    <Container fluid className="project-section">
+    <Container fluid className="project-section" id="projects">
       <Particle />
       <Container>
         <h1 className="project-heading">
@@ -36,6 +36,19 @@ function Projects() {
               isBlog={false}
               title="Virtual Recruitement Project"
               description="58Jobz a project similiar to LinkedIn"
+              ghLink="#"
+              demoLink="#"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={""}
+              isBlog={false}
+              title="Arabic Manuscript Dating Project"
+              description="This project was about creating a machine learning model
+              for automatically dating ancient arabic manuscripts, it was my master's degree 
+              end of studying project."
               ghLink="#"
               demoLink="#"
             />
