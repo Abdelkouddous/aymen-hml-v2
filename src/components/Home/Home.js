@@ -6,6 +6,7 @@ import Home2 from "./Home2";
 import About from "../About/About";
 import TypeName from "./Type-name";
 import Resume from "../Resume/ResumeNew";
+import Projects from "../Projects/Projects";
 
 function Home() {
   return (
@@ -48,6 +49,9 @@ function Home() {
           </Row>
           <Row>
             <Resume></Resume>
+          </Row>
+          <Row>
+            <Projects></Projects>
           </Row>
         </Container>
         <Home2 />
