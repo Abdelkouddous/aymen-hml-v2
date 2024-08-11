@@ -538,12 +538,15 @@ button:focus {
   box-shadow: 0 4px 5px 3px rgba(136, 99, 53, 0.459) !important;
   color: white !important;
   background-color: transparent !important;
-  opacity: 0.9 !important;
+  opacity: 0.85 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+  align-items: center !important;
+  display: flex !important;
+  vertical-align: center !important;
 }
 .project-card-view:hover {
-  transform: scale(1.02) !important;
+  transform: scale(1.05) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(144, 109, 72, 0.561) !important;
 }
