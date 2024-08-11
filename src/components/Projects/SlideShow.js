@@ -2,6 +2,7 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import ProjectCard from "./ProjectCards";
 import "react-slideshow-image/dist/styles.css";
+import Button from "react-bootstrap/Button";
 
 const spanStyle = {
   padding: "16px",
@@ -61,11 +62,34 @@ const slideImages = [
     caption: hello3,
   },
 ];
+//custom arrow buttons
+const buttonStyle = {
+  width: "35px",
+  background: "none",
+  border: "0px",
+};
 
+const properties = {
+  prevArrow: (
+    <Button style={{ ...buttonStyle }} className="fork-btn2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#ffd">
+        <path d="M242 180.6v-138L0 256l242 213.4V331.2h270V180.6z" />
+      </svg>
+    </Button>
+  ),
+  nextArrow: (
+    <Button style={{ ...buttonStyle }} className="fork-btn2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#ffd">
+        <path d="M512 256L270 42.6v138.2H0v150.6h270v138z" />
+      </svg>
+    </Button>
+  ),
+};
+//
 const SlideShow = () => {
   return (
     <div className="slide-container">
-      <Slide duration={2000}>
+      <Slide {...properties} duration={1500}>
         {slideImages.map((slideImage, index) => (
           <div key={index}>
             <div

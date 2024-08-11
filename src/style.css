@@ -38,6 +38,7 @@ html {
 
 button:focus {
   box-shadow: none !important;
+  /*scale: 1.05;*/
 }
 
 /* --------- */
@@ -801,9 +802,15 @@ button:focus {
   }
 }
 
-.fork-btn {
+.fork-btn,
+.fork-btn2 {
   font-size: 1.1em !important;
   padding-top: 10px !important;
+  align-items: center;
+}
+.fork-btn2:hover {
+  transform: translateY(-2px) !important;
+  background-color: #7960345d !important;
 }
 
 .fork-btn-inner {
