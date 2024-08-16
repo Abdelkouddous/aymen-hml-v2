@@ -809,8 +809,8 @@ button:focus {
   align-items: center;
 }
 .fork-btn2:hover {
-  transform: translateY(-2px) !important;
-  background-color: #7960345d !important;
+  transform: scale(1.05) !important;
+  background-color: #7960346d !important;
 }
 
 .fork-btn-inner {
