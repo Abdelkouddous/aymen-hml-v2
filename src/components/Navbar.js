@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -23,6 +23,20 @@ import { CgFileDocument } from "react-icons/cg";
 import Particle from "./Particle";
 
 function NavBar() {
+  // //
+  // const [theme, setTheme] = useState("light");
+  // const toggleTheme = () => {
+  //   if (theme === "light") {
+  //     setTheme("dark");
+  //   } else {
+  //     setTheme("light");
+  //   }
+  // };
+  // useEffect(() => {
+  //   document.body.className = theme;
+  // }, [theme]);
+  // //
+
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -64,6 +78,7 @@ function NavBar() {
             </span>
           </span>
         </Navbar.Toggle>
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
@@ -132,6 +147,10 @@ function NavBar() {
                 <AiFillStar style={{ fontSize: "1.1em" }} />
               </Button>
             </Nav.Item>
+            {/* <Nav.Item className={`App ${theme}`}>
+              <Button className={`App ${theme}`} onClick={toggleTheme}></Button>
+        
+            </Nav.Item> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

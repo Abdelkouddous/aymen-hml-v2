@@ -5,7 +5,7 @@ import {
   DiJavascript1,
   DiReact,
   DiNodejs,
-  DiMongodb,
+  //DiMongodb,
   DiPython,
   DiGit,
   DiJava,
@@ -22,7 +22,7 @@ import {
   SiBootstrap,
 } from "react-icons/si";
 import { GiJasmine } from "react-icons/gi";
-import { TbBrandGolang } from "react-icons/tb";
+//import { TbBrandGolang } from "react-icons/tb";
 import { FaLaravel } from "react-icons/fa6";
 function Techstack() {
   // my skills : HTML CSS JS PHP Python C++ C# JAVA

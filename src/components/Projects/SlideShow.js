@@ -5,17 +5,18 @@ import "react-slideshow-image/dist/styles.css";
 import Button from "react-bootstrap/Button";
 
 const spanStyle = {
-  padding: "16px",
+  padding: "10px",
   color: "#000000",
 };
 
 const divStyle = {
   display: "flex",
-  padding: "16px",
+  padding: "12px",
   alignItems: "center",
   justifyContent: "center",
   backgroundSize: "cover",
   height: "400px",
+  // backgroundColor: "darkblue",
 };
 const hello = (
   <ProjectCard
