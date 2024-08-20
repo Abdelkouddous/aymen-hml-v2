@@ -14,13 +14,15 @@ function Footer() {
   return (
     <Container fluid className="footer">
       <Row>
-        <Particle  />
+        <Particle />
+
         <Col md="4" className="footer-copywright">
           <h3>Designed and Developed by Aymen Abdelkouddous Hamel</h3>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} HML</h3>
         </Col>
+
         {/* HERE U CANT MODIFY 
         FOOTER COLOR */}
         <Col md="4" className="footer-body">

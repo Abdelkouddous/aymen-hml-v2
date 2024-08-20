@@ -1,4 +1,6 @@
 import React from "react";
+import myImg from "../../Assets/avatar.svg";
+// import Tilt from "react-parallax-tilt";
 import { Container, Row, Col } from "react-bootstrap";
 // import Nav from "react-bootstrap/Nav";
 // import Button from "react-bootstrap/Button";
@@ -10,6 +12,7 @@ import About from "../About/About";
 import TypeName from "./Type-name";
 import Resume from "../Resume/ResumeNew";
 import Projects from "../Projects/Projects";
+import Type from "./Type";
 
 function Home() {
   // const [theme, setTheme] = useState("light");
@@ -25,25 +28,33 @@ function Home() {
   // }, [theme]);
   return (
     <div id="home">
-      <section></section>
-
       <Container fluid className="home-section">
         <Particle />
-
         <Container className="home-content">
           <Row>
-            <Col md={20} className="home-header">
-              <h1 style={{ paddingBottom: 10 }} className="heading">
-                Hello There !
-                <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
-                </span>
-              </h1>
+            <Col lg={10} className="home-header" style={{ margin: "auto" }}>
+              <div className="home-card-view">
+                <h1 id="project-heading"></h1>
+                <img src={myImg} className="img-fluid" alt="avatar" />
 
-              <h1 className="heading-name">
-                I'M
+                <h1 style={{ paddingTop: 25 }} className="heading">
+                  Hello There !
+                  <span className="wave" role="img" aria-labelledby="wave">
+                    👋🏻
+                  </span>
+                  I'm
+                  <strong className="main-name">
+                    <Type></Type>
+                  </strong>
+                </h1>
+              </div>
+            </Col>
+            <Col md={10} className="home-header" style={{ margin: "auto" }}>
+              <h1 id="project-heading">
                 <strong className="main-name">
                   <TypeName />
+
+                  {/* <Tilt></Tilt> */}
                 </strong>
               </h1>
             </Col>
@@ -70,8 +81,10 @@ function Home() {
           <Row>
             <Projects></Projects>
           </Row>
+          <Row>
+            <Home2 />
+          </Row>
         </Container>
-        <Home2 />
       </Container>
     </div>
   );

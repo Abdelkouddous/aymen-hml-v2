@@ -16,25 +16,41 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ToggleButton } from "react-bootstrap";
+
+//dark mode provider
 
 function App() {
   const [load, upadateLoad] = useState(true);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   //
 
   useEffect(() => {
     const timer = setTimeout(() => {
       upadateLoad(false);
-    }, 1200);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.body.className = theme;
+  }, [theme]);
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
+    <div className={`App ${theme}`} id={load ? "no-scroll" : "scroll"}>
+      <Router>
+        <Preloader load={load} />
+
         <Navbar />
-        <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
@@ -42,9 +58,11 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        <ScrollToTop />
+
         <Footer />
-      </div>
-    </Router>
+      </Router>{" "}
+    </div>
   );
 }
 

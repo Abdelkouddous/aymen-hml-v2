@@ -5,14 +5,12 @@ function TypeName() {
   return (
     <Typewriter
       options={{
-        strings: [
-          "Hamel Aymen Abdelkouddous",
-          "a Software Engineer ",
-          "a Graphics Desginer",
-        ],
+        strings: [" 1️⃣ Software Engineer ✅ ", "2️⃣ Graphics Desginer ✅"],
         autoStart: true,
         loop: true,
-        deleteSpeed: 60,
+        deleteSpeed: 80,
+        delay: 100,
+        // cursor: "⎰",
       }}
     />
   );

@@ -5,10 +5,12 @@ function Type() {
   return (
     <Typewriter
       options={{
-        strings: ["Full Stack Developer", " Graphic Designer"],
+        strings: "Hamel Aymene Abdelkouddous",
         autoStart: true,
-        loop: true,
-        deleteSpeed: 60,
+        delay: 1,
+        loop: false,
+        deleteSpeed: false,
+        // cursor: "⎰",
       }}
     />
   );

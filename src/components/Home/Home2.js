@@ -16,12 +16,6 @@ function Home2() {
         <Container fluid className="home-about-section">
           <Container>
             <Row>
-              <Col md={12} className="myAvtar" id="avatar">
-                {/* <Tilt></Tilt> */}
-                <img src={myImg} className="img-fluid" alt="avatar" />
-              </Col>
-            </Row>
-            <Row>
               <Col md={12} className="home-about-social">
                 <h1>FIND ME ON</h1>
                 <p>

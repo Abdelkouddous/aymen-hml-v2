@@ -6,6 +6,10 @@
   height: 40vmin;
   pointer-events: none;
 }
+.dark {
+  background-color: #1d1c1b;
+  color: #ffe;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -36,4 +40,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Container {
+  display: flex;
+  height: 50px;
+  width: 50px;
+}
+
+.Container-dark {
+  background-color: #1d1c1b;
+  color: #fff;
+}
+
+.Container-light {
+  background-color: #ffe;
+  color: #333;
 }
