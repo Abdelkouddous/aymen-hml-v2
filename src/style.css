@@ -307,8 +307,20 @@ button:focus {
 }
 
 .heading {
-  font-size: 2.4em !important;
+  font-size: 2em !important;
   padding-left: 40px !important;
+}
+@media (max-width: 767px) {
+  .heading {
+    font-size: 1.1em !important;
+  }
+  #tsparticles {
+    position: relative !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    width: 30%;
+    height: 30%;
+  }
 }
 
 .heading-name {

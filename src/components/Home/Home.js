@@ -4,7 +4,6 @@ import myImg from "../../Assets/avatar.svg";
 import { Container, Row, Col } from "react-bootstrap";
 // import Nav from "react-bootstrap/Nav";
 // import Button from "react-bootstrap/Button";
-
 // import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
@@ -33,18 +32,21 @@ function Home() {
         <Container className="home-content">
           <Row>
             <Col md={10} className="home-header" style={{ margin: "auto" }}>
-              <img src={myImg} className="img-fluid" alt="avatar" />
-
-              <h1 style={{ paddingTop: 25 }} className="heading">
-                Hello There !
-                <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
-                </span>
-                I'm
-                <strong className="main-name">
-                  <Type></Type>
-                </strong>
-              </h1>
+              <div className="home-card-view">
+                <img src={myImg} className="img-fluid" alt="avatar" />
+                {/*  */}
+                <h1 style={{ paddingTop: 40 }} className="heading">
+                  Hello There !
+                  <span className="wave" role="img" aria-labelledby="wave">
+                    👋🏻
+                  </span>
+                  <p> </p>
+                  I'm <p style={{ textAlign: "center" }}> </p>
+                  <strong className="main-name">
+                    <Type></Type>
+                  </strong>
+                </h1>
+              </div>
             </Col>
           </Row>
           <Row>
