@@ -32,7 +32,7 @@ function Home() {
         <Particle />
         <Container className="home-content">
           <Row>
-            <Col lg={10} className="home-header" style={{ margin: "auto" }}>
+            <Col md={10} className="home-header" style={{ margin: "auto" }}>
               <div className="home-card-view">
                 <h1 id="project-heading"></h1>
                 <img src={myImg} className="img-fluid" alt="avatar" />
@@ -49,6 +49,8 @@ function Home() {
                 </h1>
               </div>
             </Col>
+          </Row>
+          <Row>
             <Col md={10} className="home-header" style={{ margin: "auto" }}>
               <h1 id="project-heading">
                 <strong className="main-name">
