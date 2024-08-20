@@ -33,21 +33,18 @@ function Home() {
         <Container className="home-content">
           <Row>
             <Col md={10} className="home-header" style={{ margin: "auto" }}>
-              <div className="home-card-view">
-                <h1 id="project-heading"></h1>
-                <img src={myImg} className="img-fluid" alt="avatar" />
+              <img src={myImg} className="img-fluid" alt="avatar" />
 
-                <h1 style={{ paddingTop: 25 }} className="heading">
-                  Hello There !
-                  <span className="wave" role="img" aria-labelledby="wave">
-                    👋🏻
-                  </span>
-                  I'm
-                  <strong className="main-name">
-                    <Type></Type>
-                  </strong>
-                </h1>
-              </div>
+              <h1 style={{ paddingTop: 25 }} className="heading">
+                Hello There !
+                <span className="wave" role="img" aria-labelledby="wave">
+                  👋🏻
+                </span>
+                I'm
+                <strong className="main-name">
+                  <Type></Type>
+                </strong>
+              </h1>
             </Col>
           </Row>
           <Row>
