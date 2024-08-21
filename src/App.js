@@ -34,10 +34,10 @@ function App() {
   }, []);
 
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
+    if (theme === "") {
       setTheme("light");
+    } else {
+      setTheme("");
     }
   };
   useEffect(() => {
@@ -48,9 +48,7 @@ function App() {
     <div className={`App ${theme}`} id={load ? "no-scroll" : "scroll"}>
       <Router>
         <Preloader load={load} />
-
         <Navbar />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
