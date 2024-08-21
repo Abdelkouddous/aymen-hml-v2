@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Particle from "../Particle";
+
 import pdf from "../../Assets/../Assets/CV_Abdelkouddous_HAMEL_eng.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -18,15 +18,14 @@ function ResumeNew() {
   return (
     <div id="CV">
       <Container fluid className="resume-section" id="resumeCV">
-        <Particle />
-
         <Row className="resume">
           <h1 className="project-heading">
             {" "}
             My <span className="orange">CV</span>
           </h1>
           <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.2 : 0.65} />
+            <Page pageNumber={1} scale={width > 767 ? 1.2 : 0.8} />
+            {/* <Page pageNumber={2} scale={width > 767 ? 1.2 : 0.8} /> */}
           </Document>
         </Row>
 

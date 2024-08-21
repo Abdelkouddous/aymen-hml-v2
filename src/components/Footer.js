@@ -14,8 +14,6 @@ function Footer() {
   return (
     <Container fluid className="footer">
       <Row>
-        <Particle />
-
         <Col md="4" className="footer-copywright">
           <h3>Designed and Developed by Aymen Abdelkouddous Hamel</h3>
         </Col>

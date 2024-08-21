@@ -3,6 +3,7 @@ import { Slide } from "react-slideshow-image";
 import ProjectCard from "./ProjectCards";
 import "react-slideshow-image/dist/styles.css";
 import Button from "react-bootstrap/Button";
+// import { VerticalAlignBottom } from "@mui/icons-material";
 
 const spanStyle = {
   padding: "10px",
@@ -11,11 +12,12 @@ const spanStyle = {
 
 const divStyle = {
   display: "flex",
-  padding: "12px",
+  padding: "15px",
+
   alignItems: "center",
   justifyContent: "center",
   backgroundSize: "cover",
-  height: "400px",
+  height: "500px",
   // backgroundColor: "darkblue",
 };
 const hello = (
@@ -65,7 +67,8 @@ const slideImages = [
 ];
 //custom arrow buttons
 const buttonStyle = {
-  width: "35px",
+  width: "40px",
+  height: "40px",
   background: "none",
   border: "0px",
 };
@@ -73,14 +76,14 @@ const buttonStyle = {
 const properties = {
   prevArrow: (
     <Button style={{ ...buttonStyle }} className="fork-btn2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#ffd">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#ffc">
         <path d="M242 180.6v-138L0 256l242 213.4V331.2h270V180.6z" />
       </svg>
     </Button>
   ),
   nextArrow: (
     <Button style={{ ...buttonStyle }} className="fork-btn2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#ffd">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#ffc">
         <path d="M512 256L270 42.6v138.2H0v150.6h270v138z" />
       </svg>
     </Button>

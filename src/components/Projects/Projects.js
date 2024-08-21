@@ -9,7 +9,6 @@ import SlideShow from "./SlideShow";
 function Projects() {
   return (
     <Container fluid className="project-section" id="projects">
-      <Particle />
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="orange">Projects </strong>

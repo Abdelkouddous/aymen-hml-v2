@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 // import Nav from "react-bootstrap/Nav";
 // import Button from "react-bootstrap/Button";
 // import homeLogo from "../../Assets/home-main.svg";
-import Particle from "../Particle";
+// import Particle from "../Particle";
 import Home2 from "./Home2";
 import About from "../About/About";
 import TypeName from "./Type-name";
@@ -28,7 +28,6 @@ function Home() {
   return (
     <div id="home">
       <Container fluid className="home-section">
-        <Particle />
         <Container className="home-content">
           <Row>
             <Col md={10} className="home-header" style={{ margin: "auto" }}>
@@ -49,18 +48,14 @@ function Home() {
               </div>
             </Col>
           </Row>
-          <Row>
-            <Col md={10} className="home-header" style={{ margin: "auto" }}>
-              <h1 id="project-heading">
-                <strong className="main-name">
+          <Container className="home-content-mid">
+            <Row>
+              <h1 id="project-heading" style={{ margin: "auto" }}>
+                <strong className="main-name" style={{ margin: "auto" }}>
                   <TypeName />
-
-                  {/* <Tilt></Tilt> */}
                 </strong>
               </h1>
-            </Col>
-
-            {/* IMAGE FOR CODING
+              {/* IMAGE FOR CODING
             <Col md={5} style={{ paddingBottom: 20 }}>
               <img
                 src={homeLogo}
@@ -69,23 +64,23 @@ function Home() {
                 style={{ maxHeight: "450px" }}
               />
             </Col> */}
-
-            <section id="about"></section>
-            <Col></Col>
-          </Row>
-          <Row>
-            <About />
-          </Row>
-          <Row>
-            <Resume></Resume>
-          </Row>
-          <Row>
-            <Projects></Projects>
-          </Row>
-          <Row>
-            <Home2 />
-          </Row>
+            </Row>
+          </Container>
         </Container>
+
+        <section id="about"></section>
+        <Row>
+          <About />
+        </Row>
+        <Row>
+          <Resume></Resume>
+        </Row>
+        <Row>
+          <Projects></Projects>
+        </Row>
+        <Row>
+          <Home2 />
+        </Row>
       </Container>
     </div>
   );
