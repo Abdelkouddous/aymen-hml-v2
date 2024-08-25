@@ -49,31 +49,17 @@ function Home() {
                   <strong className="main-name">
                     <Type></Type>
                   </strong>
+                  <br></br>
+                </h1>
+                <h1>
+                  <strong className="main-name">
+                    <TypeName />
+                  </strong>
                 </h1>
               </div>
             </div>
           </Col>
         </Row>
-        <Container className="home-content-mid">
-          <Row>
-            <div>
-              <h1 id="project-heading" style={{ margin: "auto" }}>
-                <strong className="main-name" style={{ margin: "auto" }}>
-                  <TypeName />
-                </strong>
-              </h1>
-            </div>
-            {/* IMAGE FOR CODING
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
-            </Col> */}
-          </Row>
-        </Container>
 
         <section id="about"></section>
         <Row>
