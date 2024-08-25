@@ -1,5 +1,5 @@
 import React from "react";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/image.png";
 // import Tilt from "react-parallax-tilt";
 import { Container, Row, Col } from "react-bootstrap";
 // import Nav from "react-bootstrap/Nav";
@@ -28,13 +28,18 @@ function Home() {
   return (
     <div id="home">
       <Container fluid className="home-section">
-        <Container className="home-content">
-          <Row>
-            <Col md={10} className="home-header" style={{ margin: "auto" }}>
-              <div className="home-card-view">
-                <img src={myImg} className="img-fluid" alt="avatar" />
-                {/*  */}
-                <h1 style={{ paddingTop: 40 }} className="heading">
+        <Row>
+          <Col className="home-header" style={{ padding: "auto" }}>
+            <div className="home-card-view">
+              <img
+                src={myImg}
+                style={{ minHeight: "50%", maxWidth: "50%" }}
+                alt="avatar"
+              />
+              {/*  */}
+              <div>
+                {" "}
+                <h1 className="heading">
                   Hello There !
                   <span className="wave" role="img" aria-labelledby="wave">
                     👋🏻
@@ -46,16 +51,19 @@ function Home() {
                   </strong>
                 </h1>
               </div>
-            </Col>
-          </Row>
-          <Container className="home-content-mid">
-            <Row>
+            </div>
+          </Col>
+        </Row>
+        <Container className="home-content-mid">
+          <Row>
+            <div>
               <h1 id="project-heading" style={{ margin: "auto" }}>
                 <strong className="main-name" style={{ margin: "auto" }}>
                   <TypeName />
                 </strong>
               </h1>
-              {/* IMAGE FOR CODING
+            </div>
+            {/* IMAGE FOR CODING
             <Col md={5} style={{ paddingBottom: 20 }}>
               <img
                 src={homeLogo}
@@ -64,8 +72,7 @@ function Home() {
                 style={{ maxHeight: "450px" }}
               />
             </Col> */}
-            </Row>
-          </Container>
+          </Row>
         </Container>
 
         <section id="about"></section>
