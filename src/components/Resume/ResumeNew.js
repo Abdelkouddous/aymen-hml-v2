@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-
-import pdf from "../../Assets/../Assets/CV_Abdelkouddous_HAMEL_eng.pdf";
+//Import for CV files
+import pdf from "../../Assets/../Assets/CV_eng_v2.pdf";
+//
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -16,7 +17,7 @@ function ResumeNew() {
   }, []);
 
   return (
-    <div id="CV">
+    <div id="CV" style={{ overflow: "scroll" }}>
       <Container fluid className="resume-section" id="resumeCV">
         <Row className="resume">
           <h1 className="project-heading">
@@ -25,7 +26,7 @@ function ResumeNew() {
           </h1>
           <Document file={pdf} className="d-flex justify-content-center">
             <Page pageNumber={1} scale={width > 767 ? 1.2 : 0.8} />
-            {/* <Page pageNumber={2} scale={width > 767 ? 1.2 : 0.8} /> */}
+            <Page pageNumber={2} scale={width > 767 ? 1.2 : 0.8} />
           </Document>
         </Row>
 
