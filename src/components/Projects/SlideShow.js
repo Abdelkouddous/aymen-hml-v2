@@ -3,21 +3,20 @@ import { Slide } from "react-slideshow-image";
 import ProjectCard from "./ProjectCards";
 import "react-slideshow-image/dist/styles.css";
 import Button from "react-bootstrap/Button";
+import path from "../../Assets/Projects/foodapp.gif";
 // import { VerticalAlignBottom } from "@mui/icons-material";
 
 const spanStyle = {
-  padding: "10px",
+  padding: "3px",
   color: "#000000",
 };
 
 const divStyle = {
   display: "flex",
-  padding: "15px",
-
+  padding: "12px",
   alignItems: "center",
   justifyContent: "center",
   backgroundSize: "cover",
-  height: "500px",
   // backgroundColor: "darkblue",
 };
 const hello = (
@@ -51,6 +50,17 @@ const hello3 = (
     demoLink="#"
   />
 );
+
+const hello4 = (
+  <ProjectCard
+    imgPath={path}
+    title="Food recipe app"
+    description="A front-end application that shows recipes for food
+    made with spoonacular api and react"
+    ghLink="https://github.com/Abdelkouddous/food-recipe-app"
+    demoLink="#"
+  />
+);
 const slideImages = [
   {
     url: "",
@@ -64,12 +74,16 @@ const slideImages = [
     url: "",
     caption: hello3,
   },
+  {
+    url: "",
+    caption: hello4,
+  },
 ];
 //custom arrow buttons
 const buttonStyle = {
-  width: "40px",
-  height: "40px",
-  background: "none",
+  width: "32px",
+  height: "32px",
+  background: "transparent",
   border: "0px",
 };
 
@@ -93,7 +107,7 @@ const properties = {
 const SlideShow = () => {
   return (
     <div className="slide-container">
-      <Slide {...properties} duration={1500}>
+      <Slide {...properties} duration={2000}>
         {slideImages.map((slideImage, index) => (
           <div key={index}>
             <div

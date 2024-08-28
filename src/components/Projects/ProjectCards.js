@@ -6,14 +6,16 @@ import { BsGithub } from "react-icons/bs";
 
 function ProjectCards(props) {
   return (
-    <Card className="project-card-view">
+    <Card className="project-card-view ">
       <Card.Img
         variant="top"
         src={props.imgPath}
         alt="card-img"
-        style={{ height: "100px", width: "200px" }}
+        style={{ height: "300px", width: "300px" }}
       />
-      <Card.Body style={{ height: "250px", width: "500px" }}>
+      <Card.Body
+        style={{ margin: "auto", maxWidth: "300px", maxHeight: "400px" }}
+      >
         <Card.Title style={{ textAlign: "center" }}>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
@@ -34,8 +36,7 @@ function ProjectCards(props) {
             target="_blank"
             style={{ marginLeft: "10px" }}
           >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
+            <CgWebsite /> &nbsp; {"Demo"}
           </Button>
         )}
       </Card.Body>

@@ -9,12 +9,10 @@ import SlideShow from "./SlideShow";
 function Projects() {
   return (
     <Container fluid className="project-section" id="projects">
-      <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="orange">Projects </strong>
-        </h1>
-        <SlideShow></SlideShow>
-      </Container>
+      <h1 className="project-heading">
+        My Recent <strong className="orange">Projects </strong>
+      </h1>
+      <SlideShow></SlideShow>
     </Container>
   );
 }

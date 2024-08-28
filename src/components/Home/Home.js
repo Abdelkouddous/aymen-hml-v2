@@ -51,6 +51,7 @@ function Home() {
                   </strong>
                   <br></br>
                 </h1>
+                <p></p>
                 <h1>
                   <strong className="main-name">
                     <TypeName />

@@ -295,8 +295,8 @@ button:focus {
   position: relative;
   background-color: rgb(2, 2, 2);
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
-  background-position: top center;
-  background-repeat: repeat;
+  background-position: top center !important;
+  background-repeat: repeat !important;
   padding-bottom: 0px !important;
   padding-top: 0px !important;
 }
@@ -326,7 +326,7 @@ button:focus {
 }
 
 .heading-name {
-  font-size: 2.4em !important;
+  font-size: 1.7em !important;
   padding-left: 2px !important;
   text-align: center;
 }
@@ -337,7 +337,7 @@ button:focus {
   /* color: #cd5ff8; */
   color: #ffd37b;
   font-size: 0.9em;
-  margin-top: 24px !important;
+  margin-top: 12px !important;
 }
 
 .Typewriter__wrapper {
@@ -378,6 +378,7 @@ button:focus {
   /* set index to 1 to hover
   correctly */
   position: relative;
+  margin: auto;
   /* background-image: var(--section-background-color) !important; */
   /* background-color: black; */
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
@@ -395,7 +396,7 @@ button:focus {
 }
 
 .home-about-body {
-  padding-top: 50px;
+  padding-top: 30px;
   font-size: 1.2em !important;
   text-align: left;
 }
@@ -537,31 +538,34 @@ button:focus {
   position: relative !important;
   padding-top: 30px !important;
   padding-bottom: 30px !important;
-  /* background-image: var(--section-background-color) !important; */
+  min-height: 100%;
+  min-width: 500px;
+  background-image: var(--section-background-color) !important;
 }
 
 .project-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
   padding-left: 25px !important;
-  padding-right: 25px !important;
-  height: auto !important;
+  /* /* padding-right: 25px !important;  */
+  min-height: 100% !important;
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(136, 99, 53, 0.459) !important;
+  /* box-shadow: 0 4px 5px 3px rgba(136, 99, 53, 0.459) !important; */
   color: white !important;
   background-color: transparent !important;
-  opacity: 0.85 !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
-  align-items: center !important;
+  opacity: 0.95 !important;
+  padding: 20px !important;
+
   display: flex !important;
+  justify-content: space-around !important;
   vertical-align: center !important;
 }
 .project-card-view:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
+  transition: all 0.5s ease 0.3s !important;
   box-shadow: 0 4px 4px 5px rgba(144, 109, 72, 0.561) !important;
 }
 
@@ -571,7 +575,7 @@ button:focus {
   background-color: transparent !important;
   opacity: 0.95 !important;
   transition: all 0.5s ease 0s !important;
-  height: 100% !important;
+  min-height: 100% !important;
   min-width: 100%;
   align-items: center !important;
   display: flex !important;
@@ -614,6 +618,7 @@ button:focus {
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
+  /* height: 20px; */
 }
 
 .blog-img {
@@ -718,7 +723,7 @@ button:focus {
 
 .resume-section {
   position: relative !important;
-  padding-top: 110px !important;
+  padding-top: 90px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
@@ -728,7 +733,7 @@ button:focus {
   padding-top: 50px;
   padding-bottom: 50px;
   justify-content: center;
-  overflow: scroll;
+  /* overflow: scroll; */
   display: none;
 }
 
@@ -751,7 +756,7 @@ button:focus {
     padding-left: 10px !important;
   }
   .resume {
-    overflow: auto;
+    /* overflow: auto; */
     display: none;
   }
 }
@@ -804,7 +809,9 @@ button:focus {
   background: #fff;
   border: 2px solid #ffbd3a;
 }
-
+/* 
+buttons
+ */
 .like-item {
   padding-top: 10px !important;
   font-size: 1.1em !important;
@@ -867,105 +874,3 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
-
-/* ======= */
-/* light mode */
-/*  */
-html.light {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(33, 27, 2, 0.942) /* rgba(12, 8, 24, 0.904)*/ ;
-  );
-
-  --image-gradient: linear-gradient(
-    to bottom left,
-    #0c0c0cad,
-    /* rgba(12, 10, 22, 0.863) */ #000000f0
-  );
-
-  /* --imp-text-color: #c770f0; */
-  --imp-text-color: #ffd37b;
-}
-/*  CSS for Dark to Very Dark Orange Gradient 
-html {
-  --section-background-color: linear-gradient(
-    to top left,
-    rgba(17, 16, 16, 0.582),
-    rgba(33, 27, 2, 0.942)
-  );
-
-  --image-gradient: linear-gradient(
-    to top left,
-    #0c0c0cad,
-    #000000f0
-  );
-
-  --imp-text-color: #ffd37b;
-}
- */
-
-.orange {
-  color: var(--imp-text-color) !important;
-}
-
-/* --------- */
-/*  Preloader */
-/* --------- */
-#preloader.light {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999999;
-  background-color: #faf1d1;
-  /* background-color: #ffd37b; */
-  background-image: url(./Assets/pre.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#preloader-none.light {
-  opacity: 0;
-}
-
-#no-scroll.light {
-  overflow: hidden;
-  height: 100vh;
-}
-/* --------- */
-/*  Preloader */
-/* --------- */
-
-/* --------- */
-/*Scrollbar   */
-/* --------- */
-
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #ffd37b66;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  /* background: rgba(178, 121, 216, 0.959); */
-  background: #ffd37b;
-  border-radius: 12px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  /* background: rgba(222, 130, 235, 0.911); */
-  background: #ffd37b66;
-  border-radius: 12px;
-}
-/* light orange: #ffd37b
-    dark orange: #ffd37b66 */
-/* --------- */
-/* Navbar Section  */
-/* --------- */
