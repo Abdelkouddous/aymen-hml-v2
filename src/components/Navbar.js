@@ -115,7 +115,7 @@ function NavBar() {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link
-                href="#avatar"
+                href="#introduce"
                 // as={Link}
                 // to="#contact"
                 onClick={() => updateExpanded(false)}

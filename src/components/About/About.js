@@ -40,7 +40,7 @@ function About() {
           </Col>
         </Row>
         {/* <h1 id="project-heading" style={{ padding: "40px" }}></h1> */}
-        <h1 className="project-heading">
+        <h1 className="project-heading" id="project-heading">
           Professional <strong className="orange">Skillset </strong>
         </h1>
 
