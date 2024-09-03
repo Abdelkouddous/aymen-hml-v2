@@ -56,7 +56,7 @@ const hello4 = (
     imgPath={path}
     title="Food recipe app"
     description="A front-end application that shows recipes for food
-    made with spoonacular api and react"
+    made with spoonacular API and ReactJS combined with TailWind CSS"
     ghLink="https://github.com/Abdelkouddous/food-recipe-app"
     demoLink="#"
   />
