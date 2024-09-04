@@ -318,17 +318,19 @@ button:focus {
 .heading {
   font-size: 1.8em !important;
   padding-left: 2px !important;
+  margin-bottom: 30px !important;
 }
-@media (max-width: 767px) {
+@media (max-width: 1092px) {
   .heading {
     font-size: 1.2em !important;
   }
 }
 
 .heading-name {
-  font-size: 1.7em !important;
+  font-size: 1.2em !important;
   padding-left: 2px !important;
   text-align: center;
+  margin-bottom: 20px !important;
 }
 
 .main-name {
