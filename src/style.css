@@ -316,7 +316,7 @@ button:focus {
 }
 
 .heading {
-  font-size: 2em !important;
+  font-size: 1.8em !important;
   padding-left: 2px !important;
 }
 @media (max-width: 767px) {
