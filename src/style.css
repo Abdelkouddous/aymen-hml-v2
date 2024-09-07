@@ -113,10 +113,12 @@ button:focus {
 .navbar {
   background-color: #1d1c1b;
   position: fixed !important;
+  width: 98% !important;
+  margin: auto !important;
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .navbar-toggler {
@@ -381,6 +383,7 @@ button:focus {
   correctly */
   position: relative;
   margin: auto;
+
   /* background-image: var(--section-background-color) !important; */
   /* background-color: black; */
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
@@ -584,6 +587,7 @@ button:focus {
   vertical-align: center !important;
   padding: 2px;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 .blog-card {
   padding-top: 50px !important;
