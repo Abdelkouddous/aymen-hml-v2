@@ -1,13 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
-import Tilt from "react-parallax-tilt";
+// import myImg from "../../Assets/avatar.svg";
+// import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
   AiOutlineFacebook,
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Form } from "./Form";
 
 function Home2() {
   return (
@@ -16,11 +17,14 @@ function Home2() {
         <Container fluid className="home-about-section">
           <Container>
             <Row>
-              <Col md={12} className="home-about-social">
+              <Col md={16} className="home-about-social">
                 <h1>FIND ME ON</h1>
                 <p>
                   Feel free to <span className="orange">connect </span>with me
                 </p>
+                {/*  */}
+                <Form></Form>
+                {/*  */}
                 <ul className="home-about-social-links">
                   <li className="social-icons">
                     <a

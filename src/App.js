@@ -16,8 +16,9 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { ToggleButton } from "react-bootstrap";
+// import { ToggleButton } from "react-bootstrap";
 
+import { Form } from "./components/Home/Form";
 //dark mode provider
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <ScrollToTop />
+
       <Footer />
     </Router>
   );

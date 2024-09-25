@@ -24,6 +24,7 @@ function ResumeNew() {
         padding: "2px",
         margin: "auto",
       }}
+      className="fade-bottom "
     >
       <Container fluid className="resume-section" id="resumeCV">
         <Row className="resume">

@@ -108,7 +108,7 @@ const properties = {
 //
 const SlideShow = () => {
   return (
-    <div className="slide-container">
+    <div className="slide-container fade-bottom  ">
       <Slide {...properties} duration={2000}>
         {slideImages.map((slideImage, index) => (
           <div key={index}>

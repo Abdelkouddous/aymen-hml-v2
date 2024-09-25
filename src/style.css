@@ -33,6 +33,58 @@ html {
 }
  */
 
+/*
+*/
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/*
+*/
 .orange {
   color: var(--imp-text-color) !important;
 }
@@ -40,6 +92,31 @@ html {
 button:focus {
   box-shadow: none !important;
   transform: scale(1.05);
+}
+
+.btn-submit {
+  position: relative !important;
+  display: block !important;
+  border: none;
+  text-align: center !important;
+  font-size: 1.1em !important;
+  line-height: 2em !important;
+  background-color: rgba(255, 255, 255, 0.99) !important;
+  color: #ffbd3a;
+  border-radius: 5% !important;
+  transition: 0.3s !important;
+}
+.btn-submit:hover {
+  box-shadow: 0 0 8px #ffd37b;
+  border: solid 0.3px;
+  border-color: #ffbd3a;
+  /* text-shadow: 0 0 1px rgb(231, 160, 38); */
+  transition: 0.3s !important;
+}
+
+.btn-submit:active {
+  background-color: #ffbd3a;
+  color: #fffbdb;
 }
 
 /* --------- */
@@ -637,15 +714,14 @@ button:focus {
   color: #fff !important;
   background-color: #ffbd3a !important;
   border-color: #ffbd3a !important;
-  box-shadow: 0 0 6 #131005 !important;
 }
 
 .btn-primary:hover {
-  color: #fff !important;
-  /* background-color: #6d20c5d7 !important;
-  border-color: #6d20c5d7 !important; */
-  background-color: #ffbd3a !important;
-  border-color: #ffbd3a !important;
+  color: #ffbd3a !important;
+  box-shadow: 4px 5px 4px 3px rgba(168, 94, 4, 0.137) !important;
+  background-color: #fffbdb !important;
+  /* border-color: #ffbd3a !important; */
+  scale: 1.03;
 }
 .btn:focus {
   outline: none !important;

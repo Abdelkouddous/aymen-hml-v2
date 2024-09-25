@@ -26,7 +26,7 @@ function Home() {
   //   document.body.className = theme;
   // }, [theme]);
   return (
-    <div id="home">
+    <div id="home reveal reveal-fade">
       <Container fluid className="home-section">
         <Row>
           <Col className="home-header" style={{ padding: "auto" }}>
