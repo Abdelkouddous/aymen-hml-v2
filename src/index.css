@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 body {
+  transition: all 0.5s ease 0.6s !important;
   margin: 3px;
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;

@@ -20,7 +20,6 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
-import Particle from "./Particle";
 
 //
 function NavBar() {
@@ -44,7 +43,7 @@ function NavBar() {
       expand="xl"
       className={navColour ? "sticky" : "navbar"}
     >
-      <Particle></Particle>
+      {/* <Particle></Particle> */}
       <Container>
         <Navbar.Brand href="/" className="d-flex">
           <img src={logo} className="img-fluid logo" alt="brand" />

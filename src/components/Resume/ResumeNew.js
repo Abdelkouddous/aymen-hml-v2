@@ -17,16 +17,26 @@ function ResumeNew() {
   }, []);
 
   return (
-    <div id="CV" style={{ overflow: "scroll" }}>
+    <div
+      id="CV"
+      style={{
+        overflow: "scroll",
+        padding: "2px",
+        margin: "auto",
+      }}
+    >
       <Container fluid className="resume-section" id="resumeCV">
         <Row className="resume">
           <h1 className="project-heading">
             {" "}
             My <span className="orange">CV</span>
           </h1>
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 767 ? 1.2 : 0.8} />
-            <Page pageNumber={2} scale={width > 767 ? 1.2 : 0.8} />
+          <Document
+            file={pdf}
+            className="d-flex justify-content-center pl-2 pr-2"
+          >
+            <Page pageNumber={1} scale={width > 767 ? 0.75 : 0.45} />
+            <Page pageNumber={2} scale={width > 767 ? 0.75 : 0.45} />
           </Document>
         </Row>
 

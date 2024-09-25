@@ -17,6 +17,8 @@ const divStyle = {
   alignItems: "center",
   justifyContent: "center",
   backgroundSize: "cover",
+  maxWidth: "75%",
+  margin: "auto",
   // backgroundColor: "darkblue",
 };
 const hello = (

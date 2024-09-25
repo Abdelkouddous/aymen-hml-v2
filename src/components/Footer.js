@@ -6,7 +6,6 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import Particle from "./Particle";
 
 function Footer() {
   let date = new Date();
@@ -15,11 +14,14 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Aymen Abdelkouddous Hamel</h3>
+          <h3>Copyright © {year} HML Tech.</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3> © {year} HML Tech. All rights reserved.</h3>
+          <h3> All rights reserved.</h3>
         </Col>
+
+        {/*   Copyright © 2024 HML Tech. <br></br>
+          All rights reserved */}
 
         {/* HERE U CANT MODIFY 
         FOOTER COLOR */}
