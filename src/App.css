@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   min-width: screen;
+  overflow: auto !important;
 }
 
 .App-logo {
