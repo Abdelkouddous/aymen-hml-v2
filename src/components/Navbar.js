@@ -20,6 +20,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { ThemeToggle } from "./theme-toggler";
 
 //
 function NavBar() {
@@ -133,7 +134,9 @@ function NavBar() {
                 <AiFillStar style={{ fontSize: "1.1em" }} />
               </Button>
             </Nav.Item>
-            <Nav.Item></Nav.Item>
+            {/* <Nav.Item className="theme-toggler">
+              <ThemeToggle></ThemeToggle>
+            </Nav.Item> */}
             {/* <Nav.Item className={`App ${theme}`}>
               <Button className={`App ${theme}`} onClick={toggleTheme}></Button>
             </Nav.Item> */}

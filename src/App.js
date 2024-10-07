@@ -19,6 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import { ToggleButton } from "react-bootstrap";
 
 import { Form } from "./components/Home/Form";
+import { ThemeProvider } from "react-bootstrap";
 //dark mode provider
 
 function App() {
@@ -47,18 +48,20 @@ function App() {
   }, [theme]);
   return (
     <Router>
-      <Preloader load={load} />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/project" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
-      <ScrollToTop />
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <Preloader load={load} />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+        <ScrollToTop />
 
-      <Footer />
+        <Footer />
+      </ThemeProvider>
     </Router>
   );
 }
