@@ -11,7 +11,7 @@ function ProjectCards(props) {
         variant="top"
         src={props.imgPath}
         alt="card-img"
-        style={{ height: "300px", width: "300px" }}
+        style={{ height: "300px", width: "400px" }}
       />
       <Card.Body
         style={{ margin: "auto", maxWidth: "300px", maxHeight: "400px" }}

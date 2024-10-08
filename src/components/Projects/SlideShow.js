@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCards";
 import "react-slideshow-image/dist/styles.css";
 import Button from "react-bootstrap/Button";
 import path from "../../Assets/Projects/foodapp.gif";
+import pulsePath from "../../Assets/Projects/Pulse.png";
 // import { VerticalAlignBottom } from "@mui/icons-material";
 
 const spanStyle = {
@@ -23,11 +24,11 @@ const divStyle = {
 };
 const hello = (
   <ProjectCard
-    imgPath="https://clipart-library.com/new_gallery/31-313080_coming-soon-hd-png.png"
-    title="E-Commerce Project"
-    description="Personal E-Commerce project similiar to Amazon"
-    ghLink="#"
-    demoLink="#"
+    imgPath={pulsePath}
+    title="Book Appointment Project"
+    description="Personal doctor book appointment project that shows my NextJS skills"
+    ghLink="https://github.com/Abdelkouddous/book-appointment-app"
+    demoLink="https://hmlbookapp.netlify.app/"
   />
 );
 
