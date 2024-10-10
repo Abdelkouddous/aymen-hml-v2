@@ -35,18 +35,11 @@ html {
 
 /*
 */
-.reveal {
-  position: relative;
-  opacity: 0;
-}
 
-.reveal.active {
-  opacity: 1;
-}
 .active.fade-bottom {
-  animation: fade-bottom 1s ease-in;
+  animation: fade-bottom 1s ease-in-out;
 }
-.active.fade-left {
+.fade-left {
   animation: fade-left 1s ease-in;
 }
 .active.fade-right {
@@ -54,7 +47,7 @@ html {
 }
 @keyframes fade-bottom {
   0% {
-    transform: translateY(50px);
+    transform: translateY(100px);
     opacity: 0;
   }
   100% {
@@ -460,7 +453,7 @@ button:focus {
   correctly */
   position: relative;
   margin: auto;
-
+  height: 100vh;
   /* background-image: var(--section-background-color) !important; */
   /* background-color: black; */
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);

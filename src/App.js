@@ -14,7 +14,7 @@ import {
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
-import "./App.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { ToggleButton } from "react-bootstrap";
 

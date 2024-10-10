@@ -12,7 +12,10 @@ import { DiPhotoshop, DiIllustrator } from "react-icons/di";
 
 function Toolstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+    <Row
+      style={{ justifyContent: "center", paddingBottom: "50px" }}
+      className="text-white"
+    >
       <Col xs={4} md={2} className="tech-icons">
         <SiMacos />
         {/* <span className="tech-text">Since 2022</span> */}

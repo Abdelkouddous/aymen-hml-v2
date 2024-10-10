@@ -33,7 +33,10 @@ function Techstack() {
   // React Next Firebase Git & Github Node Bootstrap
   // Postgre MySQL
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+    <Row
+      style={{ justifyContent: "center", paddingBottom: "50px" }}
+      className="text-white"
+    >
       <Col xs={4} md={2} className="tech-icons">
         <SiHtml5 />
 

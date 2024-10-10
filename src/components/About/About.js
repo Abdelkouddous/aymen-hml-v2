@@ -9,7 +9,7 @@ import Toolstack from "./Toolstack";
 
 function About() {
   return (
-    <div>
+    <div className="">
       <Container fluid className="about-section">
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
@@ -40,11 +40,6 @@ function About() {
           </Col>
         </Row>
         {/* <h1 id="project-heading" style={{ padding: "40px" }}></h1> */}
-        <h1 className="project-heading" id="project-heading">
-          Professional <strong className="orange">Skillset </strong>
-        </h1>
-
-        <Techstack />
 
         <h1 className="project-heading">
           <strong className="orange">Tools</strong> I use
