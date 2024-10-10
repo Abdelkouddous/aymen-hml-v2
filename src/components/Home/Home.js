@@ -11,26 +11,34 @@ import Resume from "../Resume/ResumeNew";
 import Projects from "../Projects/Projects";
 import Type from "./Type";
 import { ThemeToggle } from "../theme-toggler";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Toolstack from "../About/Toolstack";
 import AboutCard from "../About/AboutCard";
 
 function Home() {
   const sectionsRef = useRef([]);
-
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "2px",
-      threshold: 0.25,
+      rootMargin: "-60px", // Trigger slightly outside the viewport
+      threshold: 0.01, // Lower threshold for smoother transitions
     };
+
+    let isVisible = new Set(); // Track visible sections to avoid redundant re-renders
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("fade-left");
+          if (!isVisible.has(entry.target)) {
+            entry.target.classList.add("fade-left");
+            isVisible.add(entry.target); // Add the section to visible set
+          }
         } else {
-          entry.target.classList.remove("fade-left");
+          // Delay the removal to create a smoother transition
+          setTimeout(() => {
+            entry.target.classList.remove("fade-left");
+            isVisible.delete(entry.target); // Remove section from visible set
+          }, 1000); // Adjust delay as needed
         }
       });
     }, observerOptions);
@@ -45,17 +53,18 @@ function Home() {
       });
     };
   }, []);
-  // const [theme, setTheme] = useState("light");
-  // const toggleTheme = () => {
-  //   if (theme === "light") {
-  //     setTheme("dark");
-  //   } else {
-  //     setTheme("light");
-  //   }
-  // };
-  // useEffect(() => {
-  //   document.body.className = theme;
-  // }, [theme]);
+
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
   return (
     <div id="home ">
       <Container fluid className="home-section ">

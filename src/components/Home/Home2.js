@@ -18,14 +18,16 @@ function Home2() {
           <Container>
             <Row>
               <Col md={16} className="home-about-social">
-                <h1>FIND ME ON</h1>
-                <p>
-                  Feel free to <span className="orange">connect </span>with me
-                </p>
+                <h1> CONTACT ME </h1>
+
                 {/*  */}
                 <Form></Form>
+
                 {/*  */}
                 <ul className="home-about-social-links">
+                  <p>
+                    Feel free to <span className="orange">connect </span>with me
+                  </p>
                   <li className="social-icons">
                     <a
                       href="https://github.com/Abdelkouddous"
