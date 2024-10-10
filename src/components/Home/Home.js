@@ -22,7 +22,7 @@ function Home() {
     const observerOptions = {
       root: null,
       rootMargin: "2px",
-      // threshold: 0.1,
+      threshold: 0.25,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -99,31 +99,31 @@ function Home() {
           </Row>
         </section>
 
-        <section>
+        <section ref={(el) => (sectionsRef.current[2] = el)}>
           <h1 className="project-heading" id="project-heading">
             Professional <strong className="orange">Skillset </strong>
           </h1>
 
           <Techstack />
         </section>
-        <section>
+        <section ref={(el) => (sectionsRef.current[3] = el)}>
           <h1 className="project-heading">
             <strong className="orange">Tools</strong> I use
           </h1>
           <Toolstack />
         </section>
 
-        <section id="resume" ref={(el) => (sectionsRef.current[2] = el)}>
+        <section id="resume" ref={(el) => (sectionsRef.current[4] = el)}>
           <Row>
             <Resume></Resume>
           </Row>
         </section>
-        <section id="projects" ref={(el) => (sectionsRef.current[3] = el)}>
+        <section id="projects" ref={(el) => (sectionsRef.current[5] = el)}>
           <Row>
             <Projects></Projects>
           </Row>
         </section>
-        <section id="contact" ref={(el) => (sectionsRef.current[4] = el)}>
+        <section id="contact" ref={(el) => (sectionsRef.current[6] = el)}>
           <Row>
             <Home2 />
           </Row>
