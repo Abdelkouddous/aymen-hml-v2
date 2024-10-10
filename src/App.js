@@ -24,7 +24,7 @@ import { ThemeProvider } from "react-bootstrap";
 
 function App() {
   const [load, upadateLoad] = useState(true);
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
   //
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function App() {
   }, [theme]);
   return (
     <Router>
-      <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
         <Preloader load={load} />
         <Navbar />
         <Routes>

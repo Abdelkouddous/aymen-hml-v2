@@ -2,6 +2,7 @@ import "../../App.css";
 import { send } from "emailjs-com";
 import React from "react";
 import { useState } from "react";
+import { RxRowSpacing } from "react-icons/rx";
 
 export const Form = () => {
   const [toSend, setToSend] = useState({
@@ -28,17 +29,19 @@ export const Form = () => {
 
   const styleDiv = {
     display: "flex",
-    justifyContent: "space-between",
-    padding: "5px",
-    margin: "auto",
+    justifyContent: "space-evenly",
+    padding: "2px",
+    width: "100%",
+    margin: " 3px auto",
   };
 
   const styleMainDiv = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    margin: 20,
-    background: "transparent",
+    margin: "auto",
+    backgroundColor: "transparent",
+    // background: "transparent",
   };
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -83,7 +86,7 @@ export const Form = () => {
             value={toSend.message}
             onChange={handleChange}
             required
-            rows="5"
+            rows="4"
           />
         </div>
 
