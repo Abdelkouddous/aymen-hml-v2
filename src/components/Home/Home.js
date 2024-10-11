@@ -30,13 +30,13 @@ function Home() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           if (!isVisible.has(entry.target)) {
-            entry.target.classList.add("fade-left");
+            entry.target.classList.add("fade-left-visible");
             isVisible.add(entry.target); // Add the section to visible set
           }
         } else {
           // Delay the removal to create a smoother transition
           setTimeout(() => {
-            entry.target.classList.remove("fade-left");
+            entry.target.classList.remove("fade-left-visible");
             isVisible.delete(entry.target); // Remove section from visible set
           }, 1000); // Adjust delay as needed
         }
@@ -68,7 +68,7 @@ function Home() {
   return (
     <div id="home ">
       <Container fluid className="home-section ">
-        <Row>
+        <Row className="fade-left" ref={(el) => (sectionsRef.current[0] = el)}>
           <Col className="home-header" style={{ padding: "auto" }}>
             <div className="home-card-view " style={{ height: "50vh" }}>
               <img
@@ -77,7 +77,7 @@ function Home() {
                 alt="avatar"
               />
               {/*  */}
-              <div ref={(el) => (sectionsRef.current[0] = el)}>
+              <div>
                 {" "}
                 <h1 className="heading">
                   Hello There !
@@ -102,37 +102,58 @@ function Home() {
           </Col>
         </Row>
 
-        <section id="about" ref={(el) => (sectionsRef.current[1] = el)}>
-          <Row>
+        <section id="about">
+          <Row
+            className="fade-left"
+            ref={(el) => (sectionsRef.current[1] = el)}
+          >
             <About />
           </Row>
         </section>
 
-        <section ref={(el) => (sectionsRef.current[2] = el)}>
+        <section
+          className="fade-left"
+          ref={(el) => (sectionsRef.current[2] = el)}
+        >
           <h1 className="project-heading" id="project-heading">
             Professional <strong className="orange">Skillset </strong>
           </h1>
 
           <Techstack />
         </section>
-        <section ref={(el) => (sectionsRef.current[3] = el)}>
+        <section
+          className="fade-left"
+          ref={(el) => (sectionsRef.current[3] = el)}
+        >
           <h1 className="project-heading">
             <strong className="orange">Tools</strong> I use
           </h1>
           <Toolstack />
         </section>
 
-        <section id="resume" ref={(el) => (sectionsRef.current[4] = el)}>
+        <section
+          id="resume"
+          className="fade-left"
+          ref={(el) => (sectionsRef.current[4] = el)}
+        >
           <Row>
             <Resume></Resume>
           </Row>
         </section>
-        <section id="projects" ref={(el) => (sectionsRef.current[5] = el)}>
+        <section
+          id="projects"
+          className="fade-left"
+          ref={(el) => (sectionsRef.current[5] = el)}
+        >
           <Row>
             <Projects></Projects>
           </Row>
         </section>
-        <section id="contact" ref={(el) => (sectionsRef.current[6] = el)}>
+        <section
+          id="contact"
+          className="fade-left"
+          ref={(el) => (sectionsRef.current[6] = el)}
+        >
           <Row>
             <Home2 />
           </Row>

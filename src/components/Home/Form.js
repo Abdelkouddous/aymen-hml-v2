@@ -29,10 +29,10 @@ export const Form = () => {
 
   const styleDiv = {
     display: "flex",
-    justifyContent: "space-evenly",
-    padding: "2px",
+    justifyContent: "space-between",
+    padding: "1px",
     width: "100%",
-    margin: " 3px auto",
+    margin: " 2px auto",
   };
 
   const styleMainDiv = {
@@ -41,7 +41,6 @@ export const Form = () => {
     alignItems: "center",
     margin: "auto",
     backgroundColor: "transparent",
-    // background: "transparent",
   };
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });

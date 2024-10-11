@@ -20,9 +20,10 @@ function ResumeNew() {
     <div
       id="CV"
       style={{
-        overflow: "scroll",
+        overflow: "auto",
         padding: "2px",
         margin: "auto",
+        width: "100vh",
       }}
       className="fade-bottom "
     >
@@ -37,6 +38,11 @@ function ResumeNew() {
             className="d-flex justify-content-center pl-2 pr-2"
           >
             <Page pageNumber={1} scale={width > 767 ? 0.75 : 0.45} />
+          </Document>
+          <Document
+            file={pdf}
+            className="d-flex justify-content-center pl-2 pr-2"
+          >
             <Page pageNumber={2} scale={width > 767 ? 0.75 : 0.45} />
           </Document>
         </Row>
