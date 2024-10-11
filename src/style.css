@@ -53,6 +53,19 @@ its something shows in a very cute way
   opacity: 1;
   animation: fade-left 1s ease-in;
 }
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* =====+++++++++================================================= */
 /* ================================ */
 
 .active.fade-right {
@@ -69,19 +82,6 @@ its something shows in a very cute way
     opacity: 1;
   }
 }
-@keyframes fade-left {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* =====+++++++++================================================= */
 
 @keyframes fade-right {
   0% {
