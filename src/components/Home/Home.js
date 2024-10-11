@@ -21,7 +21,7 @@ function Home() {
     const observerOptions = {
       root: null,
       rootMargin: "-60px", // Trigger slightly outside the viewport
-      threshold: 0.01, // Lower threshold for smoother transitions
+      threshold: 0.0, // Lower threshold for smoother transitions
     };
 
     let isVisible = new Set(); // Track visible sections to avoid redundant re-renders
