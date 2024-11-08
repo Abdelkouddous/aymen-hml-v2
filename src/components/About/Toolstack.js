@@ -6,6 +6,7 @@ import {
   SiSlack,
   SiVercel,
   SiMacos,
+  SiPostman,
 } from "react-icons/si";
 
 import { DiPhotoshop, DiIllustrator } from "react-icons/di";
@@ -20,6 +21,7 @@ function Toolstack() {
         <SiMacos />
         {/* <span className="tech-text">Since 2022</span> */}
       </Col>
+
       <Col xs={4} md={2} className="tech-icons">
         <SiVisualstudiocode />
         {/* <p className="tech-text">Since 2020</p> */}
@@ -44,6 +46,9 @@ function Toolstack() {
         <DiIllustrator />
         {/* <span className="tech-text">Since 2023</span> */}
       </Col>
+      {/* added to my techstack later on ... */}
+      {/* <SiVercel></SiVercel>
+      <SiPostman></SiPostman> */}
     </Row>
   );
 }

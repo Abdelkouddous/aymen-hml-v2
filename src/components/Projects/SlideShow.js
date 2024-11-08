@@ -22,39 +22,39 @@ const divStyle = {
   margin: "auto",
   // backgroundColor: "darkblue",
 };
-const hello = (
+const project = (
   <ProjectCard
     imgPath={pulsePath}
     title="Book Appointment Project"
     description="Personal doctor book appointment project that shows my NextJS skills"
-    ghLink="https://github.com/Abdelkouddous/book-appointment-app"
-    demoLink="https://hmlbookapp.netlify.app/"
+    ghLink="https://github.com/Abdelkouddous/care-pulse-v1"
+    demoLink="https://pulse-hml.netlify.app/"
   />
 );
 
-const hello2 = (
-  <ProjectCard
-    imgPath="https://clipart-library.com/new_gallery/31-313080_coming-soon-hd-png.png"
-    title="Virtual Recruitement Project"
-    description="58Jobz a project similiar to LinkedIn"
-    ghLink="#"
-    demoLink="#"
-  />
-);
+// const project2 = (
+//   <ProjectCard
+//     imgPath="https://clipart-library.com/new_gallery/31-313080_coming-soon-hd-png.png"
+//     title="Virtual Recruitement Project"
+//     description="58Jobz a project similiar to LinkedIn"
+//     ghLink="#"
+//     demoLink="#"
+//   />
+// );
 
-const hello3 = (
-  <ProjectCard
-    imgPath="https://clipart-library.com/new_gallery/31-313080_coming-soon-hd-png.png"
-    title="Arabic Manuscript Dating Project"
-    description="This project was about creating a machine learning model
-  for automatically dating ancient arabic manuscripts, it was my master's degree 
-  end of studying project."
-    ghLink="#"
-    demoLink="#"
-  />
-);
+// const project3 = (
+//   <ProjectCard
+//     imgPath="https://clipart-library.com/new_gallery/31-313080_coming-soon-hd-png.png"
+//     title="Arabic Manuscript Dating Project"
+//     description="This project was about creating a machine learning model
+//   for automatically dating ancient arabic manuscripts, it was my master's degree
+//   end of studying project."
+//     ghLink="#"
+//     demoLink="#"
+//   />
+// );
 
-const hello4 = (
+const project4 = (
   <ProjectCard
     imgPath={path}
     title="Food recipe app"
@@ -67,19 +67,19 @@ const hello4 = (
 const slideImages = [
   {
     url: "",
-    caption: hello,
+    caption: project,
   },
+  // {
+  //   url: "",
+  //   caption: project2,
+  // },
+  // {
+  //   url: "",
+  //   caption: project3,
+  // },
   {
     url: "",
-    caption: hello2,
-  },
-  {
-    url: "",
-    caption: hello3,
-  },
-  {
-    url: "",
-    caption: hello4,
+    caption: project4,
   },
 ];
 //custom arrow buttons
