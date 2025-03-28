@@ -21,6 +21,7 @@ import {
   SiMysql,
   SiPostgresql,
   SiBootstrap,
+  SiMongodb,
 } from "react-icons/si";
 import { GiJasmine } from "react-icons/gi";
 //import { TbBrandGolang } from "react-icons/tb";
@@ -37,27 +38,19 @@ function Techstack() {
       style={{ justifyContent: "center", paddingBottom: "50px" }}
       className="text-white"
     >
+      {/* Highest percentages first */}
       <Col xs={4} md={2} className="tech-icons">
-        <SiHtml5 />
+        <DiGit />
+        <Box
+          height={50}
+          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+        >
+          <LinearProgress color="success" variant="determinate" value={90} />
+          <h4 className="tech-text">90%</h4>
+        </Box>
+      </Col>
 
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="success" variant="determinate" value={75} />
-          <h4 className="tech-text">75%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCss3 />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="success" variant="determinate" value={80} />
-          <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
+      {/* JavaScript and its ecosystem */}
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
         <Box
@@ -69,53 +62,13 @@ function Techstack() {
         </Box>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiBootstrap />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="success" variant="determinate" value={75} />
-          <h4 className="tech-text">75%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="success" variant="determinate" value={60} />
-          <h4 className="tech-text">60%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="success" variant="determinate" value={75} />
-          <h4 className="tech-text">75%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="success" variant="determinate" value={60} />
-          <h4 className="tech-text">60%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
         <DiNodejs />
         <Box
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={60} />
-          <h4 className="tech-text">60%</h4>
+          <LinearProgress color="success" variant="determinate" value={80} />
+          <h4 className="tech-text">80%</h4>
         </Box>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -134,10 +87,56 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={70} />
-          <h4 className="tech-text">70%</h4>
+          <LinearProgress color="success" variant="determinate" value={80} />
+          <h4 className="tech-text">80%</h4>
         </Box>
       </Col>
+
+      {/* Python */}
+      <Col xs={4} md={2} className="tech-icons">
+        <DiPython />
+        <Box
+          height={50}
+          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+        >
+          <LinearProgress color="success" variant="determinate" value={80} />
+          <h4 className="tech-text">80%</h4>
+        </Box>
+      </Col>
+
+      {/* Frontend technologies */}
+      <Col xs={4} md={2} className="tech-icons">
+        <SiCss3 />
+        <Box
+          height={50}
+          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+        >
+          <LinearProgress color="success" variant="determinate" value={80} />
+          <h4 className="tech-text">80%</h4>
+        </Box>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiHtml5 />
+        <Box
+          height={50}
+          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+        >
+          <LinearProgress color="success" variant="determinate" value={75} />
+          <h4 className="tech-text">75%</h4>
+        </Box>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiBootstrap />
+        <Box
+          height={50}
+          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+        >
+          <LinearProgress color="success" variant="determinate" value={75} />
+          <h4 className="tech-text">75%</h4>
+        </Box>
+      </Col>
+
+      {/* PHP and Laravel */}
       <Col xs={4} md={2} className="tech-icons">
         <DiPhp />
         <Box
@@ -158,18 +157,30 @@ function Techstack() {
           <h4 className="tech-text">75%</h4>
         </Box>
       </Col>
+
+      {/* Databases */}
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <SiMysql />
         <Box
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={90} />
-          <h4 className="tech-text">90%</h4>
+          <LinearProgress color="success" variant="determinate" value={80} />
+          <h4 className="tech-text">80%</h4>
         </Box>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiFlutter />
+        <SiMongodb></SiMongodb>
+        <Box
+          height={50}
+          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+        >
+          <LinearProgress color="success" variant="determinate" value={70} />
+          <h4 className="tech-text">70%</h4>
+        </Box>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiPostgresql />
         <Box
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
@@ -188,18 +199,20 @@ function Techstack() {
           <h4 className="tech-text">60%</h4>
         </Box>
       </Col>
+
+      {/* Other technologies */}
       <Col xs={4} md={2} className="tech-icons">
-        <SiMysql />
+        <CgCPlusPlus />
         <Box
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={80} />
-          <h4 className="tech-text">80%</h4>
+          <LinearProgress color="success" variant="determinate" value={65} />
+          <h4 className="tech-text">65%</h4>
         </Box>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
+        <SiFlutter />
         <Box
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}

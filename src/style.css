@@ -51,13 +51,13 @@ its something shows in a very cute way
 ======================= */
 .fade-left-visible {
   opacity: 1;
-  animation: fade-left 1s ease-in;
+  animation: fade-left 1s ease-in-out;
 }
 @keyframes fade-left {
   0% {
     transform: translateX(-100px);
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0.1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
   100% {
     transform: translateX(0);
@@ -1020,4 +1020,21 @@ input {
 .form-control {
   background-color: var(--card-background);
   color: var(--text-color);
+}
+/*  28/03/2025 */
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
 }

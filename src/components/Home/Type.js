@@ -5,7 +5,7 @@ function Type() {
   return (
     <Typewriter
       options={{
-        strings: "Hamel Aymen Abdelkouddous",
+        strings: "Hamel Aymen",
         autoStart: true,
         delay: 0.7,
         loop: false,

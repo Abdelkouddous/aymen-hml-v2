@@ -65,99 +65,171 @@ function Home() {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
+
   return (
-    <div id="home ">
-      <Container fluid className="home-section ">
-        <Row className="fade-left" ref={(el) => (sectionsRef.current[0] = el)}>
-          <Col className="home-header" style={{ padding: "auto" }}>
-            <div className="home-card-view " style={{ height: "50vh" }}>
-              <img
-                src={myImg}
-                style={{ minHeight: "50%", maxWidth: "50%" }}
-                alt="avatar"
-              />
-              {/*  */}
-              <div>
-                {" "}
+    <div id="home">
+      <Container fluid className="home-section">
+        {/* Hero Section */}
+        <Row className="justify-content-center align-items-center">
+          <Col
+            md={10}
+            lg={8}
+            className="text-center"
+            style={{ marginTop: "2rem" }}
+          >
+            <div
+              className="home-card-view"
+              style={{
+                minHeight: "60vh",
+                display: "flex",
+                flexDirection: "row", // Changed from column to row
+                alignItems: "center",
+                justifyContent: "space-between", // Adjust spacing
+                gap: "2rem",
+                padding: "2rem",
+                position: "relative",
+              }}
+            >
+              {/* Text Content */}
+              <div
+                style={{
+                  flex: 1, // Takes available space
+                  position: "relative",
+                  zIndex: 1,
+                  maxWidth: "600px", // Adjusted for better proportion
+                  textAlign: "left", // Align text to left for horizontal layout
+                }}
+              >
                 <h1 className="heading">
-                  Hello There !
+                  Hello There!{" "}
                   <span className="wave" role="img" aria-labelledby="wave">
                     👋🏻
                   </span>
-                  <p> </p>
-                  I'm <p style={{ textAlign: "center" }}> </p>
+                  I'm{" "}
                   <strong className="main-name">
-                    <Type></Type>
+                    <Type />
                   </strong>
-                  <br></br>
                 </h1>
-                <p></p>
-                <h1>
+
+                <div style={{ marginTop: "1.5rem" }}>
                   <strong className="main-name ">
-                    <TypeName />
+                    <span>A</span> <TypeName />
                   </strong>
-                </h1>
+                </div>
+              </div>
+
+              {/* Image Container */}
+              <div
+                style={{
+                  flexShrink: 0, // Prevent image from shrinking
+                  width: "250px",
+                  height: "250px",
+                  borderRadius: "15px",
+                  overflow: "hidden", // Ensure borderRadius works with image
+                }}
+              >
+                <img
+                  src={myImg}
+                  alt="home pic"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+
+              {/* Theme Toggle */}
+              <div
+                className="home-about-social"
+                style={{
+                  position: "absolute",
+                  top: "1rem",
+                  right: "1rem",
+                }}
+              >
+                {/* <ThemeToggle toggleTheme={toggleTheme} /> */}
               </div>
             </div>
           </Col>
         </Row>
+        {/* Other Sections */}
+        <div
+          style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}
+        >
+          {/* About Section */}
+          <section id="about" className="text-center my-5">
+            <Row
+              className="fade-left justify-content-center"
+              ref={(el) => (sectionsRef.current[0] = el)}
+            >
+              <Col md={12}>
+                <About />
+              </Col>
+            </Row>
+          </section>
 
-        <section id="about">
-          <Row
-            className="fade-left"
-            ref={(el) => (sectionsRef.current[1] = el)}
+          {/* Skillset Section */}
+          <section
+            className="fade-left text-center my-5"
+            ref={(el) => (sectionsRef.current[2] = el)}
           >
-            <About />
-          </Row>
-        </section>
+            <h1 className="project-heading" id="project-heading">
+              Professional <strong className="orange">Skillset </strong>
+            </h1>
+            <Techstack />
+          </section>
 
-        <section
-          className="fade-left"
-          ref={(el) => (sectionsRef.current[2] = el)}
-        >
-          <h1 className="project-heading" id="project-heading">
-            Professional <strong className="orange">Skillset </strong>
-          </h1>
+          {/* Tools Section */}
+          <section
+            className="fade-left text-center my-5"
+            ref={(el) => (sectionsRef.current[3] = el)}
+          >
+            <h1 className="project-heading">
+              <strong className="orange">Tools</strong> I use
+            </h1>
+            <Toolstack />
+          </section>
 
-          <Techstack />
-        </section>
-        <section
-          className="fade-left"
-          ref={(el) => (sectionsRef.current[3] = el)}
-        >
-          <h1 className="project-heading">
-            <strong className="orange">Tools</strong> I use
-          </h1>
-          <Toolstack />
-        </section>
+          {/* Resume Section */}
+          <section
+            id="resume"
+            className="fade-left text-center my-5"
+            ref={(el) => (sectionsRef.current[4] = el)}
+          >
+            <Row className="justify-content-center">
+              <Col md={12}>
+                <Resume />
+              </Col>
+            </Row>
+          </section>
 
-        <section
-          id="resume"
-          className="fade-left"
-          ref={(el) => (sectionsRef.current[4] = el)}
-        >
-          <Row>
-            <Resume></Resume>
-          </Row>
-        </section>
-        <section
-          id="projects"
-          className="fade-left"
-          ref={(el) => (sectionsRef.current[5] = el)}
-        >
-          <Row>
-            <Projects></Projects>
-          </Row>
-        </section>
-        <section
-          id="contact"
-          className="fade-left"
-          ref={(el) => (sectionsRef.current[6] = el)}
-        >
-          <Row>
-            <Home2 />
-          </Row>
-        </section>
+          {/* Projects Section */}
+          <section
+            id="projects"
+            className="fade-left text-center my-5"
+            ref={(el) => (sectionsRef.current[5] = el)}
+          >
+            <Row className="justify-content-center">
+              <Col md={12}>
+                <Projects />
+              </Col>
+            </Row>
+          </section>
+
+          {/* Contact Section */}
+          <section
+            id="contact"
+            className="fade-left text-center my-5"
+            ref={(el) => (sectionsRef.current[6] = el)}
+          >
+            <Row className="justify-content-center">
+              <Col md={12}>
+                <Home2 />
+              </Col>
+            </Row>
+          </section>
+        </div>
       </Container>
     </div>
   );

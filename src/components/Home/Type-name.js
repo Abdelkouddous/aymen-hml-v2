@@ -6,11 +6,12 @@ function TypeName() {
     <Typewriter
       options={{
         strings: [
-          " Software Developer  ",
-          " Graphics Desginer ",
-          "Database Administrator",
+          " Software Engineer  ",
+          " Full Stack Developer ",
+          // " Graphics Desginer ",
+          // "Database Administrator",
           // 'Cyber Security Analyst',
-          "Data Analyst",
+          // "Data Analyst",
 
           // "Big Data Engineer",
         ],

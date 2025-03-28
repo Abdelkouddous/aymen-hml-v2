@@ -15,11 +15,12 @@ function AboutCard() {
             I'am currently a junior software engineer. I have completed{" "}
             <span className="orange">Master's Degree</span> in{" "}
             <span className="orange">Computer Systems and Multimedia</span> at
-            the University of Tebessa, where I studied various fields such as :
+            the University of Tebessa, where I studied various courseworks such
+            as :
             <ul>
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
-                <span className="orange"> Programming</span>
+                <span className="orange"> Full Stack Engineering</span>
               </li>
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
