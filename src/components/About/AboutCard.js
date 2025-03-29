@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImArrowRight, ImPointRight } from "react-icons/im";
+import { ImArrowRight } from "react-icons/im";
 
 function AboutCard() {
   return (
@@ -35,19 +35,7 @@ function AboutCard() {
                 <span className="orange"> Networks Security</span>
               </li>
             </ul>
-            Apart from coding, some other activities that I love to do!
           </span>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Sports
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Playing video games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Travelling
-            </li>
-          </ul>
 
           <p style={{ color: "whitesmoke" }}>
             "The best way to learn to code is to code"{" "}

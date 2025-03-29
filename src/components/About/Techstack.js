@@ -1,15 +1,12 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg";
-import LoadingBar from "react-top-loading-bar";
 import {
   DiJavascript1,
   DiReact,
   DiNodejs,
-  //DiMongodb,
   DiPython,
   DiGit,
-  DiJava,
   DiPhp,
 } from "react-icons/di";
 import {
@@ -24,7 +21,6 @@ import {
   SiMongodb,
 } from "react-icons/si";
 import { GiJasmine } from "react-icons/gi";
-//import { TbBrandGolang } from "react-icons/tb";
 import { FaLaravel } from "react-icons/fa6";
 
 import LinearProgress from "@mui/material/LinearProgress";
@@ -36,8 +32,11 @@ function Techstack() {
   return (
     <Row
       style={{ justifyContent: "center", paddingBottom: "50px" }}
-      className="text-white"
+      className="text-white tool-stack-container"
     >
+      <h1 className="project-heading" id="project-heading">
+        Professional <strong className="orange">Skillset </strong>
+      </h1>
       {/* Highest percentages first */}
       <Col xs={4} md={2} className="tech-icons">
         <DiGit />

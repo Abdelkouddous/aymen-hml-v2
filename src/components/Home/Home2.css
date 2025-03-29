@@ -1,0 +1,11 @@
+/* src/components/Home/Home2.css */
+.contact-container {
+  background-color: #0a0416;
+  position: relative;
+  z-index: 1;
+}
+
+#contact-section {
+  padding-top: 2rem;
+  padding-bottom: 0;
+}

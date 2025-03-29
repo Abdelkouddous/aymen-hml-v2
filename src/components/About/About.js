@@ -1,25 +1,15 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
 import Github from "./Github";
-import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about2.png";
-import Toolstack from "./Toolstack";
 
 function About() {
   return (
     <div className="">
       <Container fluid className="about-section">
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
-          >
+        <Row className="flex justify-center align-items-center">
+          <Col md={6}>
             <h1
               style={{
                 textAlign: "center",
@@ -40,11 +30,6 @@ function About() {
           </Col>
         </Row>
         {/* <h1 id="project-heading" style={{ padding: "40px" }}></h1> */}
-
-        <h1 className="project-heading">
-          <strong className="orange">Tools</strong> I use
-        </h1>
-        <Toolstack />
 
         <Github />
       </Container>

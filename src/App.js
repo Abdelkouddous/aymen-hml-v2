@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
-import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import {
   BrowserRouter as Router,
@@ -17,15 +16,10 @@ import "./style.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { ToggleButton } from "react-bootstrap";
-
-import { Form } from "./components/Home/Form";
-import { ThemeProvider } from "react-bootstrap";
 //dark mode provider
 
 function App() {
   const [load, upadateLoad] = useState(true);
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
-  //
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -35,33 +29,18 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  const toggleTheme = () => {
-    if (theme === "") {
-      setTheme("light");
-    } else {
-      setTheme("");
-    }
-  };
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-    document.body.className = theme;
-  }, [theme]);
   return (
     <Router>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-        <Preloader load={load} />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-        <ScrollToTop />
-
-        <Footer />
-      </ThemeProvider>
+      <Preloader load={load} />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project" element={<Projects />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+      <ScrollToTop />
     </Router>
   );
 }

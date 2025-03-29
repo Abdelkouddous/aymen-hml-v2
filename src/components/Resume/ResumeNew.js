@@ -17,17 +17,8 @@ function ResumeNew() {
   }, []);
 
   return (
-    <div
-      id="CV"
-      style={{
-        overflow: "auto",
-        padding: "2px",
-        margin: "auto",
-        width: "100vh",
-      }}
-      className="fade-bottom "
-    >
-      <Container fluid className="resume-section" id="resumeCV">
+    <div id="CV" className="fade-bottom tool-stack-container ">
+      <Container fluid className="resume-section " id="resumeCV">
         <Row className="resume">
           <h1 className="project-heading">
             {" "}

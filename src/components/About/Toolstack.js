@@ -7,15 +7,16 @@ import {
   SiVercel,
   SiMacos,
   SiPostman,
+  SiAnaconda,
 } from "react-icons/si";
 
-import { DiPhotoshop, DiIllustrator } from "react-icons/di";
+import { DiDocker } from "react-icons/di";
 
 function Toolstack() {
   return (
     <Row
       style={{ justifyContent: "center", paddingBottom: "50px" }}
-      className="text-white"
+      className="text-white "
     >
       <Col xs={4} md={2} className="tech-icons">
         <SiMacos />
@@ -31,6 +32,9 @@ function Toolstack() {
         {/* <span className="tech-text">Since 2018</span> */}
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiAnaconda></SiAnaconda>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <SiSlack />
         {/* <span className="tech-text">Since 2024</span> */}
       </Col>
@@ -39,16 +43,16 @@ function Toolstack() {
         {/* <span className="tech-text">Since 2024</span> */}
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiPhotoshop />
+        <DiDocker></DiDocker>
         {/* <span className="tech-text">Since 2023</span> */}
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiIllustrator />
+        <SiPostman></SiPostman>
         {/* <span className="tech-text">Since 2023</span> */}
       </Col>
       {/* added to my techstack later on ... */}
       {/* <SiVercel></SiVercel>
-      <SiPostman></SiPostman> */}
+       */}
     </Row>
   );
 }

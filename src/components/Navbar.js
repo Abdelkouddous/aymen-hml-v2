@@ -20,7 +20,6 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
-import { ThemeToggle } from "./theme-toggler";
 
 //
 function NavBar() {
@@ -40,7 +39,7 @@ function NavBar() {
   return (
     <Navbar
       expanded={expand}
-      fixed="top"
+      sticky="top"
       expand="xl"
       className={navColour ? "sticky" : "navbar"}
     >
