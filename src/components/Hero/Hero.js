@@ -16,9 +16,8 @@ const Hero = () => {
               to my Portfolio
             </h1>
             <p className="hero-text">
-              Hi, I'm <strong className="orange">Abdelkouddous</strong>, I am a
-              passionate software engineer with a knack for creating dynamic and
-              responsive web applications.
+              Passionate software engineer with a knack for creating dynamic and
+              responsive full stack web applications.
             </p>
 
             <div className=" flex justify-center align-items-center ">
