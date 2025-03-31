@@ -8,7 +8,9 @@ function TypeName() {
         options={{
           strings: [
             " Software Engineer  ",
+
             " Full Stack Developer ",
+            "AI Engineer",
             // " Graphics Desginer ",
             // "Database Administrator",
             // 'Cyber Security Analyst',
@@ -20,7 +22,7 @@ function TypeName() {
           deleteSpeed: 80,
           delay: 100,
           stopAfter: 5,
-          // cursor: "⎰",
+          cursor: "⎰",
         }}
       />
     </div>

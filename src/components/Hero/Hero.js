@@ -1,13 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/image.png";
+import TypeName from "../Home/Type-name";
 
 const Hero = () => {
   return (
     <Container fluid className="hero-section">
       <Row>
         <Col md={6}>
-          <div className="hero-content flex justify-center align-items-center ">
+          <div className="hero-content flex justify-center align-items-center m-auto">
             <h1 className="project-heading">
               <strong className="orange">Welcome</strong>
               <span className="wave" role="img" aria-labelledby="wave">
@@ -30,9 +31,12 @@ const Hero = () => {
             </div>
           </div>
         </Col>
-        <Col md={6}>
+        <Col md={6} className="m-auto">
           {" "}
           <img src={myImg} alt="hero" className="hero-image" />
+          <strong className="orange">
+            <TypeName></TypeName>
+          </strong>
         </Col>{" "}
       </Row>
     </Container>

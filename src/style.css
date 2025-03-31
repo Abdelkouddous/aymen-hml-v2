@@ -94,6 +94,7 @@ its something shows in a very cute way
 button:focus {
   box-shadow: none !important;
   transform: scale(1.05);
+  color: #7960346d;
 }
 
 .btn-submit {
@@ -103,7 +104,7 @@ button:focus {
   text-align: center !important;
   font-size: 1.1em !important;
   line-height: 2em !important;
-  background-color: rgba(255, 255, 255, 0.99) !important;
+  background-color: rgba(23, 0, 36, 0.99) !important;
   color: #ffbd3a;
   border-radius: 5% !important;
   transition: 0.3s !important;
@@ -376,7 +377,7 @@ button:focus {
 }
 
 .home-section {
-  background-color: rgb(2, 2, 2);
+  background-color: #0a0416;
   display: flex;
   flex-direction: column;
   /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg); */
@@ -428,10 +429,10 @@ button:focus {
 }
 
 .Typewriter__wrapper {
-  font-size: 1.2em !important;
+  font-size: 1.4em !important;
   font-weight: 50 !important;
-  position: absolute !important;
-  display: inline-block !important;
+  /* position: absolute !important; */
+  /* display: inline-block !important; */
 }
 .Typewriter__cursor {
   display: none !important;
@@ -441,11 +442,12 @@ button:focus {
   .Typewriter__wrapper {
     font-size: 1.2em !important;
     font-weight: 50 !important;
-    position: absolute !important;
-    display: inline-block !important;
+
+    /* position: absolute !important; */
+    /* display: inline-block !important; */
   }
   .Typewriter__cursor {
-    display: none !important;
+    display: inline !important;
   }
 }
 
@@ -573,7 +575,7 @@ button:focus {
   /* background: linear-gradient(to top, #3b2000, #8b3f00); */
   /* background-color: linear-gradient(to bottom, #ff8c00, #ffd700);
    */
-  background-color: #1d1c1b !important;
+  background-color: #0a0416 !important;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -730,17 +732,17 @@ button:focus {
 }
 
 .btn-primary:hover {
-  color: #ffbd3a !important;
+  color: #0a0416 !important;
   box-shadow: 4px 5px 4px 3px rgba(168, 94, 4, 0.137) !important;
   background-color: #fffbdb !important;
   /* border-color: #ffbd3a !important; */
-  scale: 1.05;
+  transform: scale(1.05);
 }
 
 .btn-secondary:hover {
   box-shadow: 4px 5px 4px 3px rgba(168, 94, 4, 0.137) !important;
   /* border-color: #ffbd3a !important; */
-  scale: 1.05;
+  transform: scale(1.05);
 }
 
 .btn-primary-2 {
@@ -1032,10 +1034,12 @@ buttons
   font-size: 1.1em !important;
   padding-top: 10px !important;
   align-items: center;
+  color: #4d3100;
 }
 .fork-btn2:hover {
   transform: scale(1.05) !important;
   background-color: #7960346d !important;
+  color: #4d3100;
 }
 
 .fork-btn-inner {
@@ -1044,12 +1048,14 @@ buttons
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
+  color: #4d3100;
 }
 
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
   background-color: #ffbd3a !important;
   border-color: #ffbd3a !important;
+  color: #4d3100;
 }
 .fork-btn-inner::after {
   display: none !important;
