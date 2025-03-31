@@ -89,13 +89,14 @@ import "./Footer.css"; // We'll create this file
 
 function Footer() {
   const year = new Date().getFullYear();
+  const brand = "Hml Soft";
 
   return (
     <footer className="footer-section">
       <Container>
         <Row className="footer-content">
           <Col lg={4} md={6} className="footer-info">
-            <h3 className="footer-brand">HML Tech</h3>
+            <h3 className="footer-brand">{brand}</h3>
             <p className="footer-description">
               Creating innovative solutions with modern web technologies.
             </p>
@@ -167,7 +168,9 @@ function Footer() {
 
         <Row className="footer-bottom">
           <Col md={6} className="copyright">
-            <p>&copy; {year} HML Soft. All rights reserved.</p>
+            <p>
+              &copy; {year} {brand}. All rights reserved.
+            </p>
           </Col>
           <Col md={6} className="credits">
             <p>Designed & Developed by Hamel Aymene Abdelkouddous</p>

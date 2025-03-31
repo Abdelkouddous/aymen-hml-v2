@@ -12,7 +12,7 @@ function AboutCard() {
             <span className="orange">HAMEL Aymen Abdelkouddous </span>
             from <span className="orange"> Algeria.</span>
             <br></br>
-            I'am currently a junior software engineer. I have completed{" "}
+            I'am currently a software engineer. I have completed{" "}
             <span className="orange">Master's Degree</span> in{" "}
             <span className="orange">Computer Systems and Multimedia</span> at
             the University of Tebessa, where I studied various courseworks such
@@ -24,12 +24,13 @@ function AboutCard() {
               </li>
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
-                <span className="orange"> Data Science</span>
+                <span className="orange"> Artificial Intelligence</span>
               </li>
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
-                <span className="orange"> Artificial Intelligence</span>
+                <span className="orange"> Data Science</span>
               </li>
+
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
                 <span className="orange"> Networks Security</span>
