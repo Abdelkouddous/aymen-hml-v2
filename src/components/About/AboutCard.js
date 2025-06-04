@@ -24,8 +24,12 @@ function AboutCard() {
               </li>
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
-                <span className="orange"> Artificial Intelligence</span>
+                <span className="orange">
+                  {" "}
+                  Systems & Artificial Intelligence Engineering
+                </span>
               </li>
+
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
                 <span className="orange"> Data Science</span>
@@ -39,7 +43,7 @@ function AboutCard() {
           </span>
 
           <p style={{ color: "whitesmoke" }}>
-            "The best way to learn to code is to code"{" "}
+            "The best way to find solutions is to find troubles"{" "}
           </p>
           <footer className="blockquote-footer">Aymen</footer>
         </blockquote>

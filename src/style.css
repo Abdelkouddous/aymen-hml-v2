@@ -7,26 +7,6 @@ body {
   /* --imp-text-color: #c770f0; */
   --imp-text-color: #ffd37b;
 }
-/*  CSS for Dark to Very Dark Orange Gradient 
-html {
-  --section-background-color: linear-gradient(
-    to top left,
-    rgba(17, 16, 16, 0.582),
-    rgba(33, 27, 2, 0.942)
-  );
-
-  --image-gradient: linear-gradient(
-    to top left,
-    #0c0c0cad,
-    #000000f0
-  );
-
-  --imp-text-color: #ffd37b;
-}
- */
-
-/*
-*/
 
 .active.fade-bottom {
   animation: fade-bottom 1s ease-in-out;
@@ -187,7 +167,7 @@ button:focus {
   background-color: #0a0416;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
-  backdrop-filter: blur(15px) !important;
+  --webkit-backdrop-filter: blur(15px) !important;
 }
 
 .navbar {

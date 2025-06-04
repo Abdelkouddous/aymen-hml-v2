@@ -1,5 +1,5 @@
 // src/components/Projects/projectsData.js
-import foodappPath from "../../Assets/Projects/foodapp.gif";
+// import foodappPath from "../../Assets/Projects/foodapp.gif";
 import pulsePath from "../../Assets/Projects/Pulse.png";
 import medcareerPath from "../../Assets/Projects/medCareer.png";
 
@@ -14,19 +14,9 @@ export const projectsData = [
     demoLink: "https://pulse-hml.netlify.app/",
     isActive: true,
   },
-  {
-    id: 2,
-    imgPath: foodappPath,
-    title: "Food Recipe App",
-    description:
-      "A front-end application that shows recipes for food made with spoonacular API and ReactJS combined with TailWind CSS",
-    ghLink: "https://github.com/Abdelkouddous/food-recipe-app",
-    demoLink: "food-recipe.vercel.app",
-    isActive: true,
-  },
   // Commented projects can be added here with isActive: false
   {
-    id: 3,
+    id: 2,
     title: "MedCareer Recruitement App",
     imgPath: medcareerPath,
     description:
