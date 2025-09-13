@@ -16,9 +16,18 @@ export const styles = {
   },
 
   buttonStyle: {
-    width: "32px",
-    height: "32px",
+    width: "40px",
+    height: "40px",
     background: "transparent",
-    border: "0px",
+    border: "1px solid rgba(255, 189, 58, 0.35)",
+    borderRadius: "50%",
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#ffbd3a",
+    cursor: "pointer",
+    boxShadow: "0 0 8px #ffd37b66",
+    transition: "transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease",
+    padding: 0,
   },
 };

@@ -4,13 +4,15 @@ import myImg from "../../Assets/image.png";
 import TypeName from "../Home/Type-name";
 
 const Hero = () => {
+  // this section is the first secion in the portofolio
+  // ?it contains the welcome message and the image
   return (
     <Container fluid className="hero-section">
       <Row>
         <Col md={6}>
-          <div className="hero-content flex justify-center align-items-center m-auto">
+          <div className="hero-content  ">
             <h1 className="project-heading">
-              <strong className="orange">Welcome</strong>
+              <strong className="orange">Welcome </strong>
               <span className="wave" role="img" aria-labelledby="wave">
                 👋🏻
               </span>{" "}
@@ -18,10 +20,10 @@ const Hero = () => {
             </h1>
             <p className="hero-text">
               Passionate software engineer with a knack for creating dynamic and
-              responsive full stack web applications.
+              responsive full stack applications.
             </p>
 
-            <div className=" flex justify-center align-items-center ">
+            <div className="hero-buttons ">
               <a href="#about" className="btn btn-primary-2 ">
                 Know More
               </a>
@@ -31,7 +33,7 @@ const Hero = () => {
             </div>
           </div>
         </Col>
-        <Col md={6} className="m-auto">
+        <Col md={6}>
           {" "}
           <img src={myImg} alt="hero" className="hero-image" />
           <strong className="orange">

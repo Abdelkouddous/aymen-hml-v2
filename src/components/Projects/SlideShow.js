@@ -5,15 +5,15 @@ import { Slide } from "react-slideshow-image";
 import ProjectCard from "./ProjectCards";
 import "react-slideshow-image/dist/styles.css";
 import { projectsData } from "./projectsData";
-// import { NavigationArrow } from "./NavigationArrow";
+import { NavigationArrow } from "./NavigationArrow";
 import { styles } from "./styles";
 
 // Custom hook for slide functionality
 const useSlideShow = () => {
   const properties = {
-    // prevArrow: <NavigationArrow direction="prev" />,
-    // nextArrow: <NavigationArrow direction="next" />,
-    duration: 2000,
+    prevArrow: <NavigationArrow direction="prev" />,
+    nextArrow: <NavigationArrow direction="next" />,
+    duration: 1000,
   };
 
   return { properties };
