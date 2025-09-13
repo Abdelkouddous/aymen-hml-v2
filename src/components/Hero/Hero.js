@@ -4,6 +4,7 @@ import myImg from "../../Assets/image.png";
 
 import TypeProfession from "../Home/TypeProfession";
 import Stats from "./Stats/Stats";
+import Type from "../Home/Type";
 
 const Hero = () => {
   // this section is the first secion in the portofolio
@@ -22,12 +23,15 @@ const Hero = () => {
             </a>
           </div>
         </Col>
-        <Col md={6}>
+        <Col md={6} className="col">
           <Col className="col">
-            <h1 className="project-heading ">
+            {/* <h1 className="project-heading ">
               <strong className="orange">HAMEL </strong>
               AYMENE ABDELKOUDDOUS
-            </h1>
+            </h1> */}
+            <h2 className="hero-name">
+              <Type></Type>
+            </h2>
             <h4 className="hero-text">
               Hello visitor{" "}
               <span className="wave" role="img" aria-labelledby="wave">
@@ -37,7 +41,7 @@ const Hero = () => {
               dynamic and responsive full stack applications.
             </h4>
           </Col>
-          <Col className="col">
+          <Col className="hero-profession">
             <strong className="orange">
               <TypeProfession></TypeProfession>
             </strong>

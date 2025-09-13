@@ -1,5 +1,5 @@
 //Home page
-import React, { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Home2 from "./Home2";
 import Techstack from "../About/Techstack";
