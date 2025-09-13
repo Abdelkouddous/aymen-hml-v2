@@ -1,7 +1,8 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-function TypeName() {
+function TypeProfession() {
+  // this is Actually not a TypeName but a type
   return (
     <div className="flex m-6 align-items-center justify-center">
       <Typewriter
@@ -28,4 +29,4 @@ function TypeName() {
   );
 }
 
-export default TypeName;
+export default TypeProfession;

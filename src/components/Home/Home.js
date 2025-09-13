@@ -8,6 +8,7 @@ import Resume from "../Resume/ResumeNew";
 import Projects from "../Projects/Projects";
 import Toolstack from "../About/Toolstack";
 import Hero from "../Hero/Hero";
+import Testimonials from "../Testimonials/Testimonials";
 
 function Home() {
   const sectionsRef = useRef([]);
@@ -85,6 +86,15 @@ function Home() {
 
         {/* Other Sections */}
         <div>
+          {/* Stats Section */}
+          {/* <section className="text-center my-5">
+            <Row className="justify-content-center">
+              <Col md={12}>
+                
+              </Col>
+            </Row>
+          </section> */}
+
           {/* About Section */}
           <section id="about" className="text-center my-4">
             <Row className="fade-left justify-content-center" ref={setRef(0)}>
@@ -132,12 +142,20 @@ function Home() {
               </Col>
             </Row>
           </section>
+          {/* Testimonials section */}
+          <section
+            id="testimonials"
+            className="fade-right text-center my-5"
+            ref={setRef(6)}
+          >
+            <Testimonials />
+          </section>
 
           {/* Contact Section */}
           <section
             id="contact"
             className="fade-left text-center my-5"
-            ref={setRef(6)}
+            ref={setRef(7)}
           >
             <Row className="justify-content-center">
               <Col md={12}>

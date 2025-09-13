@@ -8,15 +8,11 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <span className="home-about-body-me">
-            Hello visitor, I'am{" "}
-            <span className="orange">HAMEL Aymen Abdelkouddous </span>
-            from <span className="orange"> Algeria.</span>
             <br></br>
-            I'am currently a software engineer. I have completed{" "}
-            <span className="orange">Master's Degree</span> in{" "}
+            Currently a software engineer. Completed a
+            <span className="orange"> Master's Degree</span> in{" "}
             <span className="orange">Computer Systems and Multimedia</span> at
-            the University of Tebessa, where I studied various courseworks such
-            as :
+            the University of Tebessa, studied various courseworks such as:
             <ul>
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
@@ -41,7 +37,6 @@ function AboutCard() {
               </li>
             </ul>
           </span>
-
           <p style={{ color: "whitesmoke" }}>
             "The best way to find solutions is to find problems"{" "}
           </p>

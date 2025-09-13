@@ -51,6 +51,9 @@ function Techstack() {
       </Col>
 
       {/* JavaScript and its ecosystem */}
+      <h3 className="project-heading" id="project-heading">
+        JavaScript
+      </h3>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
         <Box
@@ -93,6 +96,9 @@ function Techstack() {
       </Col>
 
       {/* Python */}
+      <h3 className="project-heading" id="project-heading">
+        Python
+      </h3>
       <Col xs={4} md={2} className="tech-icons">
         <DiPython />
         <Box
@@ -105,6 +111,9 @@ function Techstack() {
       </Col>
 
       {/* Frontend technologies */}
+      <h3 className="project-heading" id="project-heading">
+        Other frontend technologies
+      </h3>
 
       <Col xs={4} md={2} className="tech-icons">
         <SiHtml5 />
@@ -138,6 +147,9 @@ function Techstack() {
       </Col>
 
       {/* PHP and Laravel */}
+      <h3 className="project-heading" id="project-heading">
+        PHP
+      </h3>
       <Col xs={4} md={2} className="tech-icons">
         <DiPhp />
         <Box
@@ -160,6 +172,9 @@ function Techstack() {
       </Col>
 
       {/* Databases */}
+      <h3 className="project-heading" id="project-heading">
+        Databases
+      </h3>
       <Col xs={4} md={2} className="tech-icons">
         <SiMysql />
         <Box
@@ -202,6 +217,9 @@ function Techstack() {
       </Col> */}
 
       {/* Other technologies */}
+      <h3 className="project-heading" id="project-heading">
+        Other technologies
+      </h3>
       <Col xs={4} md={2} className="tech-icons">
         <CgCPlusPlus />
         <Box

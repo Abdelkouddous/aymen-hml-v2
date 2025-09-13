@@ -15,6 +15,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import Testimonials from "./components/Testimonials/Testimonials";
+
 // import { ToggleButton } from "react-bootstrap";
 //dark mode provider
 
@@ -38,6 +40,7 @@ function App() {
         <Route path="/project" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <ScrollToTop />
