@@ -20,7 +20,7 @@ function AboutCard() {
             <ul>
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
-                <span className="orange"> Full Stack Engineering</span>
+                <span className="orange"> Software Engineering</span>
               </li>
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
@@ -37,13 +37,13 @@ function AboutCard() {
 
               <li className="about-activity">
                 <ImArrowRight></ImArrowRight>
-                <span className="orange"> Networks Security</span>
+                <span className="orange"> Networks & Cyber Security</span>
               </li>
             </ul>
           </span>
 
           <p style={{ color: "whitesmoke" }}>
-            "The best way to find solutions is to find troubles"{" "}
+            "The best way to find solutions is to find problems"{" "}
           </p>
           <footer className="blockquote-footer">Aymen</footer>
         </blockquote>

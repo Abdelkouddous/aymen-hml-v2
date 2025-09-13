@@ -21,8 +21,8 @@ export const projectsData = [
     imgPath: medcareerPath,
     description:
       "A project similiar to LinkedIn for medical professionals recruitement",
-    ghLink: "https://github.com/Abdelkouddous/00-MERN-STACK-TUT",
-    demoLink: "medcareer-hml.vercel.app",
+    ghLink: "https://github.com/Abdelkouddous/MedCareer",
+    demoLink: "https://medcareer.onrender.com/",
     isActive: true,
   },
 ];
