@@ -42,7 +42,7 @@ const Hero = () => {
             </h4>
           </Col>
           <Col className="hero-profession">
-            <strong className="orange">
+            <strong className="orange col">
               <TypeProfession></TypeProfession>
             </strong>
           </Col>

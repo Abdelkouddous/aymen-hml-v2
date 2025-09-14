@@ -1502,3 +1502,118 @@ tool stack */
   z-index: 1;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* Scroll-snap vertical carousel for Tools */
+.tools-scroll-container {
+  height: 70vh;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.035) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 2px;
+  position: relative;
+  /* box-shadow: 0 0 12px #ffd37b33; */
+  /* Hide scrollbar cross-browser */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and old Edge */
+}
+.tools-scroll-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none; /* Chrome/Safari */
+}
+
+/* Each card fills most of the viewport height and centers content */
+.tool-card {
+  scroll-snap-align: start;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 189, 58, 0.18);
+  border-bottom: 1px solid rgba(255, 189, 58, 0.18);
+  /* starting state (before in-view) */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 500ms ease, transform 500ms ease, box-shadow 300ms ease;
+}
+
+.tool-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  /* box-shadow: 0 6px 18px rgba(255, 189, 58, 0.15); */
+}
+
+.tool-card-content {
+  text-align: center;
+  min-width: 100%;
+  text-shadow: 0 0 12px #ffd37b33;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tool titles */
+.tool-title {
+  color: #ffd37b;
+  font-weight: 700;
+  text-shadow: 0 0 12px #ffd37b33;
+  text-overflow: unset;
+  .neon-text {
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ffbd3a,
+      0 0 82px #ffbd3a, 0 0 92px #ffbd3a, 0 0 102px #ffbd3a, 0 0 151px #ffbd3a;
+    animation: pulsate 1.5s infinite alternate;
+  }
+
+  @keyframes pulsate {
+    100% {
+      text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #ffbd3a,
+        0 0 80px #ffbd3a, 0 0 90px #ffbd3a, 0 0 100px #ffbd3a, 0 0 150px #ffbd3a;
+    }
+    0% {
+      text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #ffbd3a,
+        0 0 45px #ffbd3a, 0 0 55px #ffbd3a, 0 0 70px #ffbd3a, 0 0 80px #ffbd3a;
+    }
+  }
+  /* width: 100%; */
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  /* border: 1px solid rgba(255, 189, 58, 0.25); */
+  /* border-radius: 14px; */
+  /* background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.035) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  ); */
+  /* box-shadow: 0 0 12px #ffd37b4d; */
+}
+
+.tool-icon {
+  color: #ffbd3a;
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 12px #ffd37b33;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .tools-scroll-container {
+    height: 80vh;
+  }
+  .tool-icon {
+    font-size: 3.5rem;
+  }
+  .tool-title {
+    font-size: 1.15rem;
+  }
+}
