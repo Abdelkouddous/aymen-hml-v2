@@ -2,7 +2,7 @@
 // import foodappPath from "../../Assets/Projects/foodapp.gif";
 import pulsePath from "../../Assets/Projects/Pulse.png";
 import medcareerPath from "../../Assets/Projects/medCareer.png";
-
+import prosafePath from "../../Assets/Projects/prosafe.png";
 export const projectsData = [
   {
     id: 1,
@@ -24,5 +24,24 @@ export const projectsData = [
     ghLink: "https://github.com/Abdelkouddous/MedCareer",
     demoLink: "https://medcareer.onrender.com/",
     isActive: true,
+  },
+  {
+    id: 3,
+    title: " Prosafe ",
+    imgPath: prosafePath,
+    description:
+      "PROSAFE is a comprehensive enterprise-grade safety and security management platform designed for modern workplaces. ",
+    ghLink: "https://github.com/Abdelkouddous/prosafe",
+    demoLink: "https://prosafe-admin-psi.vercel.app/",
+    isActive: true,
+  },
+  {
+    //   id :4,
+    // title: "Soog"
+    // imgPath:soogPath,
+    // description:"A e-commerce project featuring a modern and user-friendly interface, with a focus on providing a seamless shopping experience for customers.",
+    // ghLink:"https://github.com/Abdelkouddous/soog",
+    // demoLink:"https://soog.vercel.app/",
+    // isActive: true,
   },
 ];

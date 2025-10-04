@@ -1,3 +1,4 @@
+import { FaClock, FaCode, FaSmile, FaTrophy } from "react-icons/fa";
 import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
@@ -44,10 +45,10 @@ function CountUp({ end, duration = 1200, suffix = "" }) {
 
 export default function Stats() {
   const stats = [
-    { label: "Years Experience", value: 2, suffix: "+" },
-    { label: "Created Projects", value: 6 },
-    { label: "Satisfied Clients", value: 3 },
-    { label: "Awards", value: 1 },
+    { label: "Years Experience", value: 2, suffix: "+", icon: FaClock },
+    { label: "Created Projects", value: 6, icon: FaCode },
+    { label: "Satisfied Clients", value: 3, icon: FaSmile },
+    { label: "Awards", value: 1, icon: FaTrophy },
   ];
 
   return (
@@ -60,6 +61,9 @@ export default function Stats() {
           <Col key={idx} md={3} sm={6} xs={12} className="mb-4 d-flex">
             <Card className="stats-card project-card-view flex-fill text-center">
               <Card.Body>
+                <div className="stats-icon">
+                  <s.icon className=" orange" aria-hidden="true" />
+                </div>
                 <div className="mb-2">
                   <CountUp end={s.value} suffix={s.suffix || ""} />
                 </div>

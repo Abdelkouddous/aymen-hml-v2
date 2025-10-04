@@ -1506,11 +1506,11 @@ tool stack */
 /* Scroll-snap vertical carousel for Tools */
 .tools-scroll-container {
   height: 70vh;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.035) 0%,
     rgba(255, 255, 255, 0.02) 100%
-  );
+  ); */
   overflow-y: auto;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
@@ -1538,11 +1538,11 @@ tool stack */
   justify-content: center;
   padding: 1.1rem;
   position: relative;
-  background: rgba(255, 255, 255, 0.03);
-  border-top: 1px solid rgba(255, 189, 58, 0.18);
-  border-bottom: 1px solid rgba(255, 189, 58, 0.18);
+  /* background: rgba(255, 255, 255, 0.03); */
+  /* border-top: 1px solid rgba(255, 189, 58, 0.18);
+  border-bottom: 1px solid rgba(255, 189, 58, 0.18); */
   /* starting state (before in-view) */
-  opacity: 0;
+  opacity: 0.1;
   transform: translateY(40px);
   transition: opacity 500ms ease, transform 500ms ease, box-shadow 300ms ease;
 }

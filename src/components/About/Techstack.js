@@ -13,15 +13,14 @@ import {
   SiFlutter,
   SiCss3,
   SiHtml5,
-  SiFirebase,
   SiNextdotjs,
   SiMysql,
   SiPostgresql,
-  SiBootstrap,
   SiMongodb,
   SiTailwindcss,
+  SiNestjs,
 } from "react-icons/si";
-import { GiJasmine } from "react-icons/gi";
+// import { GiJasmine } from "react-icons/gi";
 import { FaLaravel } from "react-icons/fa6";
 
 import LinearProgress from "@mui/material/LinearProgress";
@@ -45,7 +44,7 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={90} />
+          <LinearProgress color="secondary" variant="determinate" value={90} />
           <h4 className="tech-text">90%</h4>
         </Box>
       </Col>
@@ -60,7 +59,7 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={80} />
+          <LinearProgress color="secondary" variant="determinate" value={80} />
           <h4 className="tech-text">80%</h4>
         </Box>
       </Col>
@@ -70,17 +69,33 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={80} />
+          <LinearProgress color="secondary" variant="determinate" value={80} />
           <h4 className="tech-text">80%</h4>
         </Box>
       </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiNestjs></SiNestjs>
+        <Box
+          height={50}
+          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+        >
+          <LinearProgress
+            className="strong"
+            color="secondary"
+            variant="determinate"
+            value={80}
+          />
+          <h4 className="tech-text">80%</h4>
+        </Box>
+      </Col>
+
       <Col xs={4} md={2} className="tech-icons">
         <DiReact />
         <Box
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={80} />
+          <LinearProgress color="secondary" variant="determinate" value={80} />
           <h4 className="tech-text">80%</h4>
         </Box>
       </Col>
@@ -90,7 +105,7 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={80} />
+          <LinearProgress color="secondary" variant="determinate" value={80} />
           <h4 className="tech-text">80%</h4>
         </Box>
       </Col>
@@ -105,44 +120,8 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={80} />
+          <LinearProgress color="secondary" variant="determinate" value={80} />
           <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
-
-      {/* Frontend technologies */}
-      <h3 className="project-heading" id="project-heading">
-        Other frontend technologies
-      </h3>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <SiHtml5 />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="success" variant="determinate" value={75} />
-          <h4 className="tech-text">75%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCss3 />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="success" variant="determinate" value={80} />
-          <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTailwindcss />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="success" variant="determinate" value={75} />
-          <h4 className="tech-text">75%</h4>
         </Box>
       </Col>
 
@@ -156,7 +135,7 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={60} />
+          <LinearProgress color="secondary" variant="determinate" value={60} />
           <h4 className="tech-text">60%</h4>
         </Box>
       </Col>
@@ -166,7 +145,7 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={75} />
+          <LinearProgress color="secondary" variant="determinate" value={75} />
           <h4 className="tech-text">75%</h4>
         </Box>
       </Col>
@@ -181,7 +160,7 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={80} />
+          <LinearProgress color="secondary" variant="determinate" value={80} />
           <h4 className="tech-text">80%</h4>
         </Box>
       </Col>
@@ -191,7 +170,7 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={70} />
+          <LinearProgress color="secondary" variant="determinate" value={70} />
           <h4 className="tech-text">70%</h4>
         </Box>
       </Col>
@@ -201,7 +180,7 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={70} />
+          <LinearProgress color="secondary" variant="determinate" value={70} />
           <h4 className="tech-text">70%</h4>
         </Box>
       </Col>
@@ -211,7 +190,7 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={60} />
+          <LinearProgress color="secondary" variant="determinate" value={60} />
           <h4 className="tech-text">60%</h4>
         </Box>
       </Col> */}
@@ -220,13 +199,45 @@ function Techstack() {
       <h3 className="project-heading" id="project-heading">
         Other technologies
       </h3>
+      {/* Frontend technologies */}
+
+      <Col xs={4} md={2} className="tech-icons">
+        <SiHtml5 />
+        <Box
+          height={50}
+          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+        >
+          <LinearProgress color="secondary" variant="determinate" value={75} />
+          <h4 className="tech-text">75%</h4>
+        </Box>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiCss3 />
+        <Box
+          height={50}
+          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+        >
+          <LinearProgress color="secondary" variant="determinate" value={80} />
+          <h4 className="tech-text">80%</h4>
+        </Box>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiTailwindcss />
+        <Box
+          height={50}
+          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+        >
+          <LinearProgress color="secondary" variant="determinate" value={75} />
+          <h4 className="tech-text">75%</h4>
+        </Box>
+      </Col>
       <Col xs={4} md={2} className="tech-icons">
         <CgCPlusPlus />
         <Box
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={65} />
+          <LinearProgress color="secondary" variant="determinate" value={65} />
           <h4 className="tech-text">70%</h4>
         </Box>
       </Col>
@@ -236,7 +247,7 @@ function Techstack() {
           height={50}
           sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
         >
-          <LinearProgress color="success" variant="determinate" value={70} />
+          <LinearProgress color="secondary" variant="determinate" value={70} />
           <h4 className="tech-text">70%</h4>
         </Box>
       </Col>
