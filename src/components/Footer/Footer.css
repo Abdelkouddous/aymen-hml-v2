@@ -1,15 +1,19 @@
 /* src/components/Footer.css */
 .footer-section {
   background-color: #0a0416;
+  display: grid;
+  grid-template-columns: auto;
   color: #f5f5f5;
-  padding: 3rem 0 1.5rem;
+  padding: 3rem 0 1.2rem;
   position: relative;
+  align-items: center;
   z-index: 1;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
-  margin-bottom: 2rem;
+  display: flex;
+  margin-bottom: 1.5rem;
 }
 
 .footer-brand {
@@ -101,7 +105,7 @@
   .footer-info,
   .footer-links,
   .footer-social {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .credits {

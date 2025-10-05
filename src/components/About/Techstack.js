@@ -1,267 +1,104 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import "./techstack.css";
+import { Container } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg";
-import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiPython,
-  DiGit,
-  DiPhp,
-} from "react-icons/di";
+import { DiJavascript1, DiReact, DiNodejs, DiGit, DiPhp } from "react-icons/di";
 import {
   SiFlutter,
   SiCss3,
-  SiHtml5,
-  SiNextdotjs,
   SiMysql,
   SiPostgresql,
   SiMongodb,
   SiTailwindcss,
-  SiNestjs,
 } from "react-icons/si";
-// import { GiJasmine } from "react-icons/gi";
 import { FaLaravel } from "react-icons/fa6";
 
-import LinearProgress from "@mui/material/LinearProgress";
-import Box from "@mui/material/Box";
+const skills = [
+  { icon: DiGit, label: "Git" },
+  { icon: DiJavascript1, label: "JavaScript" },
+  { icon: DiNodejs, label: "Node.js" },
+  { icon: DiReact, label: "React" },
+  { icon: SiTailwindcss, label: "Tailwind" },
+  { icon: DiPhp, label: "PHP" },
+  { icon: FaLaravel, label: "Laravel" },
+  { icon: SiMysql, label: "MySQL" },
+  { icon: SiMongodb, label: "MongoDB" },
+  { icon: SiPostgresql, label: "PostgreSQL" },
+  { icon: SiCss3, label: "CSS" },
+  { icon: CgCPlusPlus, label: "C++" },
+  { icon: SiFlutter, label: "Flutter" },
+];
+
 function Techstack() {
-  // my skills : HTML CSS JS PHP Python C++ C# JAVA
-  // React Next Firebase Git & Github Node Bootstrap
-  // Postgre MySQL
+  const [angle, setAngle] = useState(0);
+  // Continuous slow rotation speed (degrees per second)
+  const ROTATION_SPEED_DEG_PER_SEC = 6;
+  const step = useMemo(() => 360 / skills.length, []);
+
+  useEffect(() => {
+    let rafId = null;
+    let lastTs = null;
+    const tick = (ts) => {
+      if (lastTs == null) {
+        lastTs = ts;
+        rafId = requestAnimationFrame(tick);
+        return;
+      }
+      const dt = (ts - lastTs) / 1000;
+      lastTs = ts;
+      setAngle((a) => a + ROTATION_SPEED_DEG_PER_SEC * dt);
+      rafId = requestAnimationFrame(tick);
+    };
+    rafId = requestAnimationFrame(tick);
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, []);
+
+  // Automatic rotation only; no mouse/touch handlers
+
   return (
-    <Row
-      style={{ justifyContent: "center", paddingBottom: "50px" }}
-      className="text-white tool-stack-container"
-    >
-      <h1 className="project-heading" id="project-heading">
-        Professional <strong className="orange">Skillset </strong>
+    <Container fluid className="about-section" id="project-heading">
+      <h1>
+        Professional <strong className="orange">Skillset</strong>
       </h1>
-      {/* Highest percentages first */}
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
+      <div className="tech-3d-container">
+        <div
+          className="tech-3d-scene"
+          role="region"
+          aria-label="3D rotating tech stack carousel"
         >
-          <LinearProgress color="secondary" variant="determinate" value={90} />
-          <h4 className="tech-text">90%</h4>
-        </Box>
-      </Col>
-
-      {/* JavaScript and its ecosystem */}
-      <h3 className="project-heading" id="project-heading">
-        JavaScript
-      </h3>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={80} />
-          <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={80} />
-          <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNestjs></SiNestjs>
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress
-            className="strong"
-            color="secondary"
-            variant="determinate"
-            value={80}
-          />
-          <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
-
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={80} />
-          <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={80} />
-          <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
-
-      {/* Python */}
-      <h3 className="project-heading" id="project-heading">
-        Python
-      </h3>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={80} />
-          <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
-
-      {/* PHP and Laravel */}
-      <h3 className="project-heading" id="project-heading">
-        PHP
-      </h3>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPhp />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={60} />
-          <h4 className="tech-text">60%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <FaLaravel />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={75} />
-          <h4 className="tech-text">75%</h4>
-        </Box>
-      </Col>
-
-      {/* Databases */}
-      <h3 className="project-heading" id="project-heading">
-        Databases
-      </h3>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMysql />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={80} />
-          <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMongodb></SiMongodb>
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={70} />
-          <h4 className="tech-text">70%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={70} />
-          <h4 className="tech-text">70%</h4>
-        </Box>
-      </Col>
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={60} />
-          <h4 className="tech-text">60%</h4>
-        </Box>
-      </Col> */}
-
-      {/* Other technologies */}
-      <h3 className="project-heading" id="project-heading">
-        Other technologies
-      </h3>
-      {/* Frontend technologies */}
-
-      <Col xs={4} md={2} className="tech-icons">
-        <SiHtml5 />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={75} />
-          <h4 className="tech-text">75%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCss3 />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={80} />
-          <h4 className="tech-text">80%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTailwindcss />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={75} />
-          <h4 className="tech-text">75%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={65} />
-          <h4 className="tech-text">70%</h4>
-        </Box>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFlutter />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="secondary" variant="determinate" value={70} />
-          <h4 className="tech-text">70%</h4>
-        </Box>
-      </Col>
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <GiJasmine />
-        <Box
-          height={50}
-          sx={{ width: "100%", alignItems: "center", verticalAlign: "middle" }}
-        >
-          <LinearProgress color="success" variant="determinate" value={55} />
-          <h4 className="tech-text">55%</h4>
-        </Box>
-      </Col> */}
-    </Row>
+          <div
+            className="tech-3d-ring"
+            style={{
+              transform: `translate(-50%, -50%) translateZ(calc(-1 * var(--carousel-radius))) rotateY(${angle}deg)`,
+            }}
+          >
+            {skills.map((Item, i) => {
+              const Icon = Item.icon;
+              const itemAngle = i * step;
+              return (
+                <div
+                  key={`${Item.label}-${i}`}
+                  className="tech-3d-item"
+                  style={{
+                    transform: `translate(-50%, -50%) rotateY(${itemAngle}deg) translateZ(var(--carousel-radius))`,
+                  }}
+                >
+                  <div className="tech-item-card">
+                    <div className="tech-item-icon">
+                      <Icon aria-hidden="true" />
+                    </div>
+                    <div className="tech-item-label">{Item.label}</div>
+                    {/* <div className="tech-item-value">{Item.value}%</div> */}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </Container>
   );
 }
 

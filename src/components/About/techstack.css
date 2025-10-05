@@ -1,0 +1,124 @@
+/* 3D Tech Carousel */
+.tech-3d-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.tech-3d-scene {
+  position: relative;
+  width: min(1100px, 95vw);
+  height: min(760px, 80vh);
+  margin: 0 auto;
+  perspective: 1000px;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: pan-y;
+  /* Local radius override for bigger, centered ring */
+  --carousel-radius: 340px;
+}
+.tech-3d-scene:active {
+  cursor: default;
+}
+
+:root,
+[data-theme="light"] {
+  --carousel-radius: 300px;
+}
+[data-theme="dark"] {
+  --carousel-radius: 300px;
+}
+
+.tech-3d-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+  transition: transform 100ms cubic-bezier(0.22, 1, 0.36, 0.1);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.tech-3d-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.tech-item-card {
+  width: 190px;
+  height: 220px;
+  border-radius: 16px;
+  background: var(--card-background-color);
+  color: var(--imp-text-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  backdrop-filter: saturate(1.2) blur(8px);
+  -webkit-backdrop-filter: saturate(1.2) blur(8px);
+  -webkit-user-select: none;
+  user-select: none;
+}
+.tech-item-card * {
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.tech-item-icon {
+  font-size: 2.6rem;
+}
+.tech-item-label {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.tech-item-value {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* controls removed in favor of hover/scroll */
+
+@media (max-width: 640px) {
+  .tech-3d-scene {
+    height: 70vh;
+    width: 95vw;
+    --carousel-radius: 260px;
+  }
+  :root,
+  [data-theme="light"],
+  [data-theme="dark"] {
+    --carousel-radius: 220px;
+  }
+  .tech-item-card {
+    width: 150px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tech-3d-scene {
+    height: 640px;
+    width: min(1250px, 95vw);
+    --carousel-radius: 420px;
+  }
+  :root,
+  [data-theme="light"],
+  [data-theme="dark"] {
+    --carousel-radius: 380px;
+  }
+}
