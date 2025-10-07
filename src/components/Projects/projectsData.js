@@ -36,6 +36,17 @@ export const projectsData = [
     isActive: true,
   },
   {
+    id: 4,
+    title: "Essaweg an E-Commerce online store",
+    imgPath: "", // temporary placeholder image
+    description: `Modern e-commerce web app focused on a seamless shopping experience.
+      Coming soon ... `,
+    ghLink: "#",
+    demoLink: "#",
+    isActive: true,
+  },
+  // ... existing code ...
+  {
     //   id :4,
     // title: "Soog"
     // imgPath:soogPath,

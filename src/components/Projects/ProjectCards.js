@@ -3,21 +3,23 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import homeMain from "../../Assets/home-main.svg";
 
 function ProjectCards(props) {
   return (
     <Card className="project-card-view ">
       <Card.Img
         variant="top"
-        src={props.imgPath}
-        alt="card-img"
-        style={{ height: "300px", width: "400px" }}
+        src={props.imgPath || homeMain}
+        alt={props.title || "Project"}
+        onError={(e) => {
+          e.currentTarget.src = homeMain;
+        }}
+        style={{ margin: "auto", maxWidth: "55%", maxHeight: "50%" }}
       />
-      <Card.Body
-        style={{ margin: "auto", maxWidth: "300px", maxHeight: "400px" }}
-      >
+      <Card.Body className="hero-appear align-items-center">
         <Card.Title style={{ textAlign: "center" }}>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
+        <Card.Text style={{ textAlign: "center" }}>
           {props.description}
         </Card.Text>
         <Button variant="primary" href={props.ghLink} target="_blank">

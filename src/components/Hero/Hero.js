@@ -10,11 +10,19 @@ const Hero = () => {
   // this section is the first secion in the portofolio
   // ?it contains the welcome message and the image
   return (
-    <Container fluid className="hero-section ">
-      <Row md={12}>
-        <Col md={6}>
-          <img src={myImg} alt="hero" className="hero-image" />
-          <div className="hero-buttons ">
+    <Container fluid className="hero-section hero-split hero-appear">
+      <Row md={12} className="hero-row-split">
+        <Col md={6} className="hero-left hero-appear-left">
+          <p className="hero-kicker">Hi, I am</p>
+          <h2 className="hero-heading">
+            <Type></Type>
+          </h2>
+          <h4 className="hero-subtitle">
+            <strong className="orange">
+              <TypeProfession></TypeProfession>
+            </strong>
+          </h4>
+          <div className="hero-buttons">
             <a href="#about" className="btn btn-primary-2 ">
               Know More
             </a>
@@ -23,29 +31,8 @@ const Hero = () => {
             </a>
           </div>
         </Col>
-        <Col md={6} className="col">
-          <Col className="col">
-            {/* <h1 className="project-heading ">
-              <strong className="orange">HAMEL </strong>
-              AYMENE ABDELKOUDDOUS
-            </h1> */}
-            <h2 className="hero-name">
-              <Type></Type>
-            </h2>
-            <h4 className="hero-text">
-              Hello visitor{" "}
-              <span className="wave" role="img" aria-labelledby="wave">
-                👋🏻
-              </span>{" "}
-              , I'am Passionate software engineer with a knack for creating
-              dynamic and responsive full stack applications.
-            </h4>
-          </Col>
-          <Col className="hero-profession">
-            <strong className="orange col">
-              <TypeProfession></TypeProfession>
-            </strong>
-          </Col>
+        <Col md={6} className="hero-right hero-appear-right">
+          <img src={myImg} alt="hero" className="hero-portrait" />
         </Col>
       </Row>
       <Row>
