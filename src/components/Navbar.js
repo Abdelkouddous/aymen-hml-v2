@@ -84,6 +84,15 @@ function NavBar() {
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
             </Nav.Item>
+            {/* Testimonials nav item */}
+            <Nav.Item>
+              <Nav.Link
+                href="#testimonials"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiFillMessage style={{ marginBottom: "2px" }} /> Testimonials
+              </Nav.Link>
+            </Nav.Item>
             <Nav.Item>
               <Nav.Link
                 // as={Link}
@@ -122,7 +131,7 @@ function NavBar() {
                 <AiFillMessage style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
-            {}{" "}
+
             <Nav.Item className="fork-btn">
               <Button
                 href="https://github.com/Abdelkouddous"

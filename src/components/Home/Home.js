@@ -103,6 +103,14 @@ function Home() {
               </Col>
             </Row>
           </section>
+          {/* Testimonials section */}
+          <section
+            id="testimonials"
+            className="fade-right text-center my-5"
+            ref={setRef(6)}
+          >
+            <Testimonials />
+          </section>
 
           {/* Skillset Section */}
           <section className="fade-left text-center my-5" ref={setRef(2)}>
@@ -140,15 +148,6 @@ function Home() {
                 <Resume />
               </Col>
             </Row>
-          </section>
-
-          {/* Testimonials section */}
-          <section
-            id="testimonials"
-            className="fade-right text-center my-5"
-            ref={setRef(6)}
-          >
-            <Testimonials />
           </section>
 
           {/* Contact Section */}

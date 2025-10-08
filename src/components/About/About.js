@@ -10,23 +10,23 @@ function About() {
       <Container fluid className="about-section">
         <Row className="flex justify-center align-items-center">
           <Col md={6}>
-            <h1
-              style={{
-                textAlign: "center",
-                fontSize: "2.1em",
-                paddingBottom: "20px",
-              }}
-            >
+            <h1>
               About <strong className="orange">ME</strong>
             </h1>
             <Aboutcard />
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "10px", paddingBottom: "10px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+          <Col md={6}>
+            <img
+              src={laptopImg}
+              alt="about"
+              className="img-fluid"
+              style={{ maxWidth: "75%", maxHeight: "75%" }}
+            />
+            <p className="text-center">
+              <small className="text-muted">
+                Photo <span className="text-muted">Generated with gemini</span>
+              </small>
+            </p>
           </Col>
         </Row>
         {/* <h1 id="project-heading" style={{ padding: "40px" }}></h1> */}
