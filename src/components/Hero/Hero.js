@@ -13,7 +13,7 @@ const Hero = () => {
     <Container fluid className="hero-section hero-split hero-appear">
       <Row md={12} className="hero-row-split">
         <Col md={6} className="hero-left hero-appear-left">
-          <p className="hero-kicker">Hi, I am</p>
+          <p className="hero-kicker">Hello, I'am</p>
           <h2 className="hero-heading">
             <Type></Type>
           </h2>
@@ -32,7 +32,11 @@ const Hero = () => {
           </div>
         </Col>
         <Col md={6} className="hero-right hero-appear-right">
-          <img src={myImg} alt="hero" className="hero-portrait" />
+          <img
+            src={myImg}
+            alt="hero"
+            className="hero-portrait hero-portrait-circle"
+          />
         </Col>
       </Row>
       <Row>

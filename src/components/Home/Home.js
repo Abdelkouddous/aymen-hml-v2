@@ -26,7 +26,7 @@ function Home() {
           if (entry.target.isConnected) {
             entry.target.classList.remove("fade-left-visible");
           }
-        }, 1000);
+        }, 500);
       }
     });
   }, []);
@@ -116,6 +116,18 @@ function Home() {
             </h1>
             <Toolstack />
           </section>
+          {/* Projects Section */}
+          <section
+            id="projects"
+            className="fade-left text-center my-5"
+            ref={setRef(5)}
+          >
+            <Row className="justify-content-center">
+              <Col md={12}>
+                <Projects />
+              </Col>
+            </Row>
+          </section>
 
           {/* Resume Section */}
           <section
@@ -130,18 +142,6 @@ function Home() {
             </Row>
           </section>
 
-          {/* Projects Section */}
-          <section
-            id="projects"
-            className="fade-left text-center my-5"
-            ref={setRef(5)}
-          >
-            <Row className="justify-content-center">
-              <Col md={12}>
-                <Projects />
-              </Col>
-            </Row>
-          </section>
           {/* Testimonials section */}
           <section
             id="testimonials"
