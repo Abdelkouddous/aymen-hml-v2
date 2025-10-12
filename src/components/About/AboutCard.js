@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImArrowRight } from "react-icons/im";
-
+import "./about.css";
 function AboutCard() {
   return (
     <Card className="quote-card-view">

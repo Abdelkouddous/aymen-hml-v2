@@ -1,0 +1,92 @@
+/* --------- */
+/* Testimonials */
+/* --------- */
+.testimonials-section {
+  position: relative !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  margin-top: 5px;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  align-items: center;
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 189, 58, 0.25) !important;
+  box-shadow: 0 0 12px #ffd37b66;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 189, 58, 0.2);
+}
+
+.testimonial-author {
+  color: #ffbd3a !important;
+  font-weight: 600;
+}
+
+.testimonial-quote {
+  color: whitesmoke;
+  margin-top: 8px;
+}
+
+.testimonial-stars {
+  color: #ffbd3a;
+  display: inline-flex;
+  gap: 5px;
+  font-size: 1.1rem;
+  margin-left: auto;
+}
+
+.testimonial-rating-text {
+  color: #ffd37b;
+  font-size: 1.05rem;
+  margin-right: auto;
+}
+
+/* --------- */
+/* Stats */
+/* --------- */
+.stats-section {
+  position: relative !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stats-card {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 189, 58, 0.25) !important;
+  box-shadow: 0 0 12px #ffd37b66;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 189, 58, 0.2);
+}
+
+.stats-number {
+  color: #ffbd3a;
+  font-weight: 800;
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+}
+
+.stats-label {
+  color: whitesmoke;
+  font-size: 1rem;
+  opacity: 0.95;
+}

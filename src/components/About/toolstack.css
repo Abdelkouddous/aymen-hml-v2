@@ -1,0 +1,106 @@
+/* --------------
+   Tool Stack
+-------------- */
+
+.tool-stack-container {
+  margin-bottom: 5rem;
+  padding: 3rem 0 1.5rem;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, #0a0416 0%, #1a103a 50%, #261c52 100%);
+  color: #f5f5f5;
+  z-index: 1;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Scroll container — now just a regular scrollable area */
+.tools-scroll-container {
+  height: 70vh;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.035) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 2px;
+  position: relative;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.tools-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tool card — hidden by default */
+.tool-card {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem;
+  position: relative;
+  opacity: 0.5;
+  transform: translateY(40px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+/* Only animate when in view */
+.tool-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tool-card-content {
+  text-align: center;
+  min-width: 100%;
+  text-shadow: 0 0 12px #ffd37b33;
+}
+
+.tool-title {
+  color: #ffd37b;
+  font-weight: 700;
+  text-shadow: 0 0 12px #ffd37b33;
+}
+
+.tool-title .neon-text {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ffbd3a,
+    0 0 82px #ffbd3a, 0 0 92px #ffbd3a, 0 0 102px #ffbd3a, 0 0 151px #ffbd3a;
+  animation: pulsate 1.5s infinite alternate;
+}
+
+@keyframes pulsate {
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #ffbd3a,
+      0 0 45px #ffbd3a, 0 0 55px #ffbd3a, 0 0 70px #ffbd3a, 0 0 80px #ffbd3a;
+  }
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #ffbd3a,
+      0 0 80px #ffbd3a, 0 0 90px #ffbd3a, 0 0 100px #ffbd3a, 0 0 150px #ffbd3a;
+  }
+}
+
+.tool-icon {
+  color: #ffbd3a;
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 12px #ffd37b33;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tools-scroll-container {
+    height: 80vh;
+  }
+  .tool-icon {
+    font-size: 3.5rem;
+  }
+  .tool-title {
+    font-size: 1.15rem;
+  }
+}

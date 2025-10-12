@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./techstack.css";
 import { Container } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg";
@@ -10,6 +10,8 @@ import {
   SiPostgresql,
   SiMongodb,
   SiTailwindcss,
+  SiNextdotjs,
+  SiNestjs,
 } from "react-icons/si";
 import { FaLaravel } from "react-icons/fa6";
 
@@ -18,13 +20,15 @@ const skills = [
   { icon: DiJavascript1, label: "JavaScript" },
   { icon: DiNodejs, label: "Node.js" },
   { icon: DiReact, label: "React" },
-  { icon: SiTailwindcss, label: "Tailwind" },
+  { icon: SiNextdotjs, label: "Next.js" },
+  { icon: SiNestjs, label: "Nest.js" },
   { icon: DiPhp, label: "PHP" },
   { icon: FaLaravel, label: "Laravel" },
   { icon: SiMysql, label: "MySQL" },
   { icon: SiMongodb, label: "MongoDB" },
   { icon: SiPostgresql, label: "PostgreSQL" },
   { icon: SiCss3, label: "CSS" },
+  { icon: SiTailwindcss, label: "Tailwind" },
   { icon: CgCPlusPlus, label: "C++" },
   { icon: SiFlutter, label: "Flutter" },
 ];

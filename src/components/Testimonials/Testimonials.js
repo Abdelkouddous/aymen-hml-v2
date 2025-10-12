@@ -2,6 +2,7 @@
 // it is a functional component
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
+import "./testimonials.css";
 
 function RatingStars({ value, outOf = 5 }) {
   const stars = [];
@@ -30,22 +31,22 @@ function Testimonials() {
   const testimonials = [
     {
       name: "C.Aymen",
-      project: "E-commerce application",
-      rating: 3.5,
+      project: "Sooug - E-commerce app",
+      rating: 4,
       comment:
         "Aymen delivered a solid e-commerce MVP quickly. Great collaboration and problem-solving throughout the project!",
     },
     {
       name: "L.Bourouh",
-      project: "Enterprise Incidents Declaration app",
+      project: "Prosafe - Enterprise Incidents Declaration app",
       rating: 4,
       comment:
         "Professional and proactive. The incidents app streamlined our internal process and improved response time.",
     },
     {
       name: "Lilas Clinic",
-      project: "Book Appointment app",
-      rating: 4,
+      project: "RDV - Book Appointment app",
+      rating: 4.5,
       comment:
         "Reliable and efficient. The appointment booking app is intuitive and has helped our patients tremendously.",
     },

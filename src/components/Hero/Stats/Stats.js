@@ -2,6 +2,7 @@
 import { Calendar, Code, Smile, Trophy } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import "./stats.css";
 
 function CountUp({ end, duration = 1200, suffix = "" }) {
   const [value, setValue] = useState(0);
@@ -63,7 +64,7 @@ export default function Stats() {
             <Card className="stats-card project-card-view flex-fill text-center">
               <Card.Body>
                 <div>
-                  <s.icon className=" orange tool-icon" aria-hidden="true" />
+                  <s.icon className="stats-icon " aria-hidden="true" />
                 </div>
                 <div className="mb-2">
                   <CountUp end={s.value} suffix={s.suffix || ""} />

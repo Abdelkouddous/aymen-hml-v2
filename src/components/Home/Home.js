@@ -85,16 +85,15 @@ function Home() {
         </section>
 
         {/* Other Sections */}
-        <div>
-          {/* Stats Section */}
-          {/* <section className="text-center my-5">
+        {/* Stats Section */}
+        {/* <section className="text-center my-5">
             <Row className="justify-content-center">
               <Col md={12}>
                 
               </Col>
             </Row>
           </section> */}
-
+        <div>
           {/* About Section */}
           <section id="about" className="text-center my-4">
             <Row className="fade-left justify-content-center" ref={setRef(0)}>
@@ -107,7 +106,7 @@ function Home() {
           <section
             id="testimonials"
             className="fade-right text-center my-5"
-            ref={setRef(6)}
+            ref={setRef(1)}
           >
             <Testimonials />
           </section>
@@ -128,7 +127,7 @@ function Home() {
           <section
             id="projects"
             className="fade-left text-center my-5"
-            ref={setRef(5)}
+            ref={setRef(4)}
           >
             <Row className="justify-content-center">
               <Col md={12}>
@@ -141,7 +140,7 @@ function Home() {
           <section
             id="resume"
             className="fade-left text-center my-5"
-            ref={setRef(4)}
+            ref={setRef(5)}
           >
             <Row className="justify-content-center">
               <Col md={12}>
@@ -154,7 +153,7 @@ function Home() {
           <section
             id="contact"
             className="fade-left text-center my-5"
-            ref={setRef(7)}
+            ref={setRef(6)}
           >
             <Row className="justify-content-center">
               <Col md={12}>

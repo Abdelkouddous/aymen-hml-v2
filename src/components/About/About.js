@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Github from "./Github";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about2.png";
+import "./about.css";
 
 function About() {
   return (

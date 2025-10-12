@@ -103,6 +103,15 @@ function NavBar() {
                 <GiSkills style={{ marginBottom: "2px" }} /> Skills
               </Nav.Link>
             </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link href="#projects" onClick={() => updateExpanded(false)}>
+                {/* as={Link}
+                to=".about"
+                 */}
+                <AiFillProject style={{ marginBottom: "2px" }} /> Projects
+              </Nav.Link>
+            </Nav.Item>
             <Nav.Item>
               <Nav.Link
                 // as={Link}
@@ -113,14 +122,7 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> MyCV
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="#projects" onClick={() => updateExpanded(false)}>
-                {/* as={Link}
-                to=".about"
-                 */}
-                <AiFillProject style={{ marginBottom: "2px" }} /> Projects
-              </Nav.Link>
-            </Nav.Item>
+
             <Nav.Item>
               <Nav.Link
                 href="#introduce"
