@@ -17,13 +17,10 @@
 /* Scroll container — now just a regular scrollable area */
 .tools-scroll-container {
   height: 70vh;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.035) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
   overflow-y: auto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   border-radius: 2px;
   position: relative;

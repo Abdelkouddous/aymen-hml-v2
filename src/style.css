@@ -174,25 +174,43 @@ button:focus {
 /* --------- */
 /* Navbar Section  */
 /* --------- */
+/* Define a navbar height variable so we can offset page content consistently */
+:root {
+  --navbar-height: 64px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --navbar-height: 72px;
+  }
+}
 .sticky {
   /* background-color: #1b1a2ea9 !important; */
   background-color: #0a0416;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   --webkit-backdrop-filter: blur(15px) !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  z-index: 1100; /* ensure navbar is above all page content */
 }
 
 .navbar {
   background-color: #0a0416;
   color: #f5f5f5;
-  z-index: 1;
+  z-index: 1100;
   position: fixed !important;
-  width: 99% !important;
-  margin: auto !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  margin: 0 !important;
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
-  margin-bottom: 40px;
 }
 
 .navbar-toggler {
@@ -361,6 +379,7 @@ button:focus {
   position: fixed !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+  z-index: 0; /* keep particles behind fixed navbar and content */
 }
 
 .home-header {
@@ -619,11 +638,21 @@ button:focus {
 .project-section {
   position: relative !important;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  padding-top: 30px !important;
+  /* offset for fixed navbar to avoid overlap */
+  padding-top: calc(var(--navbar-height) + 20px) !important;
   padding-bottom: 30px !important;
   min-height: 100vh;
   width: 100% !important;
   background-color: var(--section-background-color) !important;
+}
+
+/* Anchor targets should account for fixed navbar height when scrolled via hash links */
+#about,
+#projects,
+#ai-projects,
+#resumeCV,
+#contact {
+  scroll-margin-top: calc(var(--navbar-height) + 12px);
 }
 
 /* Gradient background used by ProjectDetails to match main theme */

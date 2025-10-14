@@ -37,7 +37,7 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "Essaweg an E-Commerce online store",
+    title: "Esoug an E-Commerce online store",
     imgPath: "", // temporary placeholder image
     description: `Modern e-commerce web app focused on a seamless shopping experience.
       Coming soon ... `,
