@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import ProjectDetails from "./components/Projects/ProjectDetails/ProjectDetails";
 import Resume from "./components/Resume/ResumeNew";
 import {
   BrowserRouter as Router,
@@ -38,6 +39,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project" element={<Projects />} />
+        <Route path="/projects/:id" element={<ProjectDetails />} />
+        <Route path="/ai-projects/:id" element={<ProjectDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/testimonials" element={<Testimonials />} />

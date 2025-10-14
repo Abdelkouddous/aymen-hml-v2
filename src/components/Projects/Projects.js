@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 
 import SlideShow from "./SlideShow";
+import AiProjects from "./Ai/AiProjects";
 
 function Projects() {
   return (
@@ -10,6 +11,7 @@ function Projects() {
         My Recent <strong className="orange">Projects </strong>
       </h1>
       <SlideShow></SlideShow>
+      <AiProjects></AiProjects>
     </Container>
   );
 }

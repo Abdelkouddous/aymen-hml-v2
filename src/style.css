@@ -2,7 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  --section-background-color: rgba(23, 0, 36, 0.99);
+  --section-background-color: rgba(23, 0, 36, 0.99) !important;
   /* --imp-text-color: #c770f0; */
   --imp-text-color: #ffd37b;
 }
@@ -621,9 +621,64 @@ button:focus {
   transition: opacity 0.5s ease, transform 0.5s ease;
   padding-top: 30px !important;
   padding-bottom: 30px !important;
-  min-height: 100%;
+  min-height: 100vh;
   width: 100% !important;
-  background-image: var(--section-background-color) !important;
+  background-color: var(--section-background-color) !important;
+}
+
+/* Gradient background used by ProjectDetails to match main theme */
+.details-gradient {
+  background: linear-gradient(135deg, #0a0416 0%, #1a103a 50%, #261c52 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Icon–label pairs list styling for ProjectDetails */
+.icon-pair-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.icon-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 211, 123, 0.25);
+  color: #f5f5f5;
+  line-height: 1;
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.icon-pair:hover {
+  transform: translateY(-1px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 12px #ffd37b33;
+  border-color: rgba(255, 211, 123, 0.45);
+}
+
+.icon-pair svg {
+  color: #ffbd3a;
+}
+
+.icon-pair .dash {
+  color: rgba(245, 245, 245, 0.75);
+  opacity: 0.85;
+}
+
+/* Ensure Bootstrap Cards in details view never render white backgrounds */
+.project-card-view,
+.project-card-view .card,
+.project-card-view .card-body,
+.project-card-view .card-header,
+.project-card-view .card-footer {
+  background-color: transparent !important;
 }
 
 .project-card {
@@ -644,6 +699,14 @@ button:focus {
   display: flex !important;
   justify-content: space-around !important;
   vertical-align: center !important;
+}
+.project-card-view .list-group-item {
+  background-color: transparent !important;
+  color: #f5f5f5 !important;
+  border-color: rgba(255, 211, 123, 0.25) !important;
+}
+.project-card-view .list-group {
+  background-color: transparent !important;
 }
 .project-card-view:hover {
   transform: scale(1.05) !important;
@@ -1292,6 +1355,7 @@ input {
 }
 /* 
  */
+
 /* Contact Form Styles */
 
 .contact-form-container {
