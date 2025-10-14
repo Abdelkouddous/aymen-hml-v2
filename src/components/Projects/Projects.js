@@ -8,7 +8,7 @@ function Projects() {
   return (
     <Container fluid className="project-section" id="projects">
       <h1 className="project-heading">
-        My Recent <strong className="orange">Projects </strong>
+        <strong className="orange">Full Stack </strong>Projects
       </h1>
       <SlideShow></SlideShow>
       <AiProjects></AiProjects>
