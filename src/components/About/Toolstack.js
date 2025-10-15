@@ -60,7 +60,7 @@ function Toolstack() {
 
     let rafId;
     let direction = 1; // 1 => down, -1 => up
-    let speed = 900; // pixels per frame; ~24px/sec at 60fps
+    let speed = 0.4; // pixels per frame; ~24px/sec at 60fps
     let paused = false;
 
     const step = () => {
