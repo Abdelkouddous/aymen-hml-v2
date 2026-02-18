@@ -2,6 +2,6 @@
   font-size: 5em !important;
   max-height: 50px !important;
   scale: 1.5 !important;
-  color: rgba(230, 178, 115, 0.883);
+  color: var(--accent-color);
   transition: all 0.4s ease 0s !important;
 }

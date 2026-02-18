@@ -1,4 +1,106 @@
-/* 3D Tech Carousel */
+/* Slider Container Styling */
+.tech-slider-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 3rem auto !important;
+  position: relative;
+  overflow: hidden; /* Hide overflow for checking marquee */
+  /* Gradient Masks for fade effect */
+  -webkit-mask-image: linear-gradient(to right, transparent, var(--text-color) 15%, var(--text-color) 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, var(--text-color) 15%, var(--text-color) 85%, transparent);
+}
+
+.marquee-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 20px;
+  /* Calculated duration based on content width approx. speed: ~25px/sec.
+     Total width approx 2550px. 100s = 25.5px/s.
+     This provides a smooth, slow, continuous flow.
+  */
+  animation: scroll 100s linear infinite; 
+  /* Pause on hover if desired */
+}
+
+/* 
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+*/
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move half way since we duplicated the list */
+  }
+}
+
+.tech-item-card {
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  background: var(--card-bg); /* Glassmorphism background */
+  color: var(--imp-text-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid var(--card-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px 0; /* Vertical margin only, horizontal handled by gap */
+}
+
+.tech-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--imp-text-color);
+}
+
+.tech-item-icon {
+  font-size: 3rem;
+  color: var(--imp-text-color); /* Ensure icons use the accent color */
+}
+
+.tech-item-label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-color); /* Key text white */
+}
+
+/* Hide default arrows if they clash, or style them */
+.react-slideshow-container .nav {
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+}
+
+.react-slideshow-container .nav:hover {
+  background: var(--imp-text-color);
+}
+
+.react-slideshow-container .nav svg {
+  fill: var(--text-color);
+}
+
+
+/* 
+=====================================================
+PRESERVED 3D TECH CAROUSEL STYLES (FOR FUTURE USE)
+=====================================================
+
 .tech-3d-container {
   display: flex;
   justify-content: center;
@@ -19,9 +121,9 @@
   -ms-user-select: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: pan-y;
-  /* Local radius override for bigger, centered ring */
+  /* Local radius override for bigger, centered ring 
   --carousel-radius: 340px;
-}
+}*/
 .tech-3d-scene:active {
   cursor: default;
 }
@@ -56,43 +158,20 @@
   -webkit-backface-visibility: hidden;
 }
 
+/* Note: .tech-item-card is reused in the new slider, so some styles might overlap. 
+   Original 3D specific card styles: */
+/*
 .tech-item-card {
   width: 190px;
   height: 220px;
-  border-radius: 16px;
-  background: var(--card-background-color);
-  color: var(--imp-text-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem;
-  backdrop-filter: saturate(1.2) blur(8px);
-  -webkit-backdrop-filter: saturate(1.2) blur(8px);
-  -webkit-user-select: none;
-  user-select: none;
+  // ... other styles ...
 }
-.tech-item-card * {
-  pointer-events: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
+*/
 
-.tech-item-icon {
-  font-size: 2.6rem;
-}
-.tech-item-label {
-  font-weight: 600;
-  font-size: 1.05rem;
-}
 .tech-item-value {
   font-size: 1rem;
   opacity: 0.95;
 }
-
-/* controls removed in favor of hover/scroll */
 
 @media (max-width: 640px) {
   .tech-3d-scene {
@@ -105,12 +184,8 @@
   [data-theme="dark"] {
     --carousel-radius: 220px;
   }
-  .tech-item-card {
-    width: 150px;
-    height: 180px;
-  }
 }
-
+/*  
 @media (min-width: 1024px) {
   .tech-3d-scene {
     height: 640px;
@@ -123,3 +198,4 @@
     --carousel-radius: 380px;
   }
 }
+*/

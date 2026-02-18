@@ -6,7 +6,7 @@ import Techstack from "../About/Techstack";
 import About from "../About/About";
 import Resume from "../Resume/ResumeNew";
 import Projects from "../Projects/Projects";
-import Toolstack from "../About/Toolstack";
+
 import Hero from "../Hero/Hero";
 import Testimonials from "../Testimonials/Testimonials";
 
@@ -74,59 +74,45 @@ function Home() {
 
   return (
     <div id="home">
-      <Container fluid className="home-section">
+      <Container fluid className="home-section p-0">
         {/* Hero Section */}
-        <section className="text-center my-5 h-screen">
-          <Row className="justify-content-center">
-            <Col md={12}>
+        <section className="text-center h-screen flex flex-col justify-center">
+          <Row className="justify-content-center m-0">
+            <Col md={12} className="p-0">
               <Hero />
             </Col>
           </Row>
         </section>
 
-        {/* Other Sections */}
-        {/* Stats Section */}
-        {/* <section className="text-center my-5">
-            <Row className="justify-content-center">
-              <Col md={12}>
-                
-              </Col>
-            </Row>
-          </section> */}
-        <div>
+        <div className="section-content-wrapper">
           {/* About Section */}
-          <section id="about" className="text-center my-4">
+          <section id="about" className="text-center py-5 section-divider">
             <Row className="fade-left justify-content-center" ref={setRef(0)}>
               <Col md={12}>
                 <About />
               </Col>
             </Row>
           </section>
+
           {/* Testimonials section */}
           <section
             id="testimonials"
-            className="fade-right text-center my-5"
+            className="fade-right text-center py-5 section-divider"
             ref={setRef(1)}
           >
             <Testimonials />
           </section>
 
           {/* Skillset Section */}
-          <section className="fade-left text-center my-5" ref={setRef(2)}>
+          <section className="fade-left text-center py-5 section-divider" ref={setRef(2)}>
             <Techstack />
           </section>
 
-          {/* Tools Section */}
-          <section className="fade-left text-center my-5" ref={setRef(3)}>
-            <h1 className="project-heading">
-              <strong className="orange">Tools</strong> I use
-            </h1>
-            <Toolstack />
-          </section>
+
           {/* Projects Section */}
           <section
             id="projects"
-            className="fade-left text-center my-5"
+            className="fade-left text-center py-5 section-divider"
             ref={setRef(4)}
           >
             <Row className="justify-content-center">
@@ -139,7 +125,7 @@ function Home() {
           {/* Resume Section */}
           <section
             id="resume"
-            className="fade-left text-center my-5"
+            className="fade-left text-center py-5 section-divider"
             ref={setRef(5)}
           >
             <Row className="justify-content-center">
@@ -152,7 +138,7 @@ function Home() {
           {/* Contact Section */}
           <section
             id="contact"
-            className="fade-left text-center my-5"
+            className="fade-left text-center py-5 section-divider"
             ref={setRef(6)}
           >
             <Row className="justify-content-center">

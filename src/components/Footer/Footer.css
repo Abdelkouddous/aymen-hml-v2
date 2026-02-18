@@ -1,14 +1,14 @@
 /* src/components/Footer.css */
 .footer-section {
-  background-color: #0a0416;
+  background-color: var(--footer-bg);
   display: grid;
   grid-template-columns: auto;
-  color: #f5f5f5;
+  color: var(--text-color);
   padding: 3rem 0 1.2rem;
   position: relative;
   align-items: center;
   z-index: 1;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--card-border);
 }
 
 .footer-content {
@@ -24,7 +24,7 @@
 }
 
 .footer-description {
-  color: #b3b3b3;
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
@@ -35,7 +35,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .footer-links ul {
@@ -49,7 +49,7 @@
 }
 
 .footer-links ul li a {
-  color: #b3b3b3;
+  color: var(--text-muted);
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 0.95rem;
@@ -71,26 +71,26 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background-color: var(--card-border);
+  color: var(--text-color);
   font-size: 1.2rem;
   transition: all 0.3s ease;
 }
 
 .social-links a:hover {
   background-color: var(--imp-text-color, #f9d74c);
-  color: #000000;
+  color: var(--bg-color);
   transform: translateY(-3px);
 }
 
 .footer-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--card-border);
   margin: 2rem 0;
 }
 
 .footer-bottom {
   font-size: 0.9rem;
-  color: #b3b3b3;
+  color: var(--text-muted);
 }
 
 .copyright p {

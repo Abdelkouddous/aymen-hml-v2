@@ -1,13 +1,11 @@
-/* --------- */
-/* About */
-/* --------- */
+/* src/components/About/about.css */
 
 .about-section {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
-  color: white !important;
+  color: var(--text-color) !important;
   transition: all 0.5s ease 0.3s !important;
 }
 
@@ -16,7 +14,7 @@
   margin: 15px !important;
   padding: 10px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid rgba(230, 193, 137, 0.637) !important;
+  border: 1.7px solid var(--accent-color) !important;
   vertical-align: middle !important;
   align-items: center;
   text-align: center !important;
@@ -39,7 +37,9 @@
 .tech-icons:hover {
   transform: scale(1.1) !important;
   /* overflow: hidden !important; */
-  background-color: rgba(230, 178, 115, 0.883) !important;
+  background-color: var(--accent-color-hover) !important;
+  border-color: var(--accent-color-hover) !important;
+  color: var(--bg-color) !important;
 }
 .tech-icon-images {
   padding: 20px !important;
@@ -48,7 +48,7 @@
 
 .quote-card-view {
   border: none !important;
-  color: white !important;
+  color: var(--text-color) !important;
   background-color: transparent !important;
 }
 

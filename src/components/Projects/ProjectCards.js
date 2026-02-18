@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import homeMain from "../../Assets/home-main.svg";
 
 function ProjectCards(props) {
@@ -15,7 +16,7 @@ function ProjectCards(props) {
         onError={(e) => {
           e.currentTarget.src = homeMain;
         }}
-        style={{ margin: "auto", maxWidth: "55%", maxHeight: "50%" }}
+        className="project-card-img"
       />
       <Card.Body className="hero-appear align-items-center">
         <Card.Title style={{ textAlign: "center" }}>{props.title}</Card.Title>
@@ -41,6 +42,15 @@ function ProjectCards(props) {
             <CgWebsite /> &nbsp; {"Demo"}
           </Button>
         )}
+
+        <Button
+          as={Link}
+          to={`/projects/${props.id}`}
+          variant="primary"
+          style={{ marginLeft: "10px" }}
+        >
+          Details
+        </Button>
       </Card.Body>
     </Card>
   );

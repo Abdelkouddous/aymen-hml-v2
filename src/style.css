@@ -1,10 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 html,
 body {
   width: 100%;
   height: 100%;
-  --section-background-color: rgba(23, 0, 36, 0.99) !important;
-  /* --imp-text-color: #c770f0; */
-  --imp-text-color: #ffd37b;
+  margin: 0;
+  font-family: 'Outfit', sans-serif !important;
+  scroll-behavior: smooth;
+  
+  /* Theme Variables (Default / Dark Mode) */
+  --bg-color: #302b63;
+  --bg-gradient: linear-gradient(to bottom right, #302b63, #24243e);
+  --text-color: #f5f5f5;
+  --text-muted: #b3b3b3;
+  --accent-color: #ffd37b;
+  --accent-color-hover: #ffca5f;
+  --primary-color: #6244C5;
+  --btn-secondary-color: #6244C5;
+  --card-bg: rgba(255, 255, 255, 0.05); /* Glass dark */
+  --card-bg-hover: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(255, 211, 123, 0.15);
+  --navbar-bg: #0a0416;
+  --footer-bg: #0a0416;
+  --scroll-track: #0f0c29;
+  --scroll-thumb: rgba(255, 211, 123, 0.6);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --section-background-color: var(--bg-color);
+  
+  /* Variables used by replaced CSS */
+  --imp-text-color: var(--accent-color);
+  --image-gradient: linear-gradient(to bottom, rgba(16, 12, 45, 0.8), rgba(16, 12, 45, 0.8));
+}
+
+[data-theme="light"] {
+  /* Surface colors: Professional Light Mode (Subtle Lavender/Grey) */
+  --bg-color: #f8f7fa; 
+  --bg-gradient: linear-gradient(135deg, #fdfbfd 0%, #f4f0f8 50%, #e8e6f1 100%); /* Very subtle, premium light purple/grey */
+  
+  /* Text colors: High Contrast Dark */
+  --text-color: #0d0d0d; /* sharp black/grey */
+  --text-muted: #4a4a4a;
+  
+  /* Accent colors: Hot Orange (No Purple) */
+  --accent-color: #d35400; /* Deep Rust/Orange */
+  --accent-color-hover: #e67e22; 
+  
+  /* Primary Elements */
+  --primary-color: #0d0d0d; /* Black buttons */
+  --btn-secondary-color: #0d0d0d;
+  
+  /* Cards: crisp white with shadow */
+  --card-bg: #ffffff;
+  --card-bg-hover: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  
+  --navbar-bg: rgba(253, 251, 253, 0.95);
+  --footer-bg: #f4f0f8;
+  
+  --scroll-track: #e8e6f1;
+  --scroll-thumb: rgba(211, 84, 0, 0.5);
+  
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --imp-text-color: var(--accent-color);
+  --navbar-text: #0d0d0d;
+  --image-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* Force specific elements to respect variable in all modes */
+.project-card-view, 
+.tech-item-label, 
+.project-heading,
+.home-about-description,
+.purple {
+  color: var(--text-color) !important;
 }
 
 /* col  */
@@ -97,20 +171,20 @@ button:focus {
   font-size: 1.1em !important;
   line-height: 2em !important;
   background-color: rgba(23, 0, 36, 0.99) !important;
-  color: #ffbd3a;
+  color: var(--accent-color);
   border-radius: 5% !important;
   transition: 0.3s !important;
 }
 .btn-submit:hover {
-  box-shadow: 0 0 8px #ffd37b;
+  box-shadow: 0 0 8px var(--accent-color);
   border: solid 0.3px;
-  border-color: #ffbd3a;
+  border-color: var(--accent-color);
   /* text-shadow: 0 0 1px rgb(231, 160, 38); */
   transition: 0.3s !important;
 }
 
 .btn-submit:active {
-  background-color: #ffbd3a;
+  background-color: var(--accent-color);
   color: #fffbdb;
 }
 
@@ -125,7 +199,7 @@ button:focus {
   height: 100%;
   z-index: 999999;
   background-color: #131005;
-  /* background-color: #ffd37b; */
+  /* background-color: var(--accent-color); */
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -148,29 +222,27 @@ button:focus {
 /* --------- */
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #ffd37b66;
+  background: var(--bg-color);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  /* background: rgba(178, 121, 216, 0.959); */
-  background: #ffd37b;
-  border-radius: 12px;
+  background: rgba(255, 211, 123, 0.6);
+  border-radius: 10px;
+  border: 2px solid var(--bg-color); /* Creates padding effect */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  /* background: rgba(222, 130, 235, 0.911); */
-  background: #ffd37b66;
-  border-radius: 12px;
+  background: rgba(255, 211, 123, 0.9);
 }
-/* light orange: #ffd37b
-    dark orange: #ffd37b66 */
+/* light orange: var(--accent-color)
+    dark orange: var(--accent-color)66 */
 /* --------- */
 /* Navbar Section  */
 /* --------- */
@@ -184,9 +256,7 @@ button:focus {
     --navbar-height: 72px;
   }
 }
-.sticky {
-  /* background-color: #1b1a2ea9 !important; */
-  background-color: #0a0416;
+.sticky { background-color: var(--navbar-bg);
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   --webkit-backdrop-filter: blur(15px) !important;
@@ -198,9 +268,8 @@ button:focus {
   z-index: 1100; /* ensure navbar is above all page content */
 }
 
-.navbar {
-  background-color: #0a0416;
-  color: #f5f5f5;
+.navbar { background-color: var(--navbar-bg); color: var(--text-color);
+  color: var(--text-color);
   z-index: 1100;
   position: fixed !important;
   top: 0;
@@ -222,7 +291,7 @@ button:focus {
 .navbar-toggler span {
   display: inline-block !important;
   /* background-color: #be50f4 !important; */
-  /* background-color: #ffd37b !important; */
+  /* background-color: var(--accent-color) !important; */
   height: 5px !important;
   width: 30px !important;
   /* margin-top: 5px !important; */
@@ -285,12 +354,12 @@ button:focus {
 }
 
 .navbar-nav .nav-link {
-  color: white !important;
+  color: var(--text-color) !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
 }
 .nav-link:hover {
-  color: #ffd37b !important;
+  color: var(--accent-color) !important;
   transition: all 0.3s ease-out 1s;
 }
 
@@ -325,9 +394,9 @@ button:focus {
   width: 0;
   border-radius: 16px;
   /* background: #c95bf5; */
-  /* light orange: #ffd37b
-    dark orange: #ffd37b66 */
-  background: #ffd37b66;
+  /* light orange: var(--accent-color)
+    dark orange: var(--accent-color)66 */
+  background: var(--accent-color)66;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -388,7 +457,7 @@ button:focus {
 }
 
 .home-section {
-  background-color: #0a0416;
+  background-color: var(--navbar-bg);
   display: flex;
   flex-direction: column;
   /* background-image: var(--image-gradient), url(./Assets/home-bg.jpg); */
@@ -400,7 +469,7 @@ button:focus {
 
 .home-content {
   /* padding: 7rem 0 2rem !important; */
-  color: whitesmoke;
+  color: var(--text-color);
   text-align: center;
   display: table;
   margin: auto !important;
@@ -408,7 +477,7 @@ button:focus {
 
 .home-content-mid {
   padding: 7rem 0 2rem !important;
-  color: whitesmoke;
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -431,10 +500,10 @@ button:focus {
 }
 
 .main-name {
-  /* light orange: #ffd37b
-    dark orange: #ffd37b66 */
+  /* light orange: var(--accent-color)
+    dark orange: var(--accent-color)66 */
   /* color: #cd5ff8; */
-  color: #ffd37b;
+  color: var(--accent-color);
   font-size: 0.9em;
   margin-top: 12px !important;
 }
@@ -490,7 +559,7 @@ button:focus {
 }
 
 .home-about-description {
-  color: white !important;
+  color: var(--text-color) !important;
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
@@ -511,7 +580,7 @@ button:focus {
 .home-about-social {
   text-align: center !important;
   padding-top: 25px;
-  color: white !important;
+  color: var(--text-color) !important;
 }
 
 .home-about-social-links {
@@ -545,7 +614,7 @@ button:focus {
   height: 100%;
   border-radius: 50%;
   /* background: #68187a; */
-  background: #ffc34de5 !important;
+  background: var(--accent-color) !important;
   transition: 0.2s;
   transform: scale(0.95);
   z-index: -1;
@@ -554,15 +623,15 @@ button:focus {
 .home-social-icons:hover::before {
   transform: scale(1.1);
   /* box-shadow: 0 0 15px #801f95; */
-  box-shadow: 0 0 12px #ffd37b66;
+  box-shadow: 0 0 12px var(--accent-color)66;
 }
 
 .home-social-icons:hover {
   /* color: #87209e;
   box-shadow: 0 0 5px #87209e;
   text-shadow: 0 0 2px #87209e; */
-  color: #ffd37b;
-  box-shadow: 0 0 2px #ffd37b;
+  color: var(--accent-color);
+  box-shadow: 0 0 2px var(--accent-color);
   text-shadow: 0 0 5px rgb(231, 160, 38);
 }
 
@@ -574,7 +643,7 @@ button:focus {
 
 .icon-colour {
   /* color: #700c86 !important; */
-  color: #ffbd3a !important;
+  color: var(--accent-color) !important;
 }
 
 /* --------- */
@@ -586,7 +655,7 @@ button:focus {
   /* background: linear-gradient(to top, #3b2000, #8b3f00); */
   /* background-color: linear-gradient(to bottom, #ff8c00, #ffd700);
    */
-  background-color: #0a0416 !important;
+  background-color: var(--navbar-bg) !important;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -616,8 +685,8 @@ button:focus {
 .footer h3 {
   z-index: 2;
   font-size: 1em;
-  color: white !important;
-  /* color: #ffd37b !important; */
+  color: var(--text-color) !important;
+  /* color: var(--accent-color) !important; */
   margin-top: 0.6em !important;
   margin-bottom: 0.5em !important;
 }
@@ -630,7 +699,7 @@ button:focus {
 
 .blockquote-footer {
   /* color: #a588c0 !important; */
-  color: #ffbd3a !important;
+  color: var(--accent-color) !important;
 }
 /* --------- */
 /* Projects */
@@ -657,7 +726,7 @@ button:focus {
 
 /* Gradient background used by ProjectDetails to match main theme */
 .details-gradient {
-  background: linear-gradient(135deg, #0a0416 0%, #1a103a 50%, #261c52 100%);
+  background: var(--bg-gradient);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -679,7 +748,7 @@ button:focus {
   border-radius: 999px;
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 211, 123, 0.25);
-  color: #f5f5f5;
+  color: var(--text-color);
   line-height: 1;
   transition: transform 0.2s ease, background-color 0.2s ease,
     box-shadow 0.2s ease, border-color 0.2s ease;
@@ -688,12 +757,12 @@ button:focus {
 .icon-pair:hover {
   transform: translateY(-1px);
   background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 12px #ffd37b33;
+  box-shadow: 0 0 12px var(--accent-color)33;
   border-color: rgba(255, 211, 123, 0.45);
 }
 
 .icon-pair svg {
-  color: #ffbd3a;
+  color: var(--accent-color);
 }
 
 .icon-pair .dash {
@@ -718,35 +787,76 @@ button:focus {
   min-height: 100% !important;
 }
 
+/* Improved Project Card Styles */
 .project-card-view {
-  /* box-shadow: 0 4px 5px 3px rgba(136, 99, 53, 0.459) !important; */
-  color: white !important;
+  color: var(--text-color) !important;
   background-color: transparent !important;
   opacity: 0.95 !important;
-  padding: 20px !important;
-
+  transition: all 0.4s ease-out !important; /* Faster, smoother transition */
+  padding: 2rem !important;
+  border-radius: 15px !important;
+  border: 1px solid rgba(255, 211, 123, 0.15) !important;
+  backdrop-filter: blur(5px) !important;
   display: flex !important;
-  justify-content: space-around !important;
-  vertical-align: center !important;
+  flex-direction: column !important; /* Ensure content stacks correctly */
+  height: 100% !important; /* Full height */
 }
-.project-card-view .list-group-item {
-  background-color: transparent !important;
-  color: #f5f5f5 !important;
-  border-color: rgba(255, 211, 123, 0.25) !important;
+
+.project-card-img {
+  margin: 0 auto 1.5rem auto !important;
+  max-width: 100% !important;
+  height: 200px !important; /* Fixed height for consistency */
+  object-fit: contain !important; /* Contain to show full image without cropping */
+  transition: transform 0.3s ease;
 }
-.project-card-view .list-group {
-  background-color: transparent !important;
+
+.project-card-view:hover .project-card-img {
+  transform: scale(1.05); /* Subtle zoom on hover */
 }
+
 .project-card-view:hover {
-  transform: scale(1.05) !important;
+  transform: translateY(-8px) scale(1.02) !important;
   overflow: hidden !important;
-  transition: all 0.5s ease 0.3s !important;
-  box-shadow: 0 4px 4px 5px rgba(144, 109, 72, 0.561) !important;
+  box-shadow: 0 12px 20px var(--shadow-color), 0 0 15px var(--card-border) !important; /* Cleaner shadow */
+  border-color: var(--imp-text-color) !important;
 }
+
+/* Light Mode Project Card Specifics */
+[data-theme="light"] .project-card-view {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .project-card-view:hover {
+  background-color: #ffffff !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 8px 30px rgba(211, 84, 0, 0.2) !important; /* Orange glow */
+}
+
+/* Button overrides for professional consistency */
+.btn-primary {
+  color: var(--text-color) !important;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  transition: all 0.3s ease !important;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; */
+}
+
+.btn-primary:hover {
+  color: var(--text-color) !important;
+  background-color: var(--accent-color) !important; /* Use theme accent color on hover */
+  border-color: var(--accent-color) !important; 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 211, 123, 0.3) !important;
+}
+
+
+
 
 .home-card-view {
   /* box-shadow: 0 4px 5px 3px rgba(136, 99, 53, 0.459) !important; */
-  color: white !important;
+  color: var(--text-color) !important;
   background-color: transparent !important;
   opacity: 0.99 !important;
   transition: all 0.5s ease 0s !important;
@@ -768,13 +878,13 @@ button:focus {
 .blog-card-view {
   background-color: transparent !important;
   box-shadow: 0 3px 3px 2px rgba(161, 125, 77, 0.459) !important;
-  color: white !important;
+  color: var(--text-color) !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
 
 .blog-link {
-  color: white !important;
+  color: var(--text-color) !important;
   text-decoration: none !important;
 }
 
@@ -802,9 +912,9 @@ button:focus {
 }
 
 .btn-primary {
-  color: #fff !important;
-  background-color: #ffbd3a !important;
-  border-color: #ffbd3a !important;
+  color: var(--text-color) !important;
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
 
   margin: 1px;
   margin-right: 0, 5rem;
@@ -816,23 +926,23 @@ button:focus {
 }
 
 .btn-primary:hover {
-  color: #0a0416 !important;
+  color: var(--navbar-bg) !important;
   box-shadow: 4px 5px 4px 3px rgba(168, 94, 4, 0.137) !important;
   background-color: #fffbdb !important;
-  /* border-color: #ffbd3a !important; */
+  /* border-color: var(--accent-color) !important; */
   transform: scale(1.05);
 }
 
 .btn-secondary:hover {
   box-shadow: 4px 5px 4px 3px rgba(168, 94, 4, 0.137) !important;
-  /* border-color: #ffbd3a !important; */
+  /* border-color: var(--accent-color) !important; */
   transform: scale(1.05);
 }
 
 .btn-primary-2 {
-  color: #0a0416 !important; /* Dark text for better contrast on yellow */
-  background-color: #ffbd3a !important;
-  border-color: #ffbd3a !important;
+  color: var(--navbar-bg) !important; /* Dark text for better contrast on yellow */
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
   margin: 0.5rem;
   padding: 0.6rem 1.5rem;
   border-radius: 50px !important;
@@ -840,15 +950,19 @@ button:focus {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-size: 0.85rem;
+  text-decoration: none !important; /* Remove text line */
   transition: all 0.3s ease !important;
   box-shadow: 0 4px 15px rgba(255, 189, 58, 0.3);
   position: relative;
   overflow: hidden;
+  display: inline-block; /* Ensure it behaves like a button */
 }
 
 .btn-primary-2:hover {
-  background-color: #ffca5f !important;
-  border-color: #ffca5f !important;
+  background-color: var(--accent-color-hover) !important;
+  border-color: var(--accent-color-hover) !important;
+  color: var(--navbar-bg) !important;
+  text-decoration: none !important; /* Remove text line on hover */
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 189, 58, 0.4);
 }
@@ -858,9 +972,9 @@ button:focus {
 }
 
 .btn-secondary-2 {
-  color: #f5f5f5 !important;
+  color: var(--text-color) !important;
   background-color: transparent !important;
-  border: 2px solid #ffbd3a !important;
+  border: 2px solid var(--accent-color) !important;
   margin: 0.5rem;
   padding: 0.6rem 1.5rem;
   border-radius: 50px !important;
@@ -868,21 +982,24 @@ button:focus {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-size: 0.85rem;
+  text-decoration: none !important; /* Remove text line */
   transition: all 0.3s ease !important;
   position: relative;
   overflow: hidden;
+  display: inline-block; /* Ensure it behaves like a button */
 }
 
 .btn-secondary-2:hover {
   background-color: rgba(255, 189, 58, 0.1) !important;
-  color: #ffca5f !important;
+  color: var(--accent-color-hover) !important;
+  text-decoration: none !important; /* Remove text line on hover */
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(255, 189, 58, 0.2);
 }
 
 /* Navigation arrows for Projects slideshow */
 .nav-arrow-btn {
-  color: #ffbd3a !important;
+  color: var(--accent-color) !important;
   background-color: transparent !important;
   border: 1px solid rgba(255, 189, 58, 0.35) !important;
   width: 40px;
@@ -891,7 +1008,7 @@ button:focus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 8px #ffd37b66;
+  box-shadow: 0 0 8px var(--accent-color)66;
   transition: transform 0.2s ease, box-shadow 0.2s ease,
     background-color 0.2s ease;
   padding: 0;
@@ -899,7 +1016,7 @@ button:focus {
 
 .nav-arrow-btn:hover {
   background-color: rgba(255, 189, 58, 0.1) !important;
-  color: #ffca5f !important;
+  color: var(--accent-color-hover) !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(255, 189, 58, 0.2);
 }
@@ -947,7 +1064,7 @@ button:focus {
 .project-heading {
   text-align: center;
 
-  color: white !important;
+  color: var(--text-color) !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
@@ -962,7 +1079,7 @@ button:focus {
   padding-top: 90px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
-  color: white !important;
+  color: var(--text-color) !important;
 }
 
 .resume {
@@ -1006,7 +1123,7 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #ffbd3a;
+  border-left: 2px solid var(--accent-color);
   position: relative;
 }
 
@@ -1043,7 +1160,7 @@ button:focus {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #ffbd3a;
+  border: 2px solid var(--accent-color);
 }
 /* 
 buttons
@@ -1055,8 +1172,8 @@ buttons
 }
 
 .like-btn {
-  background-color: #ffbd3a !important;
-  border-color: #ffbd3a !important;
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
@@ -1065,8 +1182,8 @@ buttons
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
-  background-color: #ffbd3a !important;
-  border-color: #ffbd3a !important;
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
 }
 
 .animate-like {
@@ -1098,7 +1215,7 @@ buttons
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: #ffbd3a !important;
+  background-color: var(--accent-color) !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
@@ -1107,8 +1224,8 @@ buttons
 
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
-  background-color: #ffbd3a !important;
-  border-color: #ffbd3a !important;
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
   color: #4d3100;
 }
 .fork-btn-inner::after {
@@ -1117,7 +1234,7 @@ buttons
 /* Define CSS variables for dark mode (default mode) */
 :root {
   --background-color: #1e1e1e;
-  --text-color: #f5f5f5;
+  --text-color: var(--text-color);
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
   --border-color: #444444;
@@ -1131,7 +1248,7 @@ buttons
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
   --border-color: #dddddd;
-  --card-background: #f5f5f5;
+  --card-background: var(--text-color);
 }
 
 /* Apply the variables */
@@ -1283,8 +1400,8 @@ input {
 
 .hero-left {
   /* background: var(--section-background-color); */
-  background: linear-gradient(135deg, #0a0416 0%, #1a103a 50%, #261c52 100%);
-  color: #f5f5f5;
+  background: var(--bg-gradient);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1292,7 +1409,7 @@ input {
   text-align: center;
   gap: 0.7rem;
   padding: 5rem 2rem 3rem;
-  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 }
 
 .hero-right {
@@ -1316,13 +1433,13 @@ input {
   font-weight: 800;
   line-height: 1.1;
   margin: 0 0 0.5rem 0;
-  color: #f5f5f5;
+  color: var(--text-color);
   text-align: left;
 }
 
 .hero-subtitle {
   font-size: clamp(1rem, 1.6vw, 1.25rem);
-  color: rgba(245, 245, 245, 0.8);
+  color: var(--text-muted);
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -1428,7 +1545,7 @@ input {
   padding: 12px 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--card-bg);
   color: var(--txt-color);
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -1494,4 +1611,90 @@ input {
   .btn-submit {
     padding: 10px;
   }
+}
+
+[data-theme="light"] .navbar {
+  color: var(--navbar-text) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+[data-theme="light"] .nav-link {
+  color: var(--navbar-text) !important;
+}
+[data-theme="light"] .nav-link:hover {
+  color: var(--accent-color) !important;
+}
+[data-theme="light"] .footer-brand, 
+[data-theme="light"] .footer h3,
+[data-theme="light"] .footer-copywright,
+[data-theme="light"] .footer-body,
+[data-theme="light"] .heading,
+[data-theme="light"] .project-heading {
+  color: var(--text-color) !important;
+}
+[data-theme="light"] .orange {
+  color: var(--accent-color) !important;
+}
+
+/* Generic List Group Override for consistency */
+.list-group-item {
+  background-color: transparent !important;
+  color: inherit !important;
+  border-color: var(--card-border) !important;
+}
+
+/* Light Mode Button Override: Prevent white text on hover */
+[data-theme="light"] .btn:hover,
+[data-theme="light"] .btn:focus,
+[data-theme="light"] .btn:active,
+[data-theme="light"] .btn-primary:hover,
+[data-theme="light"] .btn-primary:active {
+  color: var(--text-color) !important;
+}
+
+/* Navbar Alignment & GitHub Button Consistency */
+.fork-btn {
+  padding-top: 0 !important; /* Remove extra padding causing misalignment */
+  display: flex;
+  align-items: center;
+}
+
+/* Force GitHub button to keep the "Gold" style in standard/light modes if desired, 
+   or just ensure it adapts. User said "keep as the same style". 
+   Assuming they mean the signature Gold look. */
+[data-theme="light"] .fork-btn-inner {
+  background-color: #ffd37b !important; /* Gold */
+  color: #4d3100 !important; /* Dark Brown */
+  border-color: #ffd37b !important;
+}
+[data-theme="light"] .fork-btn-inner:hover {
+  background-color: #ffca5f !important;
+  color: #4d3100 !important;
+  border-color: #ffca5f !important;
+}
+
+/* Theme Toggler Button */
+.theme-btn {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--text-color) !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  margin-left: 20px !important;
+}
+
+.theme-btn:hover {
+  color: var(--accent-color) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px var(--accent-color)40;
+}
+
+[data-theme="light"] .theme-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
 }

@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 import "./techstack.css";
 import { Container } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg";
-import { DiJavascript1, DiReact, DiNodejs, DiGit, DiPhp } from "react-icons/di";
+import { DiJavascript1, DiReact, DiNodejs, DiGit, DiPhp, DiPython } from "react-icons/di";
 import {
   SiFlutter,
   SiCss3,
@@ -12,8 +12,12 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiNestjs,
+  SiScikitlearn,
+  SiPytorch,
 } from "react-icons/si";
 import { FaLaravel } from "react-icons/fa6";
+
+import "react-slideshow-image/dist/styles.css";
 
 const skills = [
   { icon: DiGit, label: "Git" },
@@ -31,9 +35,13 @@ const skills = [
   { icon: SiTailwindcss, label: "Tailwind" },
   { icon: CgCPlusPlus, label: "C++" },
   { icon: SiFlutter, label: "Flutter" },
+  {icon : DiPython  , label : "Python"},
+  {icon : SiScikitlearn  , label : "Scikit-learn"},
+  {icon : SiPytorch  , label : "PyTorch"},
 ];
 
 function Techstack() {
+  /*
   const [angle, setAngle] = useState(0);
   // Continuous slow rotation speed (degrees per second)
   const ROTATION_SPEED_DEG_PER_SEC = 6;
@@ -58,50 +66,82 @@ function Techstack() {
       if (rafId) cancelAnimationFrame(rafId);
     };
   }, []);
+  */
 
-  // Automatic rotation only; no mouse/touch handlers
+  /*
+  const properties = {
+    duration: 2000,
+    transitionDuration: 500,
+    infinite: true,
+    indicators: false,
+    arrows: false,
+    autoplay: true,
+    pauseOnHover: true,
+    slidesToShow: 5,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 0,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+  };
+  */
 
   return (
     <Container fluid className="about-section" id="project-heading">
       <h1>
         Professional <strong className="orange">Skillset</strong>
       </h1>
+      
+      {/* 
       <div className="tech-3d-container">
-        <div
-          className="tech-3d-scene"
-          role="region"
-          aria-label="3D rotating tech stack carousel"
-        >
-          <div
-            className="tech-3d-ring"
-            style={{
-              transform: `translate(-50%, -50%) translateZ(calc(-1 * var(--carousel-radius))) rotateY(${angle}deg)`,
-            }}
-          >
-            {skills.map((Item, i) => {
-              const Icon = Item.icon;
-              const itemAngle = i * step;
-              return (
-                <div
-                  key={`${Item.label}-${i}`}
-                  className="tech-3d-item"
-                  style={{
-                    transform: `translate(-50%, -50%) rotateY(${itemAngle}deg) translateZ(var(--carousel-radius))`,
-                  }}
-                >
-                  <div className="tech-item-card">
+       ... (old 3d code)
+      </div>
+      */}
+
+      <div className="tech-slider-container">
+        <div className="marquee-wrapper">
+          <div className="marquee-content">
+            {/* Duplicate the skills list to create seamless infinite scrolling */}
+            {[...skills, ...skills].map((Item, index) => {
+               const Icon = Item.icon;
+               return (
+                  <div key={index} className="tech-item-card">
                     <div className="tech-item-icon">
-                      <Icon aria-hidden="true" />
+                      <Icon />
                     </div>
                     <div className="tech-item-label">{Item.label}</div>
-                    {/* <div className="tech-item-value">{Item.value}%</div> */}
                   </div>
-                </div>
-              );
+               );
             })}
           </div>
         </div>
       </div>
+
     </Container>
   );
 }

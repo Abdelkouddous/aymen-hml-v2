@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Github from "./Github";
 import Aboutcard from "./AboutCard";
+import Certificates from "./Certificates";
 import laptopImg from "../../Assets/about2.png";
 import "./about.css";
 
@@ -23,16 +24,12 @@ function About() {
               className="img-fluid"
               style={{ maxWidth: "75%", maxHeight: "75%" }}
             />
-            <p className="text-center">
-              <small className="text-muted">
-                Photo <span className="text-muted">Generated with gemini</span>
-              </small>
-            </p>
           </Col>
         </Row>
         {/* <h1 id="project-heading" style={{ padding: "40px" }}></h1> */}
 
         <Github />
+        <Certificates />
       </Container>
     </div>
   );

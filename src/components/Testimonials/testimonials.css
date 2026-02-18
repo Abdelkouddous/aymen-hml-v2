@@ -7,15 +7,15 @@
   padding-bottom: 30px !important;
   margin-top: 5px;
   background-image: var(--section-background-color) !important;
-  color: white !important;
+  color: var(--text-color) !important;
   transition: opacity 0.5s ease, transform 0.5s ease;
   align-items: center;
 }
 
 .testimonial-card {
-  background-color: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 189, 58, 0.25) !important;
-  box-shadow: 0 0 12px #ffd37b66;
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: 0 0 12px var(--shadow-color);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -30,17 +30,17 @@
 }
 
 .testimonial-author {
-  color: #ffbd3a !important;
+  color: var(--imp-text-color) !important;
   font-weight: 600;
 }
 
 .testimonial-quote {
-  color: whitesmoke;
+  color: var(--text-color);
   margin-top: 8px;
 }
 
 .testimonial-stars {
-  color: #ffbd3a;
+  color: var(--accent-color);
   display: inline-flex;
   gap: 5px;
   font-size: 1.1rem;
@@ -48,7 +48,7 @@
 }
 
 .testimonial-rating-text {
-  color: #ffd37b;
+  color: var(--accent-color);
   font-size: 1.05rem;
   margin-right: auto;
 }
@@ -61,14 +61,14 @@
   padding-top: 30px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
-  color: white !important;
+  color: var(--text-color) !important;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .stats-card {
-  background-color: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 189, 58, 0.25) !important;
-  box-shadow: 0 0 12px #ffd37b66;
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: 0 0 12px var(--shadow-color);
   border-radius: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -79,14 +79,14 @@
 }
 
 .stats-number {
-  color: #ffbd3a;
+  color: var(--accent-color);
   font-weight: 800;
   font-size: 2.4rem;
   letter-spacing: 0.5px;
 }
 
 .stats-label {
-  color: whitesmoke;
+  color: var(--text-color);
   font-size: 1rem;
   opacity: 0.95;
 }

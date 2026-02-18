@@ -20,11 +20,15 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { ThemeContext } from "../App"; 
+import { CgSun } from "react-icons/cg";
+import { HiMoon } from "react-icons/hi";
 
 //
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const { theme, toggleTheme } = React.useContext(ThemeContext);
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -55,13 +59,7 @@ function NavBar() {
           }}
         >
           <span className="orange">
-            <span className="orange">
-              <span className="orange">
-                <span className="orange">
-                  <RxCaretDown />
-                </span>
-              </span>
-            </span>
+             <RxCaretDown />
           </span>
         </Navbar.Toggle>
 
@@ -144,12 +142,17 @@ function NavBar() {
                 <AiFillStar style={{ fontSize: "1.1em" }} />
               </Button>
             </Nav.Item>
-            {/* <Nav.Item className="theme-toggler">
-              <ThemeToggle></ThemeToggle>
-            </Nav.Item> */}
-            {/* <Nav.Item className={`App ${theme}`}>
-              <Button className={`App ${theme}`} onClick={toggleTheme}></Button>
-            </Nav.Item> */}
+            
+            <Nav.Item>
+              <Button 
+                onClick={toggleTheme} 
+                className="theme-btn"
+                variant="primary"
+              >
+                {theme === "light" ? <HiMoon /> : <CgSun />}
+              </Button>
+            </Nav.Item>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

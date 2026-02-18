@@ -21,33 +21,52 @@ import Testimonials from "./components/Testimonials/Testimonials";
 // import { ToggleButton } from "react-bootstrap";
 //dark mode provider
 
+export const ThemeContext = React.createContext(null);
+
 function App() {
   const [load, upadateLoad] = useState(true);
+  const [theme, setTheme] = useState("dark"); // Default to dark
 
   useEffect(() => {
     const timer = setTimeout(() => {
       upadateLoad(false);
     }, 2000);
 
+    // Check localStorage for theme preference
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+
     return () => clearTimeout(timer);
   }, []);
 
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
-    <Router>
-      <Preloader load={load} />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/project" element={<Projects />} />
-        <Route path="/projects/:id" element={<ProjectDetails />} />
-        <Route path="/ai-projects/:id" element={<ProjectDetails />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
-      <ScrollToTop />
-    </Router>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div id={theme} data-theme={theme}>
+        <Router>
+          <Preloader load={load} />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/project" element={<Projects />} />
+            <Route path="/projects/:id" element={<ProjectDetails />} />
+            <Route path="/ai-projects/:id" element={<ProjectDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+          <ScrollToTop />
+        </Router>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
