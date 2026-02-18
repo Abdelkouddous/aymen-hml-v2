@@ -54,6 +54,7 @@ function App() {
           <Preloader load={load} />
           <Navbar />
           <Routes>
+            
             <Route path="/" element={<Home />} />
             <Route path="/project" element={<Projects />} />
             <Route path="/projects/:id" element={<ProjectDetails />} />
