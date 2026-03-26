@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 //Import for CV files
-import pdf from "../../Assets/../Assets/CV_eng_v2.pdf";
+import pdf from "../../Assets/../Assets/CV_eng_v3_can.pdf";
 //
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
