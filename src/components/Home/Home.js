@@ -6,6 +6,7 @@ import Techstack from "../About/Techstack";
 import About from "../About/About";
 import Resume from "../Resume/ResumeNew";
 import Projects from "../Projects/Projects";
+import Services from "../Services/Services";
 
 import Hero from "../Hero/Hero";
 import Testimonials from "../Testimonials/Testimonials";
@@ -92,6 +93,11 @@ function Home() {
                 <About />
               </Col>
             </Row>
+          </section>
+
+          {/* Services Section */}
+          <section id="services" className="fade-right text-center py-5 section-divider" ref={setRef(7)}>
+            <Services />
           </section>
 
           {/* Testimonials section */}

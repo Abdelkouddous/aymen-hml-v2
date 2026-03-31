@@ -12,17 +12,17 @@ const Hero = () => {
   return (
     <Container fluid className="hero-section hero-split hero-appear d-flex flex-column justify-content-center" style={{ minHeight: "100vh", paddingTop: "80px" }}>
       <Row className="hero-row-split align-items-center justify-content-center flex-grow-1">
-        <Col md={6} className="hero-left hero-appear-left text-center text-md-start">
-          <p className="hero-kicker" style={{ fontSize: "1.5em", marginBottom: "0.5rem" }}>Hello, I'm</p>
-          <h2 className="hero-heading" style={{ fontSize: "3.5em", fontWeight: "700", marginBottom: "1rem" }}>
+        <Col md={6} className="hero-appear-left text-center">
+          <p className="hero-kicker" >Hello, I'm</p>
+          <h2 className="hero-heading" >
             <Type />
           </h2>
-          <h4 className="hero-subtitle" style={{ fontSize: "2em", marginBottom: "2rem" }}>
+          <h4 className="hero-subtitle mb-4" >
             <strong className="orange">
               <TypeProfession />
             </strong>
           </h4>
-          <div className="hero-buttons justify-content-center justify-content-md-start">
+          <div className="hero-buttons d-flex justify-content-center gap-3">
             <a href="#about" className="btn-primary-2" style={{ padding: "10px 30px", fontSize: "1.1em" }}>
               Know More
             </a>

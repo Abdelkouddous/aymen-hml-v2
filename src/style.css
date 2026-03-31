@@ -33,37 +33,37 @@ body {
 }
 
 [data-theme="light"] {
-  /* Surface colors: Professional Light Mode (Subtle Lavender/Grey) */
-  --bg-color: #f8f7fa; 
-  --bg-gradient: linear-gradient(135deg, #fdfbfd 0%, #f4f0f8 50%, #e8e6f1 100%); /* Very subtle, premium light purple/grey */
+  /* Surface colors: Professional Light Mode (Warm Neutral) */
+  --bg-color: #ffffff; 
+  --bg-gradient: linear-gradient(90deg, #ffffff 0%, #f7f5f2 50%, #eae6e1 100%); /* Clean, subtle warm depth */
   
-  /* Text colors: High Contrast Dark */
-  --text-color: #0d0d0d; /* sharp black/grey */
-  --text-muted: #4a4a4a;
+  /* Text colors: High Contrast, but softer than pure black */
+  --text-color: #2b2b2b; /* Dark charcoal for readability without harshness */
+  --text-muted: #5e5e5e; /* Balanced mid-grey */
   
-  /* Accent colors: Hot Orange (No Purple) */
+  /* Accent colors: Hot Orange (Retained as the focal point) */
   --accent-color: #d35400; /* Deep Rust/Orange */
   --accent-color-hover: #e67e22; 
   
   /* Primary Elements */
-  --primary-color: #0d0d0d; /* Black buttons */
-  --btn-secondary-color: #0d0d0d;
+  --primary-color: #2b2b2b; /* Charcoal buttons match text */
+  --btn-secondary-color: #ffffff; /* Contrast for secondary actions */
   
-  /* Cards: crisp white with shadow */
+  /* Cards: crisp white with softer shadow */
   --card-bg: #ffffff;
   --card-bg-hover: #ffffff;
-  --card-border: rgba(0, 0, 0, 0.08);
+  --card-border: rgba(0, 0, 0, 0.05); /* Slightly softer border */
   
-  --navbar-bg: rgba(253, 251, 253, 0.95);
-  --footer-bg: #f4f0f8;
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --footer-bg: #f7f5f2;
   
-  --scroll-track: #e8e6f1;
+  --scroll-track: #eae6e1;
   --scroll-thumb: rgba(211, 84, 0, 0.5);
   
-  --shadow-color: rgba(0, 0, 0, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.06); /* Reduced shadow intensity */
   --imp-text-color: var(--accent-color);
-  --navbar-text: #0d0d0d;
-  --image-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  --navbar-text: #2b2b2b;
+  --image-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.05));
 }
 
 body {
@@ -345,7 +345,7 @@ button:focus {
   }
 }
 .navbar-brand {
-  color: rgb(254, 255, 200) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .logo {
@@ -390,21 +390,21 @@ button:focus {
   content: "";
   position: relative;
   display: block;
-  height: 5px;
+  height: 8px;
   width: 0;
   border-radius: 16px;
   /* background: #c95bf5; */
   /* light orange: var(--accent-color)
     dark orange: var(--accent-color)66 */
   background: var(--accent-color)66;
-  bottom: 1px;
+  bottom: 4px;
   left: 0;
   z-index: -1;
   transition: all 0.3s ease-out 0s;
 }
 
 .navbar-nav .nav-item a:hover::after {
-  width: 100%;
+  width: 99.99%;
 }
 /* ========= */ /* ========= */
 /* --------- */
@@ -527,7 +527,7 @@ button:focus {
     /* display: inline-block !important; */
   }
   .Typewriter__cursor {
-    display: inline !important;
+    display: none !important;
   }
 }
 
@@ -1434,14 +1434,13 @@ input {
   line-height: 1.1;
   margin: 0 0 0.5rem 0;
   color: var(--text-color);
-  text-align: left;
 }
 
 .hero-subtitle {
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   color: var(--text-muted);
   margin-bottom: 1.25rem;
-  text-align: left;
+
 }
 
 /* Buttons row */

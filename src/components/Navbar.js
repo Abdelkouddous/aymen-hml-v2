@@ -5,9 +5,9 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { RxCaretDown } from "react-icons/rx";
-// import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { GiSkills } from "react-icons/gi";
+import { Layout } from "lucide-react";
 // import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
@@ -80,6 +80,15 @@ function NavBar() {
                 to=".about"
                  */}
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              </Nav.Link>
+            </Nav.Item>
+            {/* Services nav item */}
+            <Nav.Item>
+              <Nav.Link
+                href="#services"
+                onClick={() => updateExpanded(false)}
+              >
+                <Layout size={18} style={{ marginBottom: "2px" }} /> Services
               </Nav.Link>
             </Nav.Item>
             {/* Testimonials nav item */}
