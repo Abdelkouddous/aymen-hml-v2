@@ -5,8 +5,8 @@ import { aiProjectsData } from "./aiProjectsData";
 
 const AiProjects = () => {
   return (
-    <Container fluid className="project-section" id="ai-projects">
-      <h2 className="project-heading">
+    <Container fluid className="" id="ai-projects">
+      <h2 className="">
         AI / ML <strong className="orange">Projects</strong>
       </h2>
       <Row className="justify-content-center">

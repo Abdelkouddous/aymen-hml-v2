@@ -35,7 +35,7 @@ body {
 [data-theme="light"] {
   /* Surface colors: Professional Light Mode (Warm Neutral) */
   --bg-color: #ffffff; 
-  --bg-gradient: linear-gradient(90deg, #ffffff 0%, #f7f5f2 50%, #eae6e1 100%); /* Clean, subtle warm depth */
+  --bg-gradient: linear-gradient(to bottom, #ffffff 0%, #f7f5f2 50%, #eae6e1 100%); /* Clean, subtle warm depth */
   
   /* Text colors: High Contrast, but softer than pure black */
   --text-color: #2b2b2b; /* Dark charcoal for readability without harshness */

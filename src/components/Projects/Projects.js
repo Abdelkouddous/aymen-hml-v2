@@ -6,8 +6,8 @@ import AiProjects from "./Ai/AiProjects";
 
 function Projects() {
   return (
-    <Container fluid className="project-section" id="projects">
-      <h1 className="project-heading">
+    <Container fluid className="" id="projects">
+      <h1 className="">
         <strong className="orange">Full Stack </strong>Projects
       </h1>
       <SlideShow></SlideShow>
