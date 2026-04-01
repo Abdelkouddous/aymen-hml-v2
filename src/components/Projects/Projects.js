@@ -7,7 +7,7 @@ import AiProjects from "./Ai/AiProjects";
 function Projects() {
   return (
     <Container fluid className="" id="projects">
-      <h1 className="">
+      <h1>
         <strong className="orange">Full Stack </strong>Projects
       </h1>
       <SlideShow></SlideShow>

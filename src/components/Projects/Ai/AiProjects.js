@@ -6,9 +6,9 @@ import { aiProjectsData } from "./aiProjectsData";
 const AiProjects = () => {
   return (
     <Container fluid className="" id="ai-projects">
-      <h2 className="">
+      <h1>
         AI / ML <strong className="orange">Projects</strong>
-      </h2>
+      </h1>
       <Row className="justify-content-center">
         {aiProjectsData.map((project) => (
           <Col key={project.id} md={10} lg={8} className="mb-4">
