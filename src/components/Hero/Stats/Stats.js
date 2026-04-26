@@ -47,7 +47,7 @@ function CountUp({ end, duration = 1200, suffix = "" }) {
 
 export default function Stats() {
   const stats = [
-    { label: "Years Experience", value: 2, suffix: "+", icon: Calendar },
+    { label: "Years Experience", value: 3, suffix: "+", icon: Calendar },
     { label: "Created Projects", value: 6, icon: Code },
     { label: "Satisfied Clients", value: 3, icon: Smile },
     { label: "Awards", value: 1, icon: Trophy },

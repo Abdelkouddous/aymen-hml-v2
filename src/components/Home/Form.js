@@ -46,7 +46,7 @@ export const Form = () => {
   };
 
   return (
-    <div className="tool-stack-container">
+    <>
       <div className="contact-section ">
         <h2 className="section-heading">Get In Touch</h2>
         <p className="section-subheading">
@@ -132,6 +132,6 @@ export const Form = () => {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 };

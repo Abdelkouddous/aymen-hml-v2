@@ -1,13 +1,25 @@
-/* Slider Container Styling */
+/* ── Tech Slider ──────────────────────────────────────────────────────────── */
 .tech-slider-container {
   width: 100%;
   max-width: 1100px;
   margin: 3rem auto !important;
   position: relative;
-  overflow: hidden; /* Hide overflow for checking marquee */
-  /* Gradient Masks for fade effect */
-  -webkit-mask-image: linear-gradient(to right, transparent, var(--text-color) 15%, var(--text-color) 85%, transparent);
-  mask-image: linear-gradient(to right, transparent, var(--text-color) 15%, var(--text-color) 85%, transparent);
+  overflow: hidden;
+  /* Gradient fade masks on edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
 }
 
 .marquee-wrapper {
@@ -19,183 +31,56 @@
 .marquee-content {
   display: flex;
   gap: 20px;
-  /* Calculated duration based on content width approx. speed: ~25px/sec.
-     Total width approx 2550px. 100s = 25.5px/s.
-     This provides a smooth, slow, continuous flow.
-  */
-  animation: scroll 100s linear infinite; 
-  /* Pause on hover if desired */
+  animation: scroll 80s linear infinite;
+  will-change: transform;
 }
 
-/* 
-.marquee-content:hover {
+/* Pause marquee when hovering the whole container */
+.tech-slider-container:hover .marquee-content {
   animation-play-state: paused;
 }
-*/
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* Move half way since we duplicated the list */
-  }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
+/* ── Individual Card — Glassmorphic ─────────────────────────────────────── */
 .tech-item-card {
-  flex: 0 0 auto; /* Prevent shrinking */
-  width: 150px;
-  height: 150px;
-  border-radius: 16px;
-  background: var(--card-bg); /* Glassmorphism background */
+  flex: 0 0 auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   color: var(--imp-text-color);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px rgba(0 0 0 / 0.15);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
   padding: 1rem;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid var(--card-border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 10px 0; /* Vertical margin only, horizontal handled by gap */
-}
-
-.tech-item-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-color: var(--imp-text-color);
+  margin: 10px 0;
+  cursor: default;
+  /* Transitions handled by Framer Motion when hovered */
 }
 
 .tech-item-icon {
-  font-size: 3rem;
-  color: var(--imp-text-color); /* Ensure icons use the accent color */
+  font-size: 2.8rem;
+  color: var(--imp-text-color);
+  transition: transform 0.3s ease;
+}
+
+.tech-item-card:hover .tech-item-icon {
+  transform: scale(1.15) rotate(-5deg);
 }
 
 .tech-item-label {
-  font-weight: 500;
-  font-size: 1rem;
-  color: var(--text-color); /* Key text white */
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: var(--text);
 }
-
-/* Hide default arrows if they clash, or style them */
-.react-slideshow-container .nav {
-  z-index: 10;
-  background: rgba(0,0,0,0.5);
-  border-radius: 50%;
-}
-
-.react-slideshow-container .nav:hover {
-  background: var(--imp-text-color);
-}
-
-.react-slideshow-container .nav svg {
-  fill: var(--text-color);
-}
-
-
-/* 
-=====================================================
-PRESERVED 3D TECH CAROUSEL STYLES (FOR FUTURE USE)
-=====================================================
-
-.tech-3d-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-.tech-3d-scene {
-  position: relative;
-  width: min(1100px, 95vw);
-  height: min(760px, 80vh);
-  margin: 0 auto;
-  perspective: scale(1.5);
-  cursor: default;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: pan-y;
-  /* Local radius override for bigger, centered ring 
-  --carousel-radius: 340px;
-}*/
-.tech-3d-scene:active {
-  cursor: default;
-}
-
-:root,
-[data-theme="light"] {
-  --carousel-radius: 300px;
-}
-[data-theme="dark"] {
-  --carousel-radius: 300px;
-}
-
-.tech-3d-ring {
-  position: absolute;
-  align-items: center;
-  top: 50%;
-  left: 50%;
-  transform-style: preserve-3d;
-  transform: translate(-50%, -50%);
-  transition: transform 100ms cubic-bezier(0.22, 1, 0.36, 0.1);
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-}
-
-.tech-3d-item {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-style: preserve-3d;
-  transform-origin: center center;
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-}
-
-/* Note: .tech-item-card is reused in the new slider, so some styles might overlap. 
-   Original 3D specific card styles: */
-/*
-.tech-item-card {
-  width: 190px;
-  height: 220px;
-  // ... other styles ...
-}
-*/
-
-.tech-item-value {
-  font-size: 1rem;
-  opacity: 0.95;
-}
-
-@media (max-width: 640px) {
-  .tech-3d-scene {
-    height: 70vh;
-    width: 95vw;
-    --carousel-radius: 260px;
-  }
-  :root,
-  [data-theme="light"],
-  [data-theme="dark"] {
-    --carousel-radius: 220px;
-  }
-}
-/*  
-@media (min-width: 1024px) {
-  .tech-3d-scene {
-    height: 640px;
-    width: min(1250px, 95vw);
-    --carousel-radius: 420px;
-  }
-  :root,
-  [data-theme="light"],
-  [data-theme="dark"] {
-    --carousel-radius: 380px;
-  }
-}
-*/

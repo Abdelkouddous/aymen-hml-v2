@@ -9,6 +9,8 @@
     "@mui/material": "^5.16.7",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@react-pdf/renderer": "^2.2.0",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.17.10",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -17,13 +19,14 @@
     "class-variance-authority": "^0.7.0",
     "dotenv": "^16.4.5",
     "emailjs-com": "^3.2.0",
+    "framer-motion": "^10.18.0",
     "lucide-react": "^0.447.0",
     "morgan": "^1.10.0",
     "next-themes": "^0.3.0",
     "radix-ui": "^1.0.1",
-    "react": "^17.0.2",
+    "react": "^18.3.1",
     "react-bootstrap": "^2.2.1",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.3.1",
     "react-github-calendar": "^3.2.2",
     "react-icons": "^4.12.0",
     "react-parallax-tilt": "^1.7.42",
@@ -35,15 +38,16 @@
     "react-tsparticles": "^1.42.2",
     "styled-components": "^6.1.12",
     "tailwind-merge": "^2.5.3",
+    "three": "^0.184.0",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "npm start app.js"
+    "dev":   "GENERATE_SOURCEMAP=false react-scripts start",
+    "start": "GENERATE_SOURCEMAP=false react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test":  "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

@@ -1,83 +1,41 @@
-//Home page
-import { useEffect, useRef, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { motion } from "framer-motion";
+
 import Home2 from "./Home2";
 import Techstack from "../About/Techstack";
 import About from "../About/About";
 import Resume from "../Resume/ResumeNew";
 import Projects from "../Projects/Projects";
 import Services from "../Services/Services";
-
 import Hero from "../Hero/Hero";
 import Testimonials from "../Testimonials/Testimonials";
 
+// ─── Reusable section animation variants ────────────────────────────────────
+const slideUp = {
+  hidden:  { opacity: 0, y: 48 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] } },
+};
+
+const slideLeft = {
+  hidden:  { opacity: 0, x: -48 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] } },
+};
+
+const slideRight = {
+  hidden:  { opacity: 0, x: 48 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] } },
+};
+
+const viewportConfig = { once: false, amount: 0.12 };
+
+// ─── Home page component ─────────────────────────────────────────────────────
 function Home() {
-  const sectionsRef = useRef([]);
-  const observerRef = useRef(null);
-
-  // Create the observer callback as a memoized function
-  const handleIntersection = useCallback((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-left-visible");
-      } else {
-        // Delay the removal to create a smoother transition
-        setTimeout(() => {
-          // Check if the element still exists before removing the class
-          if (entry.target.isConnected) {
-            entry.target.classList.remove("fade-left-visible");
-          }
-        }, 500);
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: "-60px",
-      threshold: 0.0,
-    };
-
-    // Create a new observer instance
-    observerRef.current = new IntersectionObserver(
-      handleIntersection,
-      observerOptions
-    );
-
-    // Get current sections
-    const currentSections = sectionsRef.current.filter(Boolean);
-
-    // Observe all sections
-    currentSections.forEach((section) => {
-      if (section) {
-        observerRef.current.observe(section);
-      }
-    });
-
-    // Cleanup function
-    return () => {
-      if (observerRef.current) {
-        currentSections.forEach((section) => {
-          if (section) {
-            observerRef.current.unobserve(section);
-          }
-        });
-        observerRef.current.disconnect();
-      }
-    };
-  }, [handleIntersection]); // Only re-run if handleIntersection changes
-
-  // Function to set refs
-  const setRef = (index) => (element) => {
-    sectionsRef.current[index] = element;
-  };
-
   return (
     <div id="home">
       <Container fluid className="home-section p-0">
-        {/* Hero Section */}
-        <section className="text-center h-screen flex flex-col justify-center">
+
+        {/* ── Hero ── */}
+        <section>
           <Row className="justify-content-center m-0">
             <Col md={12} className="p-0">
               <Hero />
@@ -86,73 +44,106 @@ function Home() {
         </section>
 
         <div className="section-content-wrapper">
-          {/* About Section */}
-          <section id="about" className="text-center py-5 section-divider">
-            <Row className="fade-left justify-content-center" ref={setRef(0)}>
+
+          {/* ── About ── */}
+          <motion.section
+            id="about"
+            className="text-center py-5 section-divider"
+            variants={slideLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+          >
+            <Row className="justify-content-center">
               <Col md={12}>
                 <About />
               </Col>
             </Row>
-          </section>
+          </motion.section>
 
-          {/* Services Section */}
-          <section id="services" className="fade-right text-center py-5 section-divider" ref={setRef(7)}>
+          {/* ── Services ── */}
+          <motion.section
+            id="services"
+            className="text-center py-5 section-divider"
+            variants={slideRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+          >
             <Services />
-          </section>
+          </motion.section>
 
-          {/* Testimonials section */}
-          <section
+          {/* ── Testimonials ── */}
+          <motion.section
             id="testimonials"
-            className="fade-right text-center py-5 section-divider"
-            ref={setRef(1)}
+            className="text-center py-5 section-divider"
+            variants={slideUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
           >
             <Testimonials />
-          </section>
+          </motion.section>
 
-          {/* Skillset Section */}
-          <section className="fade-left text-center py-5 section-divider" ref={setRef(2)}>
+          {/* ── Skillset ── */}
+          <motion.section
+            className="text-center py-5 section-divider"
+            variants={slideLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+          >
             <Techstack />
-          </section>
+          </motion.section>
 
-
-          {/* Projects Section */}
-          <section
+          {/* ── Projects ── */}
+          <motion.section
             id="projects"
-            className="fade-left text-center py-5 section-divider"
-            ref={setRef(4)}
+            className="text-center py-5 section-divider"
+            variants={slideUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
           >
             <Row className="justify-content-center">
               <Col md={12}>
                 <Projects />
               </Col>
             </Row>
-          </section>
+          </motion.section>
 
-          {/* Resume Section */}
-          <section
+          {/* ── Resume / CV ── */}
+          <motion.section
             id="resume"
-            className="fade-left text-center py-5 section-divider"
-            ref={setRef(5)}
+            className="text-center py-5 section-divider"
+            variants={slideRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
           >
             <Row className="justify-content-center">
               <Col md={12}>
                 <Resume />
               </Col>
             </Row>
-          </section>
+          </motion.section>
 
-          {/* Contact Section */}
-          <section
+          {/* ── Contact ── */}
+          <motion.section
             id="contact"
-            className="fade-left text-center py-5 section-divider"
-            ref={setRef(6)}
+            className="text-center py-5 section-divider"
+            variants={slideUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
           >
             <Row className="justify-content-center">
               <Col md={12}>
                 <Home2 />
               </Col>
             </Row>
-          </section>
+          </motion.section>
+
         </div>
       </Container>
     </div>
@@ -160,4 +151,3 @@ function Home() {
 }
 
 export default Home;
-// Compare this snippet from src/components/Navbar.js:

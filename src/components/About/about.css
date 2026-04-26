@@ -4,9 +4,9 @@
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-color: transparent !important;
   color: var(--text-color) !important;
-  transition: all 0.5s ease 0.3s !important;
+  transition: color 0.3s ease !important;
 }
 
 .tech-icons {
