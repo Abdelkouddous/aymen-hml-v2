@@ -8,14 +8,9 @@ function TypeProfession() {
       <Typewriter
         options={{
           strings: [
-            " Systems Engineer  ",
-            " Full Stack Engineer ",
-            "AI Engineer",
-            // " Graphics Desginer ",
-            // "Database Administrator",
-            // 'Cyber Security Analyst',
-            // "Data Analyst",
-            // "Big Data Engineer",
+            "Systems Engineer",
+            "Software Engineer",
+            "AI & ML Engineer",
           ],
           autoStart: true,
           loop: true,
