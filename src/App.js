@@ -17,6 +17,7 @@ import "./style.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Testimonials from "./components/Testimonials/Testimonials";
+import { Analytics } from "@vercel/analytics/react";
 
 // Lazy-load the heavy Three.js canvas so it never blocks initial render
 const Scene = lazy(() => import("./components/three/Scene"));
@@ -69,6 +70,7 @@ function App() {
           </div>
           <ScrollToTop />
         </Router>
+        <Analytics />
       </div>
     </ThemeContext.Provider>
   );
