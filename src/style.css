@@ -646,6 +646,48 @@ button:focus {
 .icon-pair svg { color: var(--accent); }
 .icon-pair .dash { color: rgba(245 245 245 / 0.75); opacity: 0.85; }
 
+/* Project Gallery (mockup showcase on details page) */
+.project-gallery {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.gallery-item {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px var(--shadow);
+  border-color: hsl(var(--hsl-accent) / 0.35);
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.03);
+}
+
+.gallery-caption {
+  text-align: center;
+  padding: 12px 16px;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
 /* ============================================================
    BUTTONS
    ============================================================ */

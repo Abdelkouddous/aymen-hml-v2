@@ -203,28 +203,55 @@ const ProjectDetails = () => {
                 )}
               </ListGroup>
 
-              <Button
-                as={Link}
-                to={backLink}
-                variant="secondary"
-                className="btn-primary"
-              >
-                Back
-              </Button>
-              {project.ghLink && project.ghLink !== "#" && (
-                <Button href={project.ghLink} target="_blank" variant="primary">
-                  GitHub
-                </Button>
+              {/* ── Mockup Gallery ── */}
+              {project.gallery && project.gallery.length > 0 && (
+                <div className="project-gallery">
+                  <h5 className="mt-4 mb-3" style={{ textAlign: "center" }}>
+                    Project <span className="orange">Showcase</span>
+                  </h5>
+                  <Row className="g-3 justify-content-center">
+                    {project.gallery.map((item, idx) => (
+                      <Col key={idx} md={6} sm={12}>
+                        <div className="gallery-item">
+                          <img
+                            src={item.src}
+                            alt={item.caption || `Screenshot ${idx + 1}`}
+                            className="gallery-img"
+                          />
+                          {item.caption && (
+                            <p className="gallery-caption">{item.caption}</p>
+                          )}
+                        </div>
+                      </Col>
+                    ))}
+                  </Row>
+                </div>
               )}
-              {project.demoLink && project.demoLink !== "#" && (
+
+              <div className="d-flex flex-wrap gap-2 justify-content-center mt-4">
                 <Button
-                  href={project.demoLink}
-                  target="_blank"
-                  variant="primary"
+                  as={Link}
+                  to={backLink}
+                  variant="secondary"
+                  className="btn-primary"
                 >
-                  Demo
+                  Back
                 </Button>
-              )}
+                {project.ghLink && project.ghLink !== "#" && (
+                  <Button href={project.ghLink} target="_blank" variant="primary">
+                    GitHub
+                  </Button>
+                )}
+                {project.demoLink && project.demoLink !== "#" && (
+                  <Button
+                    href={project.demoLink}
+                    target="_blank"
+                    variant="primary"
+                  >
+                    Demo
+                  </Button>
+                )}
+              </div>
             </Card.Body>
           </Card>
         </Col>

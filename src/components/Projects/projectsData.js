@@ -1,7 +1,12 @@
 // src/components/Projects/projectsData.js
 // import foodappPath from "../../Assets/Projects/foodapp.gif";
 import pulsePath from "../../Assets/Projects/Pulse.png";
-import medcareerPath from "../../Assets/Projects/medCareer.png";
+import vitalworkPath from "../../Assets/Projects/vitalwork-connect.png";
+import vitalworkResponsive from "../../Assets/Projects/vitalwork-responsive.jpg";
+import vitalworkFeatures from "../../Assets/Projects/vitalwork-features.jpg";
+import vitalworkHero from "../../Assets/Projects/vitalwork-hero.jpg";
+import vitalworkDarkLight from "../../Assets/Projects/vitalwork-darklight.jpg";
+import vitalworkTechStack from "../../Assets/Projects/vitalwork-techstack.jpg";
 import prosafePath from "../../Assets/Projects/prosafe.png";
 export const projectsData = [
   {
@@ -21,17 +26,32 @@ export const projectsData = [
   // Commented projects can be added here with isActive: false
   {
     id: 2,
-    title: "MedCareer Recruitement App",
-    imgPath: medcareerPath,
+    title: "VitalWork Connect",
+    imgPath: vitalworkPath,
     description:
-      "A project similiar to LinkedIn for medical professionals recruitement",
-    ghLink: "https://github.com/Abdelkouddous/MedCareer",
+      "Algeria's first healthcare recruitment platform — connecting hospitals, clinics, and medical professionals across all 58 wilayas.",
+    ghLink: "https://github.com/Abdelkouddous/VitalWork",
+    // demoLink: "https://vitalwork.com/",
     demoLink: "https://medcareer.onrender.com/",
     isActive: true,
-    summary: "A professional networking platform tailored for the medical industry. It connects healthcare professionals with job opportunities and allows recruiters to find qualified candidates efficiently.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Redux"],
-    features: ["User Profiles", "Job Posting", "Application Tracking", "Real-time Chat"],
-    result: "Created a functional MVP that demonstrates the core features of a niche professional network."
+    summary: "A full-stack MERN platform that revolutionizes medical recruitment in Algeria. VitalWork Connect enables hospitals and clinics to post job openings, while healthcare professionals can browse opportunities filtered by specialization, location, and job type. Features include a medical blog, smart job filters, adaptive dark/light design system, and coverage across all 58 wilayas.",
+    technologies: ["React", "Vite", "Node.js", "Express.js", "MongoDB", "JWT"],
+    features: [
+      "Smart Job Filters by Specialization",
+      "Medical Blog with Categories",
+      "Adaptive Dark/Light Design System",
+      "60+ Open Positions across 58 Wilayas",
+      "Employer & Candidate Dashboards",
+      "Browse by Medical Specialization",
+    ],
+    result: "Live platform serving healthcare recruitment needs across Algeria with 60+ active positions.",
+    gallery: [
+      { src: vitalworkResponsive, caption: "Fully Responsive — Desktop & Mobile" },
+      { src: vitalworkFeatures, caption: "Smart Job Filters, Specialization Browse & Medical Blog" },
+      { src: vitalworkHero, caption: "VitalWork Connect — Healthcare Recruitment Platform" },
+      { src: vitalworkDarkLight, caption: "Adaptive Design System — Dark & Light Modes" },
+      { src: vitalworkTechStack, caption: "Full Stack MERN Architecture" },
+    ],
   },
   {
     id: 3,
@@ -47,20 +67,7 @@ export const projectsData = [
     features: ["Incident Reporting", "Visitor Management", "Emergency Alerts", "Analytics Dashboard"],
     result: "Developed a scalable and secure platform suitable for enterprise deployment."
   },
-  {
-    id: 4,
-    title: "Esoug an E-Commerce online store",
-    imgPath: "", // temporary placeholder image
-    description: `Modern e-commerce web app focused on a seamless shopping experience.
-      Coming soon ... `,
-    ghLink: "#",
-    demoLink: "#",
-    isActive: true,
-    summary: "A modern e-commerce platform designed to provide a seamless shopping experience. It features a clean UI, fast performance, and secure checkout.",
-    technologies: ["React", "Next.js", "Stripe", "Sanity.io"],
-    features: ["Product Catalog", "Shopping Cart", "Secure Checkout", "Order Tracking"],
-    result: "In development, aiming for a high-performance e-commerce solution."
-  },
+  
   // ... existing code ...
   {
     //   id :4,
