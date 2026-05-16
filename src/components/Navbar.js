@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+import hmlLogo from "../Assets/hml-logomark.svg";
 import Button from "react-bootstrap/Button";
 import { RxCaretDown } from "react-icons/rx";
 import { CgGitFork } from "react-icons/cg";
@@ -48,7 +48,11 @@ function NavBar() {
       <Container>
         {/* ── Brand ── */}
         <Navbar.Brand href="/" className="d-flex align-items-center">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          <img
+            src={hmlLogo}
+            className="navbar-logo-svg"
+            alt="HML Systems"
+          />
         </Navbar.Brand>
 
         {/* ── Mobile-only: theme toggle + hamburger (always visible) ── */}

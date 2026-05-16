@@ -6,18 +6,23 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import "./Footer.css"; // We'll create this file
+import hmlSystemsLogo from "../../Assets/hml-systems-logo.svg";
+import "./Footer.css";
 
 function Footer() {
   const year = new Date().getFullYear();
-  const brand = "Hml Soft";
+  const brand = "HML Systems";
 
   return (
     <footer className="footer-section">
       <Container>
         <Row className="footer-content justify-content-between align-items-center">
           <Col md={4} className="footer-info text-center text-md-start">
-            <h3 className="footer-brand">{brand}</h3>
+            <img
+              src={hmlSystemsLogo}
+              alt="HML Systems"
+              className="footer-logo-svg"
+            />
             <p className="footer-description">
               Creating innovative solutions with modern web technologies.
             </p>

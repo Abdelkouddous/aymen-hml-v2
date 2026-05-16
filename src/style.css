@@ -260,6 +260,29 @@ button:focus {
 .navbar-brand { color: rgb(255 255 255) !important; }
 .logo { height: 1.5em !important; width: 2.5em !important; }
 
+/* HML Systems — navbar SVG logomark */
+.navbar-logo-svg {
+  width: 44px;
+  height: 44px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.navbar-logo-svg:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 224, 0, 0.55));
+  transform: scale(1.06);
+}
+
+/* HML Systems — footer wordmark SVG */
+.footer-logo-svg {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+@media (max-width: 768px) {
+  .footer-logo-svg { margin: 0 auto 0.75rem auto; }
+}
+
 .navbar-nav .nav-link {
   color: var(--text) !important;
   padding-right: 1rem !important;
