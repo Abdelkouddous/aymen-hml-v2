@@ -14,12 +14,14 @@ function Projects() {
   return (
     <Container fluid id="projects">
       <motion.h1
+        className="project-heading"
+        style={{ marginBottom: "20px" }}
         variants={headingVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.5 }}
       >
-        <strong className="orange">Full Stack </strong> <h1 className="project-heading" style={{ marginBottom: "20px" }}>Projects</h1>
+        <strong className="orange">Full Stack </strong> Projects
       </motion.h1>
 
       <SlideShow />

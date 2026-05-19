@@ -1,18 +1,17 @@
-# 👨‍💻 Aymen HML — Professional Developer Portfolio
+# 🚀 HML Systems — Professional Portfolio
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![License](https://img.shields.io/github/license/aymen-hml/aymen-hml?style=for-the-badge)
+![License](https://img.shields.io/github/license/Abdelkouddous/aymen-hml-v2?style=for-the-badge)
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/aymen-hml/aymen-hml/main/src/Assets/home-main.svg" alt="Portfolio Illustration" width="400" />
   <br />
   <p>
-    <b>A modern, responsive developer portfolio designed to showcase projects, skills, and experience with elegance.</b>
+    <b>A modern, responsive, and highly-performant developer portfolio designed to showcase projects, skills, and experience with elegance. Built by HML Systems.</b>
   </p>
   <p>
-    <a href="https://aymen-hml.vercel.app/"><strong>Explore the Live Demo »</strong></a>
+    <a href="https://aymen-hml-v2.vercel.app/"><strong>Explore the Live Demo »</strong></a>
     <br />
     <br />
     <a href="#-features">View Features</a>
@@ -27,17 +26,17 @@
 
 ## 🚀 Overview
 
-This portfolio template is built with **React** and **Bootstrap**, featuring a clean, warm theme with smooth animations and a responsive layout. It serves as a perfect starting point for developers looking to present their work professionally.
+This portfolio is the official professional showcase for **HML Systems** (Hamel Aymene Abdelkouddous). It is built with **React** and **Bootstrap**, featuring a clean, premium dark theme with smooth animations and a fully responsive glassmorphic layout. It serves as a perfect demonstration of modern web technologies.
 
 ## ✨ Features
 
 - **📱 Fully Responsive:** Optimized for all devices (Mobile, Tablet, Desktop).
-- **🎨 Modern Design:** Clean aesthetic with warm orange accents and glassmorphism elements.
-- **⚡ Interactive UI:** Smooth transitions, hover effects, and subtle animations using `framer-motion` concepts.
-- **📂 Project Showcase:** Dedicated section with a carousel for highlighting key projects.
-- **🛠️ Tech Stack Display:** Visual representation of skills and tools.
-- **📄 Resume Integration:** Easy access to download or view CV.
-- **✉️ Contact Integration:** Social links and contact information.
+- **🎨 Premium Design:** Custom HML Systems branding with dynamic SVGs, warm golden accents, and premium glassmorphism elements.
+- **⚡ Interactive UI:** Smooth transitions, interactive particles, and scroll-aware navigation.
+- **📂 Project Showcase:** Dedicated section with dynamic galleries for highlighting key projects.
+- **🛠️ Tech Stack Display:** Visual representation of skills and tools using custom icons.
+- **📄 Resume Integration:** Built-in PDF reader for seamless resume viewing.
+- **⚙️ CI/CD Ready:** Custom pipeline scripts for automated vulnerability auditing and secure production builds.
 
 ## 🛠️ Tech Stack
 
@@ -45,40 +44,39 @@ This project harnesses the power of modern web technologies:
 
 | Category | Technologies |
 |----------|--------------|
-| **Frontend** | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) |
-| **Styling** | ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-007FFF?style=flat&logo=mui&logoColor=white) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=flat&logo=styled-components&logoColor=white) |
-| **Icons & Assets** | `react-icons`, `lucide-react`, `react-tsparticles` |
-| **Build & Deploy** | `react-scripts`, `vercel` |
+| **Frontend Core** | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) |
+| **Styling & UI** | ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-007FFF?style=flat&logo=mui&logoColor=white) |
+| **Interactive** | `react-tsparticles`, `@react-three/fiber` (Three.js), `framer-motion` |
+| **Build & Deploy** | `react-scripts`, `npm`, `vercel` |
 
 ## 📂 Project Structure
 
-A quick look at the top-level files and directories you'll see in this project:
-
 ```text
 /src
-├── Assets/          # Images, icons, and PDF resumes
-├── components/      # Reusable UI components (Navbar, Footer, etc.)
-│   ├── Projects/    # Project-specific components
-│   └── ...
-├── App.js           # Main application component
-├── style.css        # Global styles and theme variables
+├── Assets/          # SVG Logos (HML Systems), Images, and PDF resumes
+├── components/      # Reusable UI components
+│   ├── Navbar.js    # Glassmorphic top navigation with SVG logomark
+│   ├── Footer/      # Footer with full HML Systems SVG wordmark
+│   └── Projects/    # Project gallery and details views
+├── App.js           # Main application routing and theme provider
+├── style.css        # Global CSS variables (Light/Dark themes)
 └── index.js         # Entry point
 ```
 
 ## 🏁 Getting Started
 
-Follow these steps to get a local copy up and running.
+Follow these steps to get a local copy up and running safely.
 
 ### Prerequisites
 
-*   **Node.js** (v14 or higher)
+*   **Node.js** (v16 or higher recommended)
 *   **npm**
 
 ### Installation
 
 1.  **Clone the repo**
     ```sh
-    git clone https://github.com/aymen-hml/aymen-hml.git
+    git clone https://github.com/Abdelkouddous/aymen-hml-v2.git
     ```
 2.  **Install dependencies**
     ```sh
@@ -86,22 +84,28 @@ Follow these steps to get a local copy up and running.
     ```
 3.  **Start the development server**
     ```sh
-    npm start
+    npm run dev
     ```
 
 The app will launch at `http://localhost:3000`.
 
-## 🎨 Customization
+### Building for Production (CI/CD)
 
-You can easily personalize this template:
+This project features a secure pipeline step that checks and fixes package vulnerabilities before building.
 
-1.  **Content:** Edit files in `src/components/` to update text and logic.
-2.  **Styling:** Modify `src/style.css` to change the color palette (look for root variables).
-3.  **Assets:** Replace images in `src/Assets/` with your own.
+```sh
+# Automatically audits, fixes vulnerabilities, and creates an optimized production build
+npm run build:ci
+```
+
+## 🎨 Branding & Customization
+
+The portfolio uses centralized CSS variables in `style.css` for easy theming.
+The primary branding is "HML Systems" which utilizes scalable inline SVGs located in `src/Assets/`.
 
 ## 🤝 Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions, issues, and feature requests are welcome!
 
 1.  Fork the Project
 2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -115,9 +119,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-**Aymen HML**
+**Hamel Aymene Abdelkouddous** (HML Systems)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/aymen-hml)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aymen-hml)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aymen-hamel/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abdelkouddous)
 
-Project Link: [https://github.com/aymen-hml/aymen-hml](https://github.com/aymen-hml/aymen-hml)
+Project Link: [https://github.com/Abdelkouddous/aymen-hml-v2](https://github.com/Abdelkouddous/aymen-hml-v2)

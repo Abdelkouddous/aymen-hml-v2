@@ -1,10 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillGithub,
-  AiOutlineFacebook,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import hmlSystemsLogo from "../../Assets/hml-systems-logo.svg";
 import "./Footer.css";
@@ -39,28 +35,12 @@ function Footer() {
                 <AiFillGithub />
               </a>
               <a
-                href="https://Facebook.com/lakrin12"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <AiOutlineFacebook />
-              </a>
-              <a
                 href="https://www.linkedin.com/in/aymene-abdelkouddous-hamel-0b0b90198/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn />
-              </a>
-              <a
-                href="https://www.instagram.com/aymen___hml"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <AiFillInstagram />
               </a>
             </div>
           </Col>
