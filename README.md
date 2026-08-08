@@ -11,7 +11,7 @@
     <b>A modern, responsive, and highly-performant developer portfolio designed to showcase projects, skills, and experience with elegance. Built by HML Systems.</b>
   </p>
   <p>
-    <a href="https://aymen-hml-v2.vercel.app/"><strong>Explore the Live Demo »</strong></a>
+    <a href="https://aymen-hml.vercel.app/"><strong>Explore the Live Demo »</strong></a>
     <br />
     <br />
     <a href="#-features">View Features</a>
